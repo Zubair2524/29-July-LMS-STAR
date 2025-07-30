@@ -545,7 +545,7 @@
                     <div class="answer-options"></div>
                 `;
                 const optionsContainer = answerItem.querySelector('.answer-options');
-                question.options.forEach((option, optIndex) => {
+                question.options.forEach((opt, optIndex) => {
                     const isUserAnswer = quizAnswers[index] === optIndex;
                     const isCorrectAnswer = optIndex === question.correct;
                     const optionClass = isUserAnswer && isCorrectAnswer ? 'user-correct' : 
@@ -554,13 +554,13 @@
                     const indicatorClass = isUserAnswer && isCorrectAnswer ? 'correct-indicator' : 
                                          isUserAnswer ? 'incorrect-indicator' : 
                                          isCorrectAnswer ? 'correct-indicator' : 'neutral-indicator';
-                    const option = document.createElement('div');
-                    option.className = `answer-option ${optionClass}`;
-                    option.innerHTML = `
+                    const optionElement = document.createElement('div');
+                    optionElement.className = `answer-option ${optionClass}`;
+                    optionElement.innerHTML = `
                         <span class="option-indicator ${indicatorClass}">${String.fromCharCode(65 + optIndex)}</span>
-                        <span>${option}</span>
+                        <span>${opt}</span>
                     `;
-                    optionsContainer.appendChild(option);
+                    optionsContainer.appendChild(optionElement);
                 });
                 answersList.appendChild(answerItem);
             });
@@ -609,5 +609,25 @@
             doc.save(`${currentUser.firstName}_${currentUser.lastName}_${currentBook.title}_Certificate.pdf`);
         });
 
-        document.getElementById('backToLibraryResults'). styling, and answer review functionality.
+        document.getElementById('backToLibraryResults').addEventListener('click', () => showPage('libraryPage'));
 
+        // Search Functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            document.querySelectorAll('.book-card').forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const section = card.querySelector('p').textContent.toLowerCase();
+                card.style.display = title.includes(query) || section.includes(query) ? 'block' : 'none';
+            });
+        });
+
+        // Initialize
+        if (currentUser) {
+            showPage('libraryPage');
+        } else {
+            showPage('loginPage');
+        }
+        loadBooks();
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+[
+    {
+        "id": 17,
+        "title": "Deep Work",
+        "section": "Productivity",
+        "thumbnail": "17a.png",
+        "slides": [
+            {
+                "title": "What is Deep Work?",
+                "content": "In *Deep Work*, Cal Newport defines deep work as focused, uninterrupted work on cognitively demanding tasks, producing high-value results. Unlike shallow work—repetitive tasks like emails—deep work requires intense concentration, like writing a novel or coding. For example, a programmer creating a complex algorithm engages in deep work, achieving breakthroughs. Newport argues that deep work is rare but essential in today’s distracted world. By prioritizing it, professionals enhance productivity and innovation, mastering skills that drive career success."
+            },
+            {
+                "title": "The Value of Focus",
+                "content": "Newport emphasizes that focus is a competitive advantage. Deep work allows individuals to master complex skills quickly and produce exceptional results. For instance, a scientist focusing for hours on research makes discoveries faster than one distracted by notifications. In contrast, shallow work fragments attention, reducing output quality. By minimizing distractions, like silencing phones, professionals achieve more in less time, making deep work critical for success in fields like technology, writing, or academia."
+            },
+            {
+                "title": "Creating Deep Work Habits",
+                "content": "Building deep work habits requires discipline. Newport suggests scheduling uninterrupted blocks of time, like 90-minute sessions, for focused tasks. For example, a writer blocking mornings for drafting avoids distractions, boosting productivity. He advises creating rituals, like a quiet workspace, to signal focus. Minimizing digital distractions, such as social media, is key. These habits ensure consistent deep work, enabling professionals to tackle challenging projects with greater efficiency and creativity."
+            },
+            {
+                "title": "Eliminating Distractions",
+                "content": "Distractions are the enemy of deep work. Newport recommends turning off notifications and setting boundaries, like working offline. For instance, a manager disabling email alerts during strategy sessions focuses better. He suggests using tools like website blockers to stay on task. In a workplace, clear communication about focus time prevents interruptions. By eliminating distractions, individuals maintain cognitive depth, producing high-quality work in less time, critical for success in demanding roles."
+            },
+            {
+                "title": "Depth in a Distracted World",
+                "content": "Newport argues that our hyper-connected world undermines deep work. Constant emails and social media fragment attention, reducing productivity. For example, a designer checking messages every 10 minutes struggles to create. Newport suggests embracing boredom to train focus, like avoiding phone use during breaks. This builds mental resilience, enabling deeper concentration. In teams, fostering a culture that respects focus time enhances collective output, making deep work a key differentiator."
+            },
+            {
+                "title": "Deep Work and Learning",
+                "content": "Deep work accelerates learning complex skills. Newport explains that focused time allows deliberate practice, like a musician mastering a piece through hours of uninterrupted rehearsal. In contrast, distracted learning slows progress. For instance, a student studying without social media retains more. Newport suggests setting specific learning goals and tracking progress. By prioritizing deep work, individuals master skills faster, gaining a competitive edge in fields like programming, research, or leadership."
+            },
+            {
+                "title": "The Role of Rituals",
+                "content": "Rituals signal the brain to enter deep work mode. Newport advises consistent routines, like starting work at the same time in a dedicated space. For example, a writer lighting a candle before writing creates a focus cue. Rituals reduce the mental effort needed to start, making deep work habitual. In workplaces, rituals like team focus hours enhance productivity. These routines ensure consistent, high-quality output, aligning with Newport’s vision of focused success."
+            },
+            {
+                "title": "Balancing Deep and Shallow Work",
+                "content": "While deep work is critical, shallow work—emails, meetings—is unavoidable. Newport suggests allocating specific times for shallow tasks to protect deep work hours. For instance, a consultant handles emails in the afternoon, reserving mornings for strategy. This balance ensures essential tasks are managed without sacrificing focus. In teams, scheduling shallow work collaboratively prevents interruptions. By balancing both, professionals maximize productivity, achieving high-impact results while handling routine duties."
+            },
+            {
+                "title": "Deep Work and Innovation",
+                "content": "Deep work drives innovation by allowing uninterrupted problem-solving. Newport cites examples like scientists solving complex problems during focused sessions. For instance, a tech developer working deeply creates a groundbreaking app. In contrast, frequent distractions stifle creativity. Newport suggests fostering deep work in organizations through policies like no-meeting days. This creates space for innovative thinking, enabling teams to solve tough challenges and stay competitive in fast-paced industries."
+            },
+            {
+                "title": "Sustaining Deep Work",
+                "content": "Sustaining deep work requires long-term commitment. Newport advises gradually increasing focus time, like starting with 30-minute sessions and building to hours. For example, a researcher extending focus periods improves output. Regular reflection on progress, like tracking completed tasks, maintains motivation. In organizations, leaders can model deep work, inspiring teams. By making it a habit, individuals and teams achieve consistent, high-value results, aligning with Newport’s framework for success."
+            },
+            {
+                "title": "Real-Life Example: Software Development",
+                "content": "A programmer, Asim, struggled with coding complex features due to constant notifications. Using *Deep Work*, he scheduled two-hour morning sessions, turned off alerts, and worked in a quiet space. This ritual boosted his focus, completing a project ahead of schedule. His high-quality code earned praise, showing how Newport’s deep work principles enhance productivity and skill mastery in demanding technical roles."
+            },
+            {
+                "title": "Real-Life Example: Academic Success",
+                "content": "A student, Maria, faced poor grades due to distracted studying. Adopting Newport’s deep work, she set 90-minute study blocks without her phone, using a library for focus. She tracked progress, mastering complex topics faster. Her grades improved significantly, demonstrating how deep work, as Newport suggests, accelerates learning and academic success through focused, uninterrupted effort."
+            },
+            {
+                "title": "Real-Life Example: Team Innovation",
+                "content": "A design team, led by Omar, struggled with creative output. Using *Deep Work*, Omar implemented no-meeting mornings, allowing uninterrupted design time. The team used rituals like sketching in a quiet room, producing innovative prototypes. This boosted client satisfaction, showing how Newport’s deep work principles foster creativity and high-quality results in collaborative settings."
+            }
+        ],
+        "quiz": [
+            {"question": "What is deep work?", "options": ["Repetitive tasks", "Focused work", "Multitasking", "Shallow tasks"], "correct": 1},
+            {"question": "What does focus provide?", "options": ["Distraction", "Competitive advantage", "Stress", "Inefficiency"], "correct": 1},
+            {"question": "How do you create deep work habits?", "options": ["Increase distractions", "Schedule focus time", "Multitask", "Avoid rituals"], "correct": 1},
+            {"question": "What undermines deep work?", "options": ["Focus", "Distractions", "Rituals", "Balance"], "correct": 1},
+            {"question": "What helps learning in deep work?", "options": ["Distractions", "Deliberate practice", "Multitasking", "Shallow work"], "correct": 1},
+            {"question": "What signals deep work mode?", "options": ["Emails", "Rituals", "Notifications", "Meetings"], "correct": 1},
+            {"question": "How do you balance shallow work?", "options": ["Mix with deep work", "Allocate specific times", "Avoid it", "Prioritize it"], "correct": 1},
+            {"question": "What drives innovation?", "options": ["Distractions", "Deep work", "Shallow work", "Multitasking"], "correct": 1},
+            {"question": "How do you sustain deep work?", "options": ["Inconsistency", "Increase focus time", "Add distractions", "Avoid reflection"], "correct": 1},
+            {"question": "What did Asim schedule?", "options": ["Meetings", "Focus sessions", "Emails", "Social media"], "correct": 1},
+            {"question": "What did Maria improve?", "options": ["Socializing", "Grades", "Distractions", "Multitasking"], "correct": 1},
+            {"question": "What did Omar implement?", "options": ["No-meeting mornings", "More meetings", "Distractions", "Emails"], "correct": 0},
+            {"question": "What reduces cognitive depth?", "options": ["Focus", "Distractions", "Rituals", "Practice"], "correct": 1},
+            {"question": "What did Asim turn off?", "options": ["Focus", "Notifications", "Rituals", "Work"], "correct": 1},
+            {"question": "What accelerates skill mastery?", "options": ["Shallow work", "Deep work", "Distractions", "Multitasking"], "correct": 1},
+            {"question": "What did Maria avoid?", "options": ["Study", "Phone", "Library", "Focus"], "correct": 1},
+            {"question": "What boosts team output?", "options": ["Distractions", "Focus time", "Multitasking", "Emails"], "correct": 1},
+            {"question": "What is a deep work ritual?", "options": ["Notifications", "Quiet workspace", "Emails", "Meetings"], "correct": 1},
+            {"question": "What did Omar’s team produce?", "options": ["Emails", "Prototypes", "Meetings", "Distractions"], "correct": 1},
+            {"question": "What ensures high-quality work?", "options": ["Multitasking", "Deep work", "Shallow work", "Distractions"], "correct": 1}
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Drive: The Surprising Truth About What Motivates Us",
+        "section": "Psychology",
+        "thumbnail": "18a.png",
+        "slides": [
+            {
+                "title": "The Science of Motivation",
+                "content": "In *Drive*, Daniel H. Pink explores what truly motivates people, challenging traditional reward systems. He introduces three intrinsic motivators: autonomy, mastery, and purpose. For example, a software developer motivated by autonomy works better when trusted to choose methods. Pink argues that extrinsic rewards, like bonuses, often reduce motivation for complex tasks. Understanding these drivers enhances performance in workplaces and personal goals, fostering engagement and creativity."
+            },
+            {
+                "title": "The Power of Autonomy",
+                "content": "Autonomy, the desire to control one’s work, boosts motivation. Pink cites examples like Google’s 20% time, where employees work on passion projects, leading to innovations like Gmail. For instance, a teacher given freedom to design lessons engages students better. Autonomy fosters creativity and ownership, unlike micromanagement, which stifles effort. By granting autonomy, leaders create motivated teams, driving success in dynamic environments like startups or education."
+            },
+            {
+                "title": "Mastery as Motivation",
+                "content": "Mastery, the urge to improve skills, drives performance. Pink explains that people thrive when challenged to grow, like a musician practicing to perfect a piece. For example, a marketer learning analytics to improve campaigns feels fulfilled. Mastery requires feedback and achievable challenges. In workplaces, offering training and clear goals fosters mastery, boosting engagement. Pink’s insight shows that pursuing mastery leads to sustained motivation and high-quality results."
+            },
+            {
+                "title": "The Role of Purpose",
+                "content": "Purpose, a sense of contributing to something bigger, is a powerful motivator. Pink cites organizations like TOMS, where employees feel driven by the mission to help others. For instance, a nurse motivated by improving patient lives works harder. Purpose aligns personal and organizational goals, enhancing commitment. In teams, leaders emphasizing purpose, like environmental impact, inspire employees, driving performance and loyalty in meaningful work."
+            },
+            {
+                "title": "Limits of Extrinsic Rewards",
+                "content": "Pink argues that extrinsic rewards, like bonuses, often backfire for creative tasks. Studies show rewards can narrow focus, reducing innovation. For example, a designer motivated only by a bonus may produce uninspired work. Intrinsic motivators like autonomy and mastery outperform rewards in complex roles. In workplaces, shifting to intrinsic motivation enhances creativity and productivity, aligning with Pink’s vision of sustainable performance."
+            },
+            {
+                "title": "Creating Flow",
+                "content": "Flow, a state of deep engagement, occurs when tasks match skill levels. Pink explains that flow enhances motivation, like a coder losing track of time while solving problems. For instance, a writer in flow produces their best work effortlessly. Leaders can foster flow by assigning challenging but achievable tasks. This state drives productivity and satisfaction, making it a key goal for individuals and teams seeking high performance."
+            },
+            {
+                "title": "Motivation in Teams",
+                "content": "Pink’s principles apply to teams, where autonomy, mastery, and purpose boost collaboration. For example, a marketing team given freedom to design campaigns, opportunities to learn, and a clear purpose creates innovative work. In contrast, rigid control demotivates. Leaders fostering these motivators see higher engagement. Pink’s framework shows that motivated teams, aligned with purpose, achieve better results, critical for organizational success."
+            },
+            {
+                "title": "Applying Motivation",
+                "content": "Applying Pink’s motivators requires rethinking systems. For instance, a company offering flexible hours (autonomy), training (mastery), and a mission-driven culture (purpose) sees higher productivity. A teacher allowing students to choose projects fosters engagement. Pink suggests small changes, like feedback over rewards, to enhance motivation. By aligning tasks with intrinsic drivers, individuals and organizations achieve sustained performance and satisfaction."
+            },
+            {
+                "title": "Overcoming Demotivation",
+                "content": "Demotivation often stems from lack of autonomy or purpose. Pink suggests addressing this by empowering individuals and connecting tasks to meaning. For example, a disengaged employee given control over a project and a clear purpose rekindles effort. In schools, letting students choose topics boosts motivation. Pink’s approach helps overcome demotivation, ensuring individuals stay engaged and productive in challenging environments."
+            },
+            {
+                "title": "Long-Term Motivation",
+                "content": "Sustaining motivation requires ongoing focus on autonomy, mastery, and purpose. Pink advises regular reflection on goals and progress. For instance, a professional tracking skill growth stays motivated. Leaders can maintain team motivation by reinforcing purpose and providing growth opportunities. Pink’s framework ensures long-term engagement, helping individuals and organizations thrive by aligning work with intrinsic motivators for lasting success."
+            },
+            {
+                "title": "Real-Life Example: Tech Innovation",
+                "content": "A developer, Sana, felt unmotivated by rigid tasks. Using *Drive*, her manager gave her autonomy to choose projects, training for mastery, and a purpose of improving user lives. Sana created an innovative app feature, boosting company success. Her story shows how Pink’s motivators—autonomy, mastery, purpose—drive creativity and performance in tech, aligning with his vision of intrinsic motivation."
+            },
+            {
+                "title": "Real-Life Example: Classroom Engagement",
+                "content": "A teacher, Ali, noticed disengaged students. Applying *Drive*, he gave students autonomy to choose projects, provided resources for mastery, and tied assignments to real-world impact (purpose). Engagement soared, and students produced creative work. Ali’s success demonstrates how Pink’s motivators enhance learning, fostering motivation and achievement in education through autonomy, mastery, and purpose."
+            },
+            {
+                "title": "Real-Life Example: Team Performance",
+                "content": "A sales team, led by Nadia, struggled with low morale. Using *Drive*, Nadia offered autonomy in sales strategies, training for skill mastery, and a purpose of customer empowerment. The team’s performance improved, exceeding targets. This example shows how Pink’s intrinsic motivators boost team motivation and results, creating a culture of engagement and success in high-pressure roles."
+            }
+        ],
+        "quiz": [
+            {"question": "What are Pink’s three motivators?", "options": ["Money, fame, power", "Autonomy, mastery, purpose", "Rewards, control, tasks", "Goals, bonuses, skills"], "correct": 1},
+            {"question": "What boosts motivation?", "options": ["Micromanagement", "Autonomy", "Rewards", "Control"], "correct": 1},
+            {"question": "What drives mastery?", "options": ["Repetition", "Skill improvement", "Bonuses", "Control"], "correct": 1},
+            {"question": "What is the role of purpose?", "options": ["Narrow focus", "Align goals", "Reduce effort", "Increase control"], "correct": 1},
+            {"question": "What can extrinsic rewards do?", "options": ["Boost creativity", "Reduce motivation", "Enhance flow", "Increase mastery"], "correct": 1},
+            {"question": "What is flow?", "options": ["Distraction", "Deep engagement", "Repetition", "Control"], "correct": 1},
+            {"question": "What enhances team motivation?", "options": ["Control", "Intrinsic motivators", "Bonuses", "Micromanagement"], "correct": 1},
+            {"question": "How do you apply Pink’s motivators?", "options": ["Add rewards", "Empower and train", "Increase control", "Avoid purpose"], "correct": 1},
+            {"question": "What causes demotivation?", "options": ["Autonomy", "Lack of purpose", "Mastery", "Flow"], "correct": 1},
+            {"question": "What sustains motivation?", "options": ["Rewards", "Reflection", "Control", "Repetition"], "correct": 1},
+            {"question": "What did Sana gain?", "options": ["Control", "Autonomy", "Bonuses", "Micromanagement"], "correct": 1},
+            {"question": "What did Ali foster?", "options": ["Disengagement", "Engagement", "Control", "Rewards"], "correct": 1},
+            {"question": "What did Nadia emphasize?", "options": ["Bonuses", "Purpose", "Control", "Repetition"], "correct": 1},
+            {"question": "What reduces creativity?", "options": ["Autonomy", "Extrinsic rewards", "Mastery", "Purpose"], "correct": 1},
+            {"question": "What did Google’s 20% time create?", "options": ["Stress", "Innovations", "Control", "Bonuses"], "correct": 1},
+            {"question": "What aligns tasks with goals?", "options": ["Purpose", "Rewards", "Control", "Repetition"], "correct": 0},
+            {"question": "What did Sana create?", "options": ["Stress", "App feature", "Bonuses", "Control"], "correct": 1},
+            {"question": "What boosts student motivation?", "options": ["Control", "Autonomy", "Rewards", "Micromanagement"], "correct": 1},
+            {"question": "What did Nadia’s team achieve?", "options": ["Low morale", "Higher targets", "Disengagement", "Control"], "correct": 1},
+            {"question": "What creates flow?", "options": ["Distractions", "Skill-task match", "Bonuses", "Control"], "correct": 1}
+        ]
+    },
+    {
+        "id": 19,
+        "title": "The Innovator’s Dilemma",
+        "section": "Business",
+        "thumbnail": "19a.png",
+        "slides": [
+            {
+                "title": "Disruptive Innovation",
+                "content": "In *The Innovator’s Dilemma*, Clayton M. Christensen introduces disruptive innovation, where smaller companies with simpler technologies disrupt established firms. For example, Netflix’s streaming disrupted Blockbuster’s physical rentals. Christensen explains that established firms focus on sustaining innovations for existing customers, missing disruptive trends. This allows new entrants to capture markets. Understanding this helps businesses adapt, ensuring they don’t lose to disruptive competitors in fast-evolving industries."
+            },
+            {
+                "title": "Sustaining vs. Disruptive",
+                "content": "Christensen distinguishes between sustaining innovations, which improve existing products, and disruptive ones, which create new markets. For instance, smartphones disrupted feature phones by offering new capabilities. Established firms excel at sustaining innovations, like faster computers, but struggle with disruptive ones due to focus on current customers. This dilemma explains why giants fail. Businesses must balance both to stay competitive, embracing disruption to avoid obsolescence."
+            },
+            {
+                "title": "The Role of Customers",
+                "content": "Customers drive the innovator’s dilemma. Christensen notes that firms prioritize high-margin, demanding customers, ignoring low-end or new markets. For example, Kodak focused on film photography, missing digital’s rise. Disruptive innovators target overlooked segments, like budget-conscious users, with simpler solutions. By understanding customer needs, firms can explore new markets, ensuring growth and avoiding disruption by competitors targeting niche audiences."
+            },
+            {
+                "title": "Resource Allocation",
+                "content": "Resource allocation fuels the dilemma. Christensen explains that firms allocate resources to high-profit projects, neglecting disruptive innovations with initially low returns. For example, IBM focused on mainframes, missing PCs’ rise. To counter this, firms should invest in small, experimental teams for disruptive projects. This ensures resources support innovation, allowing businesses to capture new markets and stay ahead of competitors."
+            },
+            {
+                "title": "Organizational Structure",
+                "content": "Christensen argues that rigid structures hinder disruption. Large firms prioritize processes for existing markets, not new ones. For instance, a car manufacturer focusing on luxury models may miss electric vehicles. Creating independent units for disruptive projects, like Amazon’s AWS, fosters innovation. Flexible structures allow firms to experiment, ensuring they adapt to disruptive trends and maintain market leadership."
+            },
+            {
+                "title": "Market Disruption",
+                "content": "Disruptive innovations often start in low-end or new markets, then improve to challenge leaders. Christensen cites how mini-mills disrupted steel giants by targeting low-cost rebar. These innovations seem inferior initially but gain traction as they improve. For example, early digital cameras were low-quality but eventually dominated. Businesses must monitor these trends to avoid being overtaken by disruptive competitors."
+            },
+            {
+                "title": "Technology and Innovation",
+                "content": "Technology drives disruption, per Christensen. New technologies, like cloud computing, enable smaller firms to compete with giants. For instance, Dropbox disrupted enterprise storage with simple cloud solutions. Established firms must adopt emerging technologies early, even if unprofitable initially. This proactive approach ensures they stay competitive, leveraging technology to meet evolving customer needs and avoid disruption."
+            },
+            {
+                "title": "Adapting to Disruption",
+                "content": "Adapting to disruption requires proactive strategies. Christensen suggests creating separate units for disruptive projects, like Intel’s low-cost chip division. For example, a retailer launching an e-commerce platform avoids losing to online competitors. Regular market analysis and experimentation help firms stay ahead. By embracing disruption, businesses ensure long-term growth, avoiding the fate of firms like Blockbuster or Kodak."
+            },
+            {
+                "title": "Leadership and Vision",
+                "content": "Leadership is critical in navigating the innovator’s dilemma. Christensen emphasizes that visionary leaders anticipate disruptive trends. For example, Apple’s Steve Jobs embraced the iPhone, disrupting its own iPod. Leaders must foster a culture of experimentation, allocating resources to new ideas. This vision ensures firms stay agile, adapting to market shifts and maintaining competitiveness in dynamic industries."
+            },
+            {
+                "title": "Sustaining Long-Term Growth",
+                "content": "Long-term growth requires balancing sustaining and disruptive innovations. Christensen suggests investing in both to capture new markets while retaining existing ones. For instance, Microsoft balanced Windows with cloud services like Azure. Regular innovation audits and flexible strategies ensure firms evolve. By addressing the innovator’s dilemma, businesses sustain growth, staying relevant in fast-changing markets and avoiding disruption."
+            },
+            {
+                "title": "Real-Life Example: Retail Innovation",
+                "content": "A retailer, ShopEasy, focused on physical stores, ignoring e-commerce. Using *The Innovator’s Dilemma*, they launched a small online unit targeting budget shoppers. This disruptive move gained traction, eventually rivaling giants. ShopEasy’s success shows how Christensen’s principles help businesses adapt to disruption, capturing new markets and ensuring growth through strategic innovation."
+            },
+            {
+                "title": "Real-Life Example: Tech Disruption",
+                "content": "A tech firm, TechTrend, prioritized enterprise software, missing mobile apps’ rise. Applying Christensen’s ideas, they created a separate mobile division, targeting startups with affordable apps. This disruptive innovation gained market share, boosting revenue. TechTrend’s pivot shows how independent units, as Christensen suggests, enable firms to embrace disruption and thrive in competitive tech markets."
+            },
+            {
+                "title": "Real-Life Example: Manufacturing Shift",
+                "content": "A manufacturer, SteelCore, focused on high-end steel, ignoring low-cost alternatives. Using *The Innovator’s Dilemma*, they invested in a mini-mill for budget markets. This disruptive strategy captured new customers, ensuring growth. SteelCore’s success illustrates how Christensen’s principles help firms target overlooked markets, balancing sustaining and disruptive innovations for long-term competitiveness."
+            }
+        ],
+        "quiz": [
+            {"question": "What is disruptive innovation?", "options": ["Improving products", "Creating new markets", "Focusing on profits", "Avoiding change"], "correct": 1},
+            {"question": "What is sustaining innovation?", "options": ["New markets", "Improving existing products", "Low-end focus", "Avoiding customers"], "correct": 1},
+            {"question": "What drives the innovator’s dilemma?", "options": ["Customer focus", "Resource allocation", "New markets", "Innovation"], "correct": 1},
+            {"question": "What hinders disruption?", "options": ["Flexible structures", "Rigid structures", "New markets", "Experiments"], "correct": 1},
+            {"question": "Where do disruptions start?", "options": ["High-end markets", "Low-end markets", "Existing markets", "No markets"], "correct": 1},
+            {"question": "What drives disruption?", "options": ["Old technology", "New technology", "High profits", "Customer focus"], "correct": 1},
+            {"question": "How do firms adapt to disruption?", "options": ["Ignore trends", "Create separate units", "Focus on profits", "Avoid change"], "correct": 1},
+            {"question": "What do visionary leaders do?", "options": ["Avoid risks", "Anticipate trends", "Focus on profits", "Ignore markets"], "correct": 1},
+            {"question": "What ensures long-term growth?", "options": ["Sustaining only", "Balancing innovations", "Avoiding disruption", "High profits"], "correct": 1},
+            {"question": "What did ShopEasy launch?", "options": ["Physical stores", "Online unit", "High-end products", "No change"], "correct": 1},
+            {"question": "What did TechTrend target?", "options": ["Enterprises", "Startups", "High-end markets", "No change"], "correct": 1},
+            {"question": "What did SteelCore invest in?", "options": ["High-end steel", "Mini-mill", "Old technology", "No change"], "correct": 1},
+            {"question": "What did Netflix disrupt?", "options": ["Streaming", "Blockbuster", "Software", "Phones"], "correct": 1},
+            {"question": "What did Kodak miss?", "options": ["Film", "Digital photography", "Cameras", "Printers"], "correct": 1},
+            {"question": "What helps capture new markets?", "options": ["Ignoring customers", "Targeting niches", "High profits", "Old technology"], "correct": 1},
+            {"question": "What did Apple disrupt?", "options": ["Laptops", "iPod", "Desktops", "Tablets"], "correct": 1},
+            {"question": "What do mini-mills target?", "options": ["High-end steel", "Low-cost rebar", "Luxury markets", "No markets"], "correct": 1},
+            {"question": "What fosters innovation?", "options": ["Rigid processes", "Independent units", "High profits", "No change"], "correct": 1},
+            {"question": "What did TechTrend create?", "options": ["Enterprise software", "Mobile apps", "High-end products", "No change"], "correct": 1},
+            {"question": "What ensures competitiveness?", "options": ["Avoiding disruption", "Embracing disruption", "High profits", "Old technology"], "correct": 1}
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Daring Greatly",
+        "section": "Personal Development",
+        "thumbnail": "20a.png",
+        "slides": [
+            {
+                "title": "The Power of Vulnerability",
+                "content": "In *Daring Greatly*, Brené Brown explores vulnerability as a strength, not weakness. Embracing vulnerability—showing authenticity—fosters connection and courage. For example, a leader admitting a mistake builds trust with their team. Brown argues that avoiding vulnerability leads to shame and disconnection. By embracing it, individuals grow personally and professionally, creating stronger relationships and innovative workplaces through openness and authenticity."
+            },
+            {
+                "title": "Shame and Vulnerability",
+                "content": "Brown explains that shame blocks vulnerability, preventing growth. Shame makes people hide flaws, like an employee avoiding feedback for fear of criticism. Vulnerability, however, requires courage to be authentic. For instance, sharing a personal struggle in a team meeting fosters empathy. Brown’s research shows that overcoming shame through openness builds resilience, enabling individuals to connect deeply and thrive in personal and professional settings."
+            },
+            {
+                "title": "The Courage to Be Vulnerable",
+                "content": "Vulnerability requires courage to face uncertainty. Brown cites examples like asking for help, which strengthens relationships. For instance, a student seeking tutoring improves their grades and confidence. Avoiding vulnerability limits growth, as people hide weaknesses. Brown emphasizes that courageous acts, like admitting errors, inspire others. This courage drives personal development and team trust, making vulnerability a cornerstone of success and connection."
+            },
+            {
+                "title": "Building Trust",
+                "content": "Vulnerability fosters trust, per Brown. When leaders share authentically, like discussing challenges openly, teams feel safe to do the same. For example, a manager admitting uncertainty about a project encourages honest input. This builds a culture of trust, enhancing collaboration. Brown’s research shows that trust grows through small, vulnerable acts, like sharing feelings, ensuring stronger relationships in workplaces and personal life."
+            },
+            {
+                "title": "Vulnerability in Leadership",
+                "content": "Brown argues that vulnerable leaders inspire loyalty and innovation. For instance, a CEO sharing their vision’s uncertainties encourages team input, driving creativity. In contrast, invulnerable leaders create fear, stifling ideas. Vulnerability in leadership, like admitting mistakes, fosters a safe environment for risk-taking. Brown’s insights show that authentic leadership builds trust and engagement, critical for successful teams and organizations."
+            },
+            {
+                "title": "Overcoming Perfectionism",
+                "content": "Perfectionism, driven by fear of shame, blocks vulnerability. Brown suggests embracing ‘good enough’ to grow. For example, a writer submitting a draft despite flaws learns from feedback. Perfectionism stalls progress, as people avoid risks. Brown’s research shows that accepting imperfection fosters resilience and creativity. By letting go of perfection, individuals take bold steps, enhancing personal growth and professional success."
+            },
+            {
+                "title": "Vulnerability and Connection",
+                "content": "Vulnerability creates deep connections, per Brown. Sharing authentic emotions, like a parent discussing fears with a child, strengthens bonds. In teams, vulnerability, like admitting a skill gap, fosters collaboration. Brown emphasizes that connection requires openness, not hiding flaws. This approach builds stronger relationships, as people feel seen and valued, driving engagement in personal and professional interactions."
+            },
+            {
+                "title": "The Role of Empathy",
+                "content": "Empathy is key to vulnerability, says Brown. Responding with understanding to someone’s struggles, like a colleague sharing stress, builds trust. For instance, a manager listening without judgment strengthens team morale. Brown’s research shows empathy counters shame, fostering openness. By practicing empathy, individuals create safe spaces for vulnerability, enhancing relationships and collaboration in workplaces and personal life."
+            },
+            {
+                "title": "Vulnerability in Daily Life",
+                "content": "Brown encourages practicing vulnerability daily through small acts, like asking for feedback or sharing emotions. For example, a student admitting confusion in class sparks discussion, enhancing learning. These acts build courage and connection over time. Brown’s framework shows that daily vulnerability fosters resilience, helping individuals grow through authentic interactions in personal and professional settings."
+            },
+            {
+                "title": "Transforming Through Vulnerability",
+                "content": "Vulnerability transforms lives by fostering growth and connection. Brown argues that embracing it leads to courage, creativity, and resilience. For instance, an entrepreneur sharing failures with investors builds trust, securing support. Brown’s research shows that vulnerability drives personal and professional success by creating authentic relationships. By daring greatly, individuals unlock their potential, achieving meaningful growth and impact."
+            },
+            {
+                "title": "Real-Life Example: Team Trust",
+                "content": "A manager, Zain, used *Daring Greatly* to build team trust. By sharing his struggles with a project, he encouraged open dialogue. Team members shared ideas, improving outcomes. Zain’s vulnerability, as Brown suggests, fostered a safe environment, boosting collaboration and innovation, showing how authentic leadership drives team success through openness and trust."
+            },
+            {
+                "title": "Real-Life Example: Personal Growth",
+                "content": "A student, Ayesha, feared judgment in class. Using Brown’s principles, she asked questions despite uncertainty, gaining clarity and confidence. Her vulnerability sparked discussions, enhancing learning. Ayesha’s growth shows how *Daring Greatly* encourages courageous acts, like seeking help, to drive personal development and academic success through openness."
+            },
+            {
+                "title": "Real-Life Example: Leadership Impact",
+                "content": "A CEO, Sara, embraced vulnerability by admitting strategic errors in a meeting. This openness, inspired by *Daring Greatly*, encouraged her team to share ideas, leading to a new product launch. Sara’s leadership shows how Brown’s principles of vulnerability foster innovation and trust, driving organizational success through authentic, courageous leadership."
+            }
+        ],
+        "quiz": [
+            {"question": "What is vulnerability in *Daring Greatly*?", "options": ["Weakness", "Strength", "Avoidance", "Perfection"], "correct": 1},
+            {"question": "What blocks vulnerability?", "options": ["Courage", "Shame", "Trust", "Empathy"], "correct": 1},
+            {"question": "What does vulnerability require?", "options": ["Perfection", "Courage", "Avoidance", "Shame"], "correct": 1},
+            {"question": "What does vulnerability foster?", "options": ["Fear", "Trust", "Isolation", "Perfection"], "correct": 1},
+            {"question": "How do vulnerable leaders inspire?", "options": ["Control", "Innovation", "Fear", "Perfection"], "correct": 1},
+            {"question": "What blocks growth?", "options": ["Vulnerability", "Perfectionism", "Empathy", "Trust"], "correct": 1},
+            {"question": "What does vulnerability create?", "options": ["Disconnection", "Connection", "Shame", "Fear"], "correct": 1},
+            {"question": "What is key to vulnerability?", "options": ["Empathy", "Control", "Perfection", "Avoidance"], "correct": 0},
+            {"question": "How is vulnerability practiced?", "options": ["Avoiding risks", "Small acts", "Perfection", "Isolation"], "correct": 1},
+            {"question": "What does vulnerability transform?", "options": ["Fear", "Lives", "Shame", "Control"], "correct": 1},
+            {"question": "What did Zain build?", "options": ["Fear", "Trust", "Isolation", "Perfection"], "correct": 1},
+            {"question": "What did Ayesha gain?", "options": ["Fear", "Confidence", "Shame", "Avoidance"], "correct": 1},
+            {"question": "What did Sara encourage?", "options": ["Control", "Ideas", "Perfection", "Isolation"], "correct": 1},
+            {"question": "What counters shame?", "options": ["Fear", "Empathy", "Control", "Perfection"], "correct": 1},
+            {"question": "What did Zain’s openness improve?", "options": ["Isolation", "Collaboration", "Fear", "Control"], "correct": 1},
+            {"question": "What fosters resilience?", "options": ["Perfection", "Vulnerability", "Shame", "Avoidance"], "correct": 1},
+            {"question": "What did Ayesha spark?", "options": ["Fear", "Discussion", "Shame", "Isolation"], "correct": 1},
+            {"question": "What drives innovation in leadership?", "options": ["Control", "Vulnerability", "Perfection", "Fear"], "correct": 1},
+            {"question": "What did Sara launch?", "options": ["Failure", "Product", "Fear", "Control"], "correct": 1},
+            {"question": "What builds stronger relationships?", "options": ["Perfection", "Vulnerability", "Shame", "Isolation"], "correct": 1}
+        ]
+    }
+]

@@ -11,9 +11,9 @@ body {
     background: #0a0a0a;
 }
 .page {
-    position: fixed; /* Changed from fixed to relative to allow stacking and scrolling */
+    position: relative; /* Changed from fixed to relative to allow stacking and scrolling */
     width: 100%;
-    min-height: 30vh; /* Changed to min-height to allow content to expand beyond viewport */
+    height: 100vh; /* Changed to min-height to allow content to expand beyond viewport */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;

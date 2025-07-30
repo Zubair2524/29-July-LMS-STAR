@@ -444,31 +444,39 @@
         });
 
         function showQuestion() {
-            if (!currentBook) return;
-            const question = currentBook.quiz[currentQuestion];
-            document.getElementById('quizBookTitle').textContent = currentBook.title;
-            document.getElementById('questionText').textContent = question.question;
-            document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
-            const optionsContainer = document.getElementById('optionsContainer');
-            optionsContainer.innerHTML = '';
-            question.options.forEach((option, index) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerHTML = `
-                    <span class="option-label">${String.fromCharCode(65 + index)}</span>
-                    <span>${option}</span>
-                `;
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                    btn.classList.add('selected');
-                    quizAnswers[currentQuestion] = index;
-                    document.getElementById('nextQuestionBtn').disabled = false;
-                });
-                optionsContainer.appendChild(btn);
-            });
-            document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
-            updateQuizTimer();
-        }
+    if (!currentBook) return;
+    const question = currentBook.quiz[currentQuestion];
+    document.getElementById('quizBookTitle').textContent = currentBook.title;
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
+    question.options.forEach((option, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerHTML = `
+            <span class="option-label">${String.fromCharCode(65 + index)}</span>
+            <span>${option}</span>
+        `;
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            quizAnswers[currentQuestion] = index;
+            // Auto-advance to next question or results
+            setTimeout(() => {
+                if (currentQuestion < currentBook.quiz.length - 1) {
+                    currentQuestion++;
+                    showQuestion();
+                } else {
+                    showResults();
+                }
+            }, 300); // Small delay for user feedback
+        });
+        optionsContainer.appendChild(btn);
+    });
+    document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
+    updateQuizTimer();
+}
 
         function updateQuizTimer() {
             if (!quizStartTime) return;

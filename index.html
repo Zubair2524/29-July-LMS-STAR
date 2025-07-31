@@ -272,37 +272,35 @@
             }
         }
 
-        // Login
-        document.getElementById('loginForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const loginError = document.getElementById('loginError');
-            loginError.style.display = 'none';
-            const username = document.getElementById('loginUsername').value.trim();
-            const password = document.getElementById('loginPassword').value.trim();
-            if (!username || !password) {
-                loginError.textContent = 'Please enter both username and password.';
-                loginError.style.display = 'block';
-                return;
-            }
-            try {
-                const users = JSON.parse(localStorage.getItem('users')) || [];
-                console.log('Users in localStorage:', users); // Debugging
-                const user = users.find(u => u.username === username && u.password === password);
-                if (user) {
-                    currentUser = user;
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                    console.log('Login successful for:', user); // Debugging
-                    showPage('libraryPage');
-                } else {
-                    loginError.textContent = 'Invalid username or password.';
-                    loginError.style.display = 'block';
-                }
-            } catch (error) {
-                console.error('Login error:', error);
-                loginError.textContent = 'An error occurred. Please try again.';
-                loginError.style.display = 'block';
-            }
-        });
+// Login
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const loginError = document.getElementById('loginError');
+    loginError.style.display = 'none';
+    const email = document.getElementById('loginUsername').value.trim(); // Changed from username to email
+    const password = document.getElementById('loginPassword').value.trim();
+    if (!email || !password) {
+        loginError.textContent = 'Please enter both email and password.';
+        loginError.style.display = 'block';
+        return;
+    }
+    try {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(u => u.email === email && u.password === password); // Changed to email
+        if (user) {
+            currentUser = user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            showPage('libraryPage');
+        } else {
+            loginError.textContent = 'Invalid email or password.';
+            loginError.style.display = 'block';
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        loginError.textContent = 'An error occurred. Please try again.';
+        loginError.style.display = 'block';
+    }
+});
 
        // Registration
 document.getElementById('registerForm').addEventListener('submit', (e) => {

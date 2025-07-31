@@ -306,9 +306,11 @@
 
        // Registration
 document.getElementById('registerForm').addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission for initial validation
     const registerError = document.getElementById('registerError');
     registerError.style.display = 'none';
+
+    // Collect registration form data
     const fullName = document.getElementById('regFullName').value.trim();
     const designation = document.getElementById('regDesignation').value.trim();
     const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
@@ -317,41 +319,89 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
     const email = document.getElementById('regEmail').value.trim();
     const password = document.getElementById('regPassword').value.trim();
     const cellNumber = document.getElementById('regCellNumber').value.trim();
+
+    // Validate registration fields
     if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
         registerError.textContent = 'Please fill in all fields.';
         registerError.style.display = 'block';
         return;
     }
-    try {
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        if (users.some(u => u.username === email)) { // Using email as username
-            registerError.textContent = 'Email already exists.';
+
+    // Populate scorecard data (updated dynamically after quiz)
+    document.getElementById('regBook').value = currentBook ? currentBook.title : '';
+    document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
+    document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
+    document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+    document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+
+    // Submit form data to Google Apps Script
+    const form = document.getElementById('registerForm');
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            console.log('Registration successful, row:', data.row);
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const newUser = { 
+                fullName, 
+                designation, 
+                teamDepartment, 
+                baseCity, 
+                date, 
+                email, 
+                password, 
+                cellNumber, 
+                completedBooks: []
+            };
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            currentUser = newUser;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            showPage('libraryPage');
+        } else {
+            registerError.textContent = `Error during registration: ${data.error}`;
             registerError.style.display = 'block';
-            return;
         }
-        const newUser = { 
-            fullName, 
-            designation, 
-            teamDepartment, 
-            baseCity, 
-            date, 
-            email, 
-            password, 
-            cellNumber, 
-            completedBooks: [] 
-        };
-        users.push(newUser);
-        localStorage.setItem('users', JSON.stringify(users));
-        currentUser = newUser;
-        localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        console.log('Registration successful for:', newUser); // Debugging
-        showPage('libraryPage');
-    } catch (error) {
-        console.error('Registration error:', error);
+    })
+    .catch(error => {
+        console.error('Error:', error);
         registerError.textContent = 'An error occurred. Please try again.';
         registerError.style.display = 'block';
-    }
+    });
 });
+
+// Update scorecard data after quiz completion
+function showResults() {
+    const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
+    const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+    const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+    document.getElementById('certificateBookTitle').textContent = currentBook.title;
+    document.getElementById('certificateStudentName').textContent = `${currentUser.fullName}`;
+    document.getElementById('certificateBookName').textContent = currentBook.title;
+    document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
+    document.getElementById('finalPercentage').textContent = `${percentage}%`;
+    document.getElementById('finalGrade').textContent = grade;
+    document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
+    document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
+        'Congratulations on your outstanding performance! Keep shining!' : 
+        'Great effort! Review your answers and try again to improve!';
+    showPage('resultsPage');
+    updateUserProgress(score, percentage, grade);
+
+    // Update hidden fields for potential resubmission
+    if (document.getElementById('regBook')) {
+        document.getElementById('regBook').value = currentBook.title;
+        document.getElementById('regScore').value = `${score} / ${currentBook.quiz.length}`;
+        document.getElementById('regGrade').value = grade;
+        document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+        document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+    }
+}
         // Page Toggles
         document.getElementById('showRegister').addEventListener('click', (e) => {
             e.preventDefault();

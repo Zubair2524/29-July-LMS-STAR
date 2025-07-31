@@ -165,84 +165,84 @@
     },
     {
         "id": 14,
-        "title": "The 7 Habits of Highly Effective People",
-        "section": "Personal Development",
+        "title": "Influence: The Psychology of Persuasion",
+        "section": "Psychology",
         "thumbnail": "14a.png",
         "slides": [
             {
-                "title": "Be Proactive",
-                "content": "In *The 7 Habits of Highly Effective People*, Stephen R. Covey’s first habit is to be proactive. This means taking responsibility for your life and actions, focusing on what you can control. For example, a proactive employee addresses a project delay by proposing solutions, not blaming others. Covey emphasizes choosing responses based on values, not emotions. This habit builds initiative, as proactive people anticipate challenges and act. In contrast, reactive people let circumstances dictate their behavior, leading to stress and inefficiency."
+                "title": "The Art of Persuasion",
+                "content": "In *Influence*, Robert Cialdini explores six principles of persuasion: reciprocity, commitment, social proof, liking, authority, and scarcity. These shape decisions, like a customer buying due to a free sample (reciprocity). Understanding these principles helps individuals persuade ethically in business or personal life. For example, a marketer using social proof boosts sales. Cialdini’s framework enhances communication, ensuring effective influence in negotiations, marketing, or leadership."
             },
             {
-                "title": "Begin with the End in Mind",
-                "content": "Covey’s second habit is to begin with the end in mind, meaning to set clear goals based on your principles. For instance, a student envisioning a medical career plans their studies accordingly. This habit ensures actions align with long-term objectives, avoiding distractions. Covey suggests visualizing outcomes, like a successful business, to guide decisions. Without this focus, efforts scatter, reducing effectiveness. By defining your vision, you create a roadmap for personal and professional success, ensuring purposeful action."
+                "title": "Reciprocity",
+                "content": "Reciprocity drives people to repay favors, says Cialdini. For instance, a waiter giving free mints often gets bigger tips. This principle creates obligation, making persuasion easier. In workplaces, offering help, like mentoring a colleague, fosters cooperation. Cialdini’s insight shows that giving first builds trust and influence, ensuring better outcomes in relationships or sales."
             },
             {
-                "title": "Put First Things First",
-                "content": "The third habit, put first things first, is about prioritizing important tasks over urgent ones. Covey’s time management matrix helps focus on high-impact activities, like planning, over distractions, like emails. For example, a manager prioritizing team training over minor tasks boosts performance. This habit requires discipline to say no to less critical demands. By focusing on what matters, you achieve goals efficiently, reducing stress and increasing effectiveness in work and life."
+                "title": "Commitment and Consistency",
+                "content": "People strive for consistency with past actions, per Cialdini. For example, signing a petition makes someone likely to donate later. Commitment, even small, like agreeing to a trial, locks in behavior. In teams, public goals increase follow-through. Cialdini’s principle helps leaders secure buy-in, ensuring consistent action in projects or personal goals through early commitments."
             },
             {
-                "title": "Think Win-Win",
-                "content": "Covey’s fourth habit, think win-win, seeks mutually beneficial solutions in relationships. For example, a salesperson negotiates a deal that satisfies both client and company, fostering trust. This mindset avoids zero-sum thinking, promoting collaboration. In teams, win-win solutions, like shared project goals, enhance cooperation. Covey emphasizes empathy and creativity to find solutions where all parties gain, building stronger relationships and ensuring long-term success in negotiations and partnerships."
+                "title": "Social Proof",
+                "content": "Social proof influences behavior when people follow others’ actions, says Cialdini. For instance, online reviews drive purchases. In workplaces, showcasing team successes encourages effort. Cialdini notes that social proof is stronger in uncertain situations, like choosing a restaurant based on crowds. This principle helps marketers or leaders persuade by highlighting popular choices or behaviors."
             },
             {
-                "title": "Seek First to Understand",
-                "content": "The fifth habit, seek first to understand, then to be understood, emphasizes empathetic listening. Covey suggests listening to others’ perspectives before responding, like a doctor understanding a patient’s concerns before diagnosing. This builds trust and clarity in communication. For instance, a manager listening to an employee’s challenges before offering solutions fosters respect. This habit ensures effective communication, reducing misunderstandings and strengthening relationships in personal and professional settings."
+                "title": "Liking",
+                "content": "People are persuaded by those they like, per Cialdini. Similarity, like shared interests, or compliments build rapport. For example, a salesperson bonding over hobbies closes deals faster. In teams, likable leaders foster loyalty. Cialdini’s insight shows that building relationships through genuine connection enhances persuasion, improving outcomes in negotiations or leadership."
             },
             {
-                "title": "Synergize",
-                "content": "Covey’s sixth habit, synergize, is about creating results greater than the sum of individual efforts. For example, a diverse team brainstorming a project generates innovative ideas through collaboration. Synergy requires valuing differences and building on others’ strengths. In contrast, working alone limits outcomes. Covey emphasizes that synergy in teams, like combining marketing and tech expertise, drives creativity and success, making it essential for effective teamwork and organizational growth."
+                "title": "Authority",
+                "content": "Authority influences compliance, says Cialdini. People trust experts, like a doctor’s advice driving patient action. For instance, a manager with credentials gains team respect. Symbols, like titles or uniforms, amplify authority. Cialdini’s principle helps leaders or marketers persuade by establishing expertise, ensuring trust and action in professional or personal settings."
             },
             {
-                "title": "Sharpen the Saw",
-                "content": "The seventh habit, sharpen the saw, focuses on self-renewal in physical, mental, emotional, and spiritual areas. Covey suggests regular exercise, learning, and reflection to maintain effectiveness. For instance, a professional taking time to read or meditate stays sharp. Neglecting self-care leads to burnout. By investing in yourself, like taking a course or exercising, you sustain energy and focus, ensuring long-term success in personal and professional life."
+                "title": "Scarcity",
+                "content": "Scarcity makes things more desirable, per Cialdini. Limited offers, like ‘only 3 left,’ drive purchases. For example, a retailer using countdown timers boosts sales. In workplaces, exclusive opportunities motivate employees. Cialdini’s insight shows that highlighting scarcity persuades action, ensuring quick decisions in marketing, negotiations, or team management."
             },
             {
-                "title": "Personal Leadership",
-                "content": "Covey’s habits 1–3 focus on personal leadership, building independence. Being proactive, setting goals, and prioritizing tasks create a foundation for self-mastery. For example, a freelancer managing their schedule and goals independently thrives. These habits ensure you control your actions and align them with your vision. Without personal leadership, external pressures derail progress. Covey’s framework helps individuals take charge of their lives, fostering discipline and purpose for sustained success."
+                "title": "Ethical Persuasion",
+                "content": "Cialdini emphasizes ethical persuasion to build trust. Manipulative tactics, like fake scarcity, harm credibility. For instance, an honest limited-time offer persuades without deceit. In teams, transparent communication fosters cooperation. Cialdini’s approach ensures persuasion is sustainable, enhancing relationships and outcomes in business or personal interactions through integrity."
             },
             {
-                "title": "Interpersonal Leadership",
-                "content": "Habits 4–6, think win-win, seek first to understand, and synergize, focus on interdependent relationships. Covey emphasizes collaboration over competition. For instance, a team leader fostering win-win solutions and listening to ideas creates synergy, boosting results. These habits build trust and cooperation, essential for teamwork. Without them, conflicts arise, reducing effectiveness. By mastering interpersonal leadership, you create strong, collaborative relationships, driving success in teams and organizations."
+                "title": "Applying Influence",
+                "content": "Applying Cialdini’s principles involves strategic use of persuasion. For example, a fundraiser offering small gifts (reciprocity) and testimonials (social proof) boosts donations. In workplaces, leaders use authority and liking to inspire teams. Cialdini’s framework helps craft persuasive messages, ensuring success in sales, leadership, or negotiations by aligning with human psychology."
             },
             {
-                "title": "Continuous Improvement",
-                "content": "Covey’s habits emphasize continuous improvement through consistent practice. Sharpening the saw ensures long-term growth, while proactive habits and synergy drive progress. For example, a company adopting these habits in its culture sees improved morale and innovation. Covey stresses that small, daily actions compound, leading to significant results. By committing to these habits, individuals and organizations achieve sustained success, adapting to challenges and thriving in dynamic environments."
+                "title": "Avoiding Manipulation",
+                "content": "Cialdini warns against manipulation, like resisting fake scarcity tactics. For instance, a consumer spotting false ‘limited stock’ claims avoids bad purchases. In workplaces, recognizing manipulative tactics, like forced commitments, protects teams. Cialdini’s insight helps individuals make informed decisions, ensuring persuasion is ethical and effective in personal or professional contexts."
             },
             {
-                "title": "Real-Life Example: Project Management",
-                "content": "A project manager, Nadia, used Covey’s habits to lead a team. She was proactive (Habit 1) in addressing delays, began with the end in mind (Habit 2) by setting clear goals, and prioritized tasks (Habit 3). She negotiated win-win contracts (Habit 4), listened to team concerns (Habit 5), and fostered synergy (Habit 6). By sharpening the saw (Habit 7) through training, she delivered the project successfully, showing how Covey’s habits drive effective leadership."
+                "title": "Real-Life Example: Sales Success",
+                "content": "A salesperson, Maya, used *Influence* to boost sales. She offered samples (reciprocity), shared customer reviews (social proof), and built rapport (liking). Her ethical approach increased conversions. Maya’s success shows how Cialdini’s principles drive sales through strategic, trustworthy persuasion, ensuring customer loyalty and business growth."
             },
             {
-                "title": "Real-Life Example: Student Success",
-                "content": "A student, Bilal, applied Covey’s habits to improve grades. He was proactive (Habit 1) in studying daily, set a goal to graduate with honors (Habit 2), and prioritized study time (Habit 3). He collaborated with peers for win-win study groups (Habit 4), listened to feedback (Habit 5), and synergized with classmates (Habit 6). By exercising and reflecting (Habit 7), Bilal excelled, showing how Covey’s habits lead to academic success."
+                "title": "Real-Life Example: Team Leadership",
+                "content": "A manager, Arif, applied *Influence* to lead his team. He shared expertise (authority), encouraged public commitments to goals (consistency), and used team successes (social proof). This boosted performance. Arif’s story shows how Cialdini’s principles enhance leadership, fostering cooperation and success through persuasive strategies."
             },
             {
-                "title": "Real-Life Example: Team Collaboration",
-                "content": "A marketing team, led by Sara, used Covey’s habits to launch a campaign. They proactively planned (Habit 1), set a clear goal (Habit 2), and prioritized tasks (Habit 3). Sara fostered win-win partnerships with vendors (Habit 4), listened to client feedback (Habit 5), and created synergy through brainstorming (Habit 6). By learning new skills (Habit 7), the team launched a successful campaign, showing how Covey’s habits enhance collaboration and results."
+                "title": "Real-Life Example: Marketing Campaign",
+                "content": "A marketer, Sana, used *Influence* for a campaign. She offered limited-time discounts (scarcity), highlighted customer testimonials (social proof), and built brand rapport (liking). Sales soared. Sana’s success demonstrates how Cialdini’s principles drive marketing success through ethical persuasion, creating customer trust and engagement."
             }
         ],
         "quiz": [
-            {"question": "What is the first habit?", "options": ["Begin with the End", "Be Proactive", "Think Win-Win", "Synergize"], "correct": 1},
-            {"question": "What does Habit 2 emphasize?", "options": ["Prioritizing tasks", "Setting goals", "Listening", "Collaboration"], "correct": 1},
-            {"question": "What is Habit 3 about?", "options": ["Empathy", "Prioritization", "Synergy", "Proactivity"], "correct": 1},
-            {"question": "What does think win-win seek?", "options": ["Competition", "Mutual benefit", "Personal gain", "Avoidance"], "correct": 1},
-            {"question": "What is Habit 5?", "options": ["Synergize", "Listen first", "Be proactive", "Set goals"], "correct": 1},
-            {"question": "What creates synergy?", "options": ["Competition", "Collaboration", "Isolation", "Proactivity"], "correct": 1},
-            {"question": "What is sharpen the saw?", "options": ["Self-renewal", "Goal setting", "Listening", "Prioritizing"], "correct": 0},
-            {"question": "What do Habits 1–3 focus on?", "options": ["Teamwork", "Personal leadership", "Collaboration", "Empathy"], "correct": 1},
-            {"question": "What do Habits 4–6 emphasize?", "options": ["Independence", "Interdependence", "Proactivity", "Self-renewal"], "correct": 1},
-            {"question": "What drives continuous improvement?", "options": ["Habits", "Competition", "Avoidance", "Isolation"], "correct": 0},
-            {"question": "What did Nadia do proactively?", "options": ["Ignored delays", "Addressed delays", "Set goals", "Listened"], "correct": 1},
-            {"question": "What did Bilal prioritize?", "options": ["Socializing", "Study time", "Sports", "Avoidance"], "correct": 1},
-            {"question": "What did Sara foster?", "options": ["Competition", "Partnerships", "Isolation", "Delays"], "correct": 1},
-            {"question": "What is the time management matrix?", "options": ["Goal setting", "Prioritization tool", "Listening tool", "Synergy"], "correct": 1},
-            {"question": "What builds trust in Habit 5?", "options": ["Ignoring others", "Empathetic listening", "Competition", "Proactivity"], "correct": 1},
-            {"question": "What did Covey suggest for self-care?", "options": ["Avoidance", "Sharpen the saw", "Win-win", "Synergy"], "correct": 1},
-            {"question": "What did Bilal form?", "options": ["Study groups", "Sports teams", "Social clubs", "Solo work"], "correct": 0},
-            {"question": "What enhances team results?", "options": ["Isolation", "Synergy", "Competition", "Avoidance"], "correct": 1},
-            {"question": "What did Nadia deliver?", "options": ["Failure", "Project success", "Delays", "Competition"], "correct": 1},
-            {"question": "What ensures effectiveness?", "options": ["Reactive behavior", "Proactive behavior", "Avoidance", "Competition"], "correct": 1}
+            {"question": "What is reciprocity?", "options": ["Ignoring favors", "Repaying favors", "No trust", "Competition"], "correct": 1},
+            {"question": "What drives consistency?", "options": ["No commitment", "Past actions", "No trust", "Scarcity"], "correct": 1},
+            {"question": "What is social proof?", "options": ["Following others", "Ignoring crowds", "No trust", "Authority"], "correct": 0},
+            {"question": "What enhances persuasion?", "options": ["Disliking", "Liking", "No trust", "Scarcity"], "correct": 1},
+            {"question": "What drives compliance?", "options": ["No expertise", "Authority", "No trust", "Competition"], "correct": 1},
+            {"question": "What makes things desirable?", "options": ["Abundance", "Scarcity", "No trust", "Disliking"], "correct": 1},
+            {"question": "What builds trust?", "options": ["Manipulation", "Ethical persuasion", "No trust", "Competition"], "correct": 1},
+            {"question": "What did Maya offer?", "options": ["No samples", "Samples", "No trust", "Competition"], "correct": 1},
+            {"question": "What did Arif share?", "options": ["No expertise", "Expertise", "No trust", "Competition"], "correct": 1},
+            {"question": "What did Sana use?", "options": ["No discounts", "Discounts", "No trust", "Competition"], "correct": 1},
+            {"question": "What boosts sales?", "options": ["No reviews", "Reviews", "No trust", "Disliking"], "correct": 1},
+            {"question": "What ensures cooperation?", "options": ["No help", "Helping", "No trust", "Competition"], "correct": 1},
+            {"question": "What did Maya increase?", "options": ["No sales", "Conversions", "No trust", "Competition"], "correct": 1},
+            {"question": "What fosters loyalty?", "options": ["Manipulation", "Liking", "No trust", "Competition"], "correct": 1},
+            {"question": "What did Arif boost?", "options": ["No performance", "Performance", "No trust", "Competition"], "correct": 1},
+            {"question": "What drives quick decisions?", "options": ["Abundance", "Scarcity", "No trust", "Disliking"], "correct": 1},
+            {"question": "What did Sana boost?", "options": ["No sales", "Sales", "No trust", "Competition"], "correct": 1},
+            {"question": "What ensures ethical persuasion?", "options": ["Manipulation", "Transparency", "No trust", "Competition"], "correct": 1},
+            {"question": "What builds rapport?", "options": ["Disliking", "Similarity", "No trust", "Competition"], "correct": 1},
+            {"question": "What drives action?", "options": ["No expertise", "Authority", "No trust", "Disliking"], "correct": 1}
         ]
     },
     {

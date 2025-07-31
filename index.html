@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STAR Learning Management System</title>
+    <title>STAR-Shaigan's Learning Portal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +16,7 @@
         </div>
         <div class="login-container glass-container">
             <div class="logo-section">
-                <h1 class="star-text">STAR</h1>
+                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
                 <span class="subtitle">Study, Track, Achieve, Repeat</span>
             </div>
             <form id="loginForm">
@@ -43,7 +43,7 @@
         </div>
         <div class="registration-container glass-container">
             <div class="logo-section">
-                <h1 class="star-text">STAR</h1>
+                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
                 <span class="subtitle">Study, Track, Achieve, Repeat</span>
             </div>
             <form id="registerForm" class="registration-form">
@@ -80,7 +80,7 @@
         </div>
         <div class="glass-header">
             <div class="header-content">
-                <div class="logo">STAR</div>
+                <div class="logo">STAR-Shaigan's Learning Portal</div>
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
                     <input type="text" id="searchInput" placeholder="Search books...">
@@ -612,7 +612,7 @@
             doc.text(`Percentage: ${percentage}%`, 50, 180);
             doc.text(`Grade: ${grade}`, 50, 190);
             doc.text(`Completion Date: ${new Date().toLocaleDateString()}`, 50, 200);
-            doc.text('Issued by: STAR Learning Management System', 50, 230);
+            doc.text('Issued by: STAR-Shaigan\'s Learning Portal', 50, 230);
             doc.text('Instructor: Self-Paced Learning', 50, 240);
             doc.save(`${currentUser.firstName}_${currentUser.lastName}_${currentBook.title}_Certificate.pdf`);
         });

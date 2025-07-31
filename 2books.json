@@ -84,84 +84,84 @@
     {
 
         "id": 7,
-        "title": "Deep Work",
-        "section": "Productivity",
+        "title": "The E-Myth Revisited",
+        "section": "Business",
         "thumbnail": "7a.png",
         "slides": [
             {
-                "title": "What is Deep Work?",
-                "content": "In 'Deep Work,' Cal Newport defines deep work as focused, uninterrupted work on cognitively demanding tasks. It produces high-value results, like writing a novel or solving complex problems. In contrast, shallow work—emails or meetings—offers less value. For example, a programmer debugging code in a distraction-free environment achieves deep work. Newport argues that deep work is rare but essential in today’s distracted world, enabling professionals to excel by producing meaningful, high-quality output in less time."
+                "title": "The Entrepreneurial Myth",
+                "content": "In *The E-Myth Revisited*, Michael E. Gerber debunks the myth that entrepreneurs are just skilled workers starting businesses. Most fail because they work *in* the business, not *on* it. For example, a baker opening a shop must focus on systems, not just baking. Gerber’s framework helps build scalable businesses by emphasizing strategy and processes over technical skills."
             },
             {
-                "title": "The Value of Deep Work",
-                "content": "Deep work creates significant value by allowing mastery of complex skills. Newport explains that focused effort leads to breakthroughs, like a scientist solving a research problem. In contrast, multitasking reduces productivity. For instance, writing a report without distractions yields better results than checking emails simultaneously. Deep work fosters innovation and expertise, giving individuals a competitive edge. By prioritizing depth, professionals can achieve more in less time, enhancing career growth and personal satisfaction."
+                "title": "Three Roles in Business",
+                "content": "Gerber identifies three roles: entrepreneur (visionary), manager (organizer), and technician (doer). Most owners are technicians, like a chef cooking daily, neglecting vision or systems. Balancing these roles, like planning growth (entrepreneur) and organizing tasks (manager), ensures success. Gerber’s insight helps owners shift focus to strategy, building sustainable businesses that don’t rely on them alone."
             },
             {
-                "title": "Distraction’s Cost",
-                "content": "Distractions undermine deep work. Newport highlights that constant notifications fragment attention, reducing cognitive capacity. For example, checking social media every 10 minutes disrupts focus on a project. This leads to shallow output and stress. Newport suggests minimizing distractions, like turning off notifications or setting specific work hours. By protecting focus, individuals can engage in deep work, producing higher-quality results and feeling more accomplished in their professional and personal endeavors."
+                "title": "Working on the Business",
+                "content": "Working *on* the business, not *in* it, is key, says Gerber. For instance, a retailer creating systems for inventory (on) rather than restocking shelves (in) scales efficiently. This shift allows delegation and growth. Gerber’s approach helps entrepreneurs focus on strategy, ensuring businesses run smoothly without constant owner involvement."
             },
             {
-                "title": "Creating Deep Work Habits",
-                "content": "Building deep work habits requires intentional routines. Newport suggests scheduling uninterrupted blocks, like 90-minute sessions, for high-priority tasks. For example, a writer might reserve mornings for drafting without internet access. Rituals, like a specific workspace, signal focus time. Consistency strengthens the habit, making deep work natural. By creating these routines, individuals can maximize productivity, tackle complex challenges, and achieve meaningful progress in their goals."
+                "title": "Systems for Success",
+                "content": "Systems are the backbone of scalable businesses, per Gerber. Documented processes, like a restaurant’s recipe manuals, ensure consistency. For example, a startup with clear hiring systems grows smoothly. Gerber emphasizes systemizing tasks to reduce dependency on individuals. This approach drives efficiency, enabling businesses to scale and succeed long-term."
             },
             {
-                "title": "Time Blocking",
-                "content": "Time blocking is a key deep work strategy. Newport advocates assigning specific times for tasks to avoid multitasking. For instance, a manager might block 9-11 AM for strategic planning. This ensures focused effort without interruptions. Time blocking also helps prioritize high-value tasks over urgent but less important ones, like emails. By structuring your day, you create space for deep work, leading to better outcomes in projects and personal growth."
+                "title": "The Franchise Model",
+                "content": "Gerber advocates a franchise-like model, even for small businesses. Standardized processes, like McDonald’s consistent operations, ensure reliability. For instance, a coffee shop with uniform service scales better. Gerber’s model helps businesses create predictable experiences, attracting customers and enabling growth without sacrificing quality or brand identity."
             },
             {
-                "title": "Managing Distractions",
-                "content": "Managing distractions is critical for deep work. Newport suggests physical and digital barriers, like working in a quiet room or using website blockers. For example, a student studying for exams might use an app to block social media. Newport also recommends setting expectations, like informing colleagues of focus hours. This creates an environment conducive to deep work, allowing individuals to dive into complex tasks without constant interruptions, boosting productivity and quality."
+                "title": "Vision and Strategy",
+                "content": "A clear vision guides businesses, says Gerber. For example, a tech startup with a mission to simplify communication aligns strategies accordingly. Without vision, businesses drift. Gerber suggests defining goals early to focus efforts. This ensures entrepreneurs build purposeful businesses, driving success through strategic planning and long-term focus."
             },
             {
-                "title": "Deep Work and Learning",
-                "content": "Deep work accelerates learning complex skills. Newport explains that focused practice, like studying a new language without distractions, leads to mastery. For example, a musician practicing scales in a quiet room improves faster than one distracted by TV. Deep work allows deliberate practice, strengthening neural connections. This approach benefits professionals learning new tools or students mastering subjects, ensuring faster skill acquisition and deeper understanding over time."
+                "title": "Hiring and Delegation",
+                "content": "Effective hiring and delegation are critical, per Gerber. Owners must hire for systems, not just skills. For instance, a store hiring staff to follow processes scales better than relying on experts. Delegation frees owners to focus on strategy. Gerber’s approach ensures businesses grow efficiently, reducing owner burnout and fostering sustainability."
             },
             {
-                "title": "The Role of Rest",
-                "content": "Rest is essential for deep work. Newport argues that downtime restores cognitive energy, enabling sustained focus. For example, taking a walk after a deep work session boosts creativity. Overworking leads to burnout, reducing effectiveness. Newport suggests balancing intense focus with deliberate rest, like short naps or hobbies. This rhythm ensures long-term productivity, allowing individuals to maintain deep work habits without exhaustion, leading to consistent high-quality output."
+                "title": "Customer Experience",
+                "content": "Consistent customer experience drives loyalty, says Gerber. Systems ensure uniformity, like a hotel’s check-in process. For example, a bakery with standardized service retains customers. Gerber emphasizes designing experiences that reflect the brand. This approach builds trust and repeat business, ensuring long-term success in competitive markets."
             },
             {
-                "title": "Deep Work in Teams",
-                "content": "Deep work can apply to teams. Newport suggests creating distraction-free zones, like quiet meeting rooms, for collaborative tasks. For example, a design team brainstorming without phones produces better ideas. Leaders can foster deep work by scheduling uninterrupted project time and minimizing unnecessary meetings. This creates a culture of focus, enhancing team output and innovation. Deep work in teams ensures collective goals are met with high-quality results."
+                "title": "Scaling Sustainably",
+                "content": "Sustainable scaling requires systems and strategy, per Gerber. For instance, a tech firm with automated workflows grows without chaos. Owners must plan for growth, not just react. Gerber’s framework ensures businesses scale smoothly, maintaining quality and efficiency through documented processes and a clear vision for the future."
             },
             {
-                "title": "Sustaining Deep Work",
-                "content": "Sustaining deep work requires long-term commitment. Newport advises regularly evaluating progress and adjusting routines. For instance, a writer might review weekly output to optimize focus time. Building a deep work mindset involves embracing discomfort, as complex tasks are challenging. Over time, this discipline becomes rewarding, as individuals see significant results. Sustaining deep work leads to career advancement and personal fulfillment by consistently producing exceptional work."
+                "title": "Avoiding Burnout",
+                "content": "Burnout occurs when owners work *in* the business, says Gerber. For example, a designer doing all tasks risks exhaustion. Systems and delegation, like hiring assistants, prevent this. Gerber’s approach helps entrepreneurs focus on strategy, ensuring personal well-being and business success through balanced roles and scalable processes."
             },
             {
-                "title": "Real-Life Example: Coding Mastery",
-                "content": "John, a programmer, struggled with coding complex algorithms due to constant notifications. Using Newport’s deep work principles, he scheduled 90-minute distraction-free sessions each morning. He turned off his phone and used a website blocker. This allowed him to focus deeply, improving his coding skills. Within months, he delivered a major project, earning a promotion. John’s story shows how deep work habits can transform professional performance by enabling focused skill development."
+                "title": "Real-Life Example: Bakery Growth",
+                "content": "A baker, Emma, struggled with her shop’s chaos. Using *The E-Myth Revisited*, she created systems for recipes and hiring, delegated tasks, and focused on strategy. Her bakery scaled to multiple locations. Emma’s success shows how Gerber’s principles build scalable businesses through systems and strategic focus."
             },
             {
-                "title": "Real-Life Example: Academic Success",
-                "content": "Emma, a student, faced poor grades due to multitasking. Applying deep work, she blocked two hours daily for studying in a quiet library, using no devices. This focused effort helped her master complex subjects like calculus. Her grades improved significantly, and she felt more confident. Emma’s example illustrates how time blocking and distraction management can lead to academic success, enabling students to achieve deeper understanding and better results."
+                "title": "Real-Life Example: Tech Startup",
+                "content": "A tech founder, Raj, was overwhelmed by daily tasks. Applying *The E-Myth Revisited*, he built automated workflows, hired for systems, and set a clear vision. His startup grew rapidly. Raj’s story demonstrates how Gerber’s framework ensures scalability through processes and strategic planning, not just technical work."
             },
             {
-                "title": "Real-Life Example: Team Innovation",
-                "content": "A marketing team, led by Sarah, struggled with creative campaigns due to frequent interruptions. Using Newport’s ideas, Sarah introduced ‘focus Fridays,’ where the team worked in a distraction-free room without emails. This led to innovative campaign ideas that boosted sales. By fostering a deep work culture, Sarah’s team achieved better collaboration and creativity, showing how collective focus enhances team performance and drives business success."
+                "title": "Real-Life Example: Retail Success",
+                "content": "A retailer, Sana, used *The E-Myth Revisited* to standardize operations. She created systems for inventory and customer service, delegated tasks, and focused on growth strategy. Her store expanded successfully. Sana’s journey shows how Gerber’s principles drive retail success through consistent systems and a franchise-like approach."
             }
         ],
         "quiz": [
-            {"question": "What is deep work?", "options": ["Multitasking", "Focused work", "Shallow work", "Meetings"], "correct": 1},
-            {"question": "What reduces deep work?", "options": ["Focus", "Distractions", "Rest", "Time blocking"], "correct": 1},
-            {"question": "What is the benefit of deep work?", "options": ["Stress", "High-value results", "Multitasking", "Shallow output"], "correct": 1},
-            {"question": "What is time blocking?", "options": ["Random tasks", "Scheduled tasks", "Multitasking", "Ignoring tasks"], "correct": 1},
-            {"question": "How do you manage distractions?", "options": ["Add notifications", "Use blockers", "Check emails", "Multitask"], "correct": 1},
-            {"question": "What helps learning in deep work?", "options": ["Distractions", "Focused practice", "Shallow work", "Meetings"], "correct": 1},
-            {"question": "Why is rest important?", "options": ["Causes burnout", "Restores energy", "Reduces focus", "Increases stress"], "correct": 1},
-            {"question": "How can teams apply deep work?", "options": ["More meetings", "Distraction-free zones", "Multitasking", "Emails"], "correct": 1},
-            {"question": "What sustains deep work?", "options": ["Inconsistency", "Discipline", "Distractions", "Overworking"], "correct": 1},
-            {"question": "What did John improve?", "options": ["Emails", "Coding skills", "Meetings", "Social media"], "correct": 1},
-            {"question": "What did Emma block time for?", "options": ["Social media", "Studying", "TV", "Emails"], "correct": 1},
-            {"question": "What did Sarah introduce?", "options": ["Focus Fridays", "More meetings", "Emails", "Distractions"], "correct": 0},
-            {"question": "What reduces cognitive capacity?", "options": ["Focus", "Notifications", "Rest", "Time blocking"], "correct": 1},
-            {"question": "What signals focus time?", "options": ["Notifications", "Rituals", "Emails", "Multitasking"], "correct": 1},
-            {"question": "What did John use to block distractions?", "options": ["Phone", "Website blocker", "Emails", "TV"], "correct": 1},
-            {"question": "What boosts team innovation?", "options": ["Meetings", "Focus", "Distractions", "Emails"], "correct": 1},
-            {"question": "What did Emma achieve?", "options": ["Poor grades", "Better grades", "More distractions", "Less confidence"], "correct": 1},
-            {"question": "What is shallow work?", "options": ["High-value tasks", "Emails and meetings", "Focused work", "Complex tasks"], "correct": 1},
-            {"question": "What helps master skills?", "options": ["Multitasking", "Deep work", "Distractions", "Shallow work"], "correct": 1},
-            {"question": "What did Sarah’s team improve?", "options": ["Emails", "Campaigns", "Meetings", "Social media"], "correct": 1}
+            {"question": "What is the entrepreneurial myth?", "options": ["Skilled workers succeed", "Entrepreneurs are technicians", "Systems don’t matter", "Vision is enough"], "correct": 0},
+            {"question": "What are the three roles?", "options": ["Entrepreneur, manager, technician", "Worker, leader, doer", "Vision, tasks, skills", "No roles"], "correct": 0},
+            {"question": "What should owners focus on?", "options": ["Working in", "Working on", "No systems", "Tasks only"], "correct": 1},
+            {"question": "What drives scalability?", "options": ["No systems", "Systems", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What does the franchise model ensure?", "options": ["Chaos", "Consistency", "No systems", "Tasks only"], "correct": 1},
+            {"question": "What guides businesses?", "options": ["No vision", "Vision", "Tasks only", "No systems"], "correct": 1},
+            {"question": "What prevents burnout?", "options": ["Working in", "Delegation", "No systems", "Tasks only"], "correct": 1},
+            {"question": "What drives loyalty?", "options": ["No systems", "Customer experience", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What ensures sustainable scaling?", "options": ["No systems", "Systems and strategy", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What did Emma create?", "options": ["No systems", "Systems", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What did Raj build?", "options": ["No workflows", "Workflows", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What did Sana standardize?", "options": ["No operations", "Operations", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What reduces owner dependency?", "options": ["Working in", "Systems", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What did Emma scale?", "options": ["No locations", "Locations", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What ensures consistency?", "options": ["No systems", "Processes", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What did Raj focus on?", "options": ["Tasks only", "Strategy", "No systems", "No vision"], "correct": 1},
+            {"question": "What drives customer retention?", "options": ["No systems", "Experience", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What did Sana expand?", "options": ["No store", "Store", "Tasks only", "No vision"], "correct": 1},
+            {"question": "What balances roles?", "options": ["Tasks only", "Systems and vision", "No systems", "No vision"], "correct": 1},
+            {"question": "What prevents chaos?", "options": ["No systems", "Systems", "Tasks only", "No vision"], "correct": 1}
         ]
     },
     {

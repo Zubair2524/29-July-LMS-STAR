@@ -106,7 +106,7 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     animation: slideIn 1s ease-out;
     text-align: center;
-    margin-top: 200px; /* Slide down by approximately 100px (adjust as needed) */
+    margin-top: 400px; /* Slide down by approximately 100px (adjust as needed) */
 }
 
 .logo-section {

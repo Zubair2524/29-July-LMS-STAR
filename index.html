@@ -473,9 +473,32 @@
         document.getElementById('backToLibrary').addEventListener('click', () => showPage('libraryPage'));
 
         // Quiz Page
+document.getElementById('startQuizBtn').addEventListener('click', () => {
+    if (!currentBook || !currentBook.quiz || !Array.isArray(currentBook.quiz)) {
+        console.error('Cannot start quiz: currentBook or quiz data is invalid', { currentBook });
+        alert('Error: Unable to start quiz. Please select a book and try again.');
+        return;
+    }
+    currentQuestion = 0;
+    quizAnswers = new Array(currentBook.quiz.length).fill(-1); // Initialize with -1 for unanswered
+    quizStartTime = new Date();
+    console.log('Starting quiz for book:', currentBook.title);
+    showQuestion();
+    showPage('quizPage');
+});
+
 function showQuestion() {
-    if (!currentBook) return;
+    if (!currentBook || !currentBook.quiz || currentQuestion >= currentBook.quiz.length) {
+        console.error('Cannot show question: invalid book or question index', { currentBook, currentQuestion });
+        showResults(); // Fallback to results if quiz data is invalid
+        return;
+    }
     const question = currentBook.quiz[currentQuestion];
+    if (!question || !question.options || !Array.isArray(question.options)) {
+        console.error('Invalid question data:', { question, currentQuestion });
+        showResults(); // Fallback to results if question data is invalid
+        return;
+    }
     document.getElementById('quizBookTitle').textContent = currentBook.title;
     document.getElementById('questionText').textContent = question.question;
     document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
@@ -516,7 +539,6 @@ function showQuestion() {
     document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
     updateQuizTimer();
 }
-
 // Results Page
 function showResults() {
     console.log('Quiz Answers:', quizAnswers);
@@ -578,7 +600,6 @@ function submitQuizResults() {
     })
     .catch(error => console.error('Error submitting quiz results:', error));
 }
-
         
         // Answer Review Page
         document.getElementById('reviewAnswersBtn').addEventListener('click', () => {

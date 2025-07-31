@@ -121,7 +121,7 @@ body {
     display: block;
 }
 .register-link {
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.5rem; /* Smaller than star-text's 3.5rem */
     font-weight: 700;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fd79a8);
     background-size: 300% 300%;
@@ -129,7 +129,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbowText 3s ease-in-out infinite;
-    display: inline-block;
+    display: inline-block; /* Suitable for a link */
 }
 
 .subtitle {

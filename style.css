@@ -120,6 +120,17 @@ body {
     animation: rainbowText 3s ease-in-out infinite;
     display: block;
 }
+.register-link {
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fd79a8);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowText 3s ease-in-out infinite;
+    display: inline-block;
+}
 
 .subtitle {
     font-size: 1.2rem;

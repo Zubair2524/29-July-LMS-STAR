@@ -295,41 +295,54 @@
             }
         });
 
-        // Registration
-        document.getElementById('registerForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const registerError = document.getElementById('registerError');
-            registerError.style.display = 'none';
-            const firstName = document.getElementById('regFirstName').value.trim();
-            const lastName = document.getElementById('regLastName').value.trim();
-            const username = document.getElementById('regUsername').value.trim();
-            const password = document.getElementById('regPassword').value.trim();
-            if (!firstName || !lastName || !username || !password) {
-                registerError.textContent = 'Please fill in all fields.';
-                registerError.style.display = 'block';
-                return;
-            }
-            try {
-                const users = JSON.parse(localStorage.getItem('users')) || [];
-                if (users.some(u => u.username === username)) {
-                    registerError.textContent = 'Username already exists.';
-                    registerError.style.display = 'block';
-                    return;
-                }
-                const newUser = { firstName, lastName, username, password, completedBooks: [] };
-                users.push(newUser);
-                localStorage.setItem('users', JSON.stringify(users));
-                currentUser = newUser;
-                localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                console.log('Registration successful for:', newUser); // Debugging
-                showPage('libraryPage');
-            } catch (error) {
-                console.error('Registration error:', error);
-                registerError.textContent = 'An error occurred. Please try again.';
-                registerError.style.display = 'block';
-            }
-        });
-
+       // Registration
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const registerError = document.getElementById('registerError');
+    registerError.style.display = 'none';
+    const fullName = document.getElementById('regFullName').value.trim();
+    const designation = document.getElementById('regDesignation').value.trim();
+    const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
+    const baseCity = document.getElementById('regBaseCity').value.trim();
+    const date = document.getElementById('regDate').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const cellNumber = document.getElementById('regCellNumber').value.trim();
+    if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
+        registerError.textContent = 'Please fill in all fields.';
+        registerError.style.display = 'block';
+        return;
+    }
+    try {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        if (users.some(u => u.username === email)) { // Using email as username
+            registerError.textContent = 'Email already exists.';
+            registerError.style.display = 'block';
+            return;
+        }
+        const newUser = { 
+            fullName, 
+            designation, 
+            teamDepartment, 
+            baseCity, 
+            date, 
+            email, 
+            password, 
+            cellNumber, 
+            completedBooks: [] 
+        };
+        users.push(newUser);
+        localStorage.setItem('users', JSON.stringify(users));
+        currentUser = newUser;
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        console.log('Registration successful for:', newUser); // Debugging
+        showPage('libraryPage');
+    } catch (error) {
+        console.error('Registration error:', error);
+        registerError.textContent = 'An error occurred. Please try again.';
+        registerError.style.display = 'block';
+    }
+});
         // Page Toggles
         document.getElementById('showRegister').addEventListener('click', (e) => {
             e.preventDefault();

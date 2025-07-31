@@ -36,51 +36,60 @@
     </div>
 
     <!-- Registration Page -->
-    <div id="registerPage" class="page">
-        <div class="background">
-            <div class="stars"></div>
-            <div class="moving-bg"></div>
+   <div id="registerPage" class="page">
+    <div class="background">
+        <div class="stars"></div>
+        <div class="moving-bg"></div>
+    </div>
+    <div class="registration-container glass-container">
+        <div class="logo-section">
+            <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
+            <span class="subtitle">Study, Track, Achieve, Repeat</span>
         </div>
-        <div class="registration-container glass-container">
-            <div class="logo-section">
-                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
-                <span class="subtitle">Study, Track, Achieve, Repeat</span>
-            </div>
-            <form id="registerForm" class="registration-form">
+        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
             <div class="input-group">
                 <i class="fas fa-user"></i>
-                <input type="text" id="regFullName" placeholder="Full Name" required>
+                <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
             </div>
             <div class="input-group">
                 <i class="fas fa-briefcase"></i>
-                <input type="text" id="regDesignation" placeholder="Designation" required>
+                <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
             </div>
             <div class="input-group">
                 <i class="fas fa-users"></i>
-                <input type="text" id="regTeamDepartment" placeholder="Team/Department" required>
+                <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
             </div>
             <div class="input-group">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" id="regBaseCity" placeholder="Base City" required>
+                <i class="fas fa-city"></i>
+                <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
             </div>
             <div class="input-group">
                 <i class="fas fa-calendar"></i>
-                <input type="date" id="regDate" placeholder="Date" required>
+                <input type="date" id="regDate" name="Date" placeholder="Date" required>
             </div>
             <div class="input-group">
                 <i class="fas fa-envelope"></i>
-                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="email" id="regEmail" name="Email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regPassword" name="Password" placeholder="Password" required>
             </div>
             <div class="input-group">
                 <i class="fas fa-phone"></i>
-                <input type="tel" id="regCellNumber" placeholder="Cell Number" required>
+                <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
             </div>
+            <input type="hidden" id="regBook" name="Book">
+            <input type="hidden" id="regScore" name="Score">
+            <input type="hidden" id="regGrade" name="Grade">
+            <input type="hidden" id="regSummaryTime" name="Summary Time">
+            <input type="hidden" id="regQuizTime" name="Quiz Time">
             <button type="submit" class="rainbow-btn">Register</button>
             <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
             <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
         </form>
-        </div>
     </div>
+</div>
 
     <!-- Library Page -->
     <div id="libraryPage" class="page">

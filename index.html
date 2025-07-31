@@ -473,149 +473,113 @@
         document.getElementById('backToLibrary').addEventListener('click', () => showPage('libraryPage'));
 
         // Quiz Page
-        document.getElementById('startQuizBtn').addEventListener('click', () => {
-            currentQuestion = 0;
-            quizAnswers = new Array(currentBook.quiz.length).fill(-1); // Initialize with -1 for unanswered
-            quizStartTime = new Date();
-            showQuestion();
-            showPage('quizPage');
-        });
+function showQuestion() {
+    if (!currentBook) return;
+    const question = currentBook.quiz[currentQuestion];
+    document.getElementById('quizBookTitle').textContent = currentBook.title;
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
 
-        function showQuestion() {
-            if (!currentBook) return;
-            const question = currentBook.quiz[currentQuestion];
-            document.getElementById('quizBookTitle').textContent = currentBook.title;
-            document.getElementById('questionText').textContent = question.question;
-            document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
-            const optionsContainer = document.getElementById('optionsContainer');
-            optionsContainer.innerHTML = '';
-            question.options.forEach((option, index) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerHTML = `
-                    <span class="option-label">${String.fromCharCode(65 + index)}</span>
-                    <span>${option}</span>
-                `;
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                    btn.classList.add('selected');
-                    quizAnswers[currentQuestion] = index;
-                    console.log(`Question ${currentQuestion + 1}: Selected answer index ${index}`);
-                    document.getElementById('nextQuestionBtn').disabled = false;
-                    setTimeout(() => {
-                        if (currentQuestion < currentBook.quiz.length - 1) {
-                            currentQuestion++;
-                            showQuestion();
-                        } else {
-                            console.log('Quiz completed. Answers:', quizAnswers);
-                            showResults();
-                        }
-                    }, 300);
-                });
-                optionsContainer.appendChild(btn);
-            });
-            document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
-            updateQuizTimer();
-        }
+    // Create shuffled options and track mapping
+    const originalIndices = question.options.map((_, index) => index);
+    const shuffledIndices = [...originalIndices].sort(() => Math.random() - 0.5); // Shuffle indices
+    question.shuffledIndices = shuffledIndices; // Store mapping for scoring
 
-        function updateQuizTimer() {
-            if (!quizStartTime) return;
-            const now = new Date();
-            const diff = Math.floor((now - quizStartTime) / 1000);
-            const minutes = Math.floor(diff / 60).toString().padStart(2, '0');
-            const seconds = (diff % 60).toString().padStart(2, '0');
-            document.getElementById('quizTimer').textContent = `${minutes}:${seconds}`;
-            setTimeout(updateQuizTimer, 1000);
-        }
-
-        document.getElementById('nextQuestionBtn').addEventListener('click', () => {
-            if (currentQuestion < currentBook.quiz.length - 1) {
-                currentQuestion++;
-                showQuestion();
-            } else {
-                showResults();
-            }
-        });
-
-        // Results Page
-        function showResults() {
-            console.log('Quiz Answers:', quizAnswers);
-            console.log('Correct Answers:', currentBook.quiz.map(q => q.correct));
-            const score = currentBook.quiz.reduce((acc, q, i) => {
-                const userAnswer = quizAnswers[i] !== undefined ? Number(quizAnswers[i]) : -1;
-                const correctAnswer = Number(q.correct);
-                const isCorrect = userAnswer === correctAnswer;
-                console.log(`Question ${i + 1}: User Answer = ${userAnswer}, Correct Answer = ${correctAnswer}, Correct = ${isCorrect}`);
-                return acc + (isCorrect ? 1 : 0);
-            }, 0);
-            const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
-            const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
-            document.getElementById('certificateBookTitle').textContent = currentBook.title;
-            document.getElementById('certificateStudentName').textContent = currentUser.fullName;
-            document.getElementById('certificateBookName').textContent = currentBook.title;
-            document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
-            document.getElementById('finalPercentage').textContent = `${percentage}%`;
-            document.getElementById('finalGrade').textContent = grade;
-            document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
-            document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
-                'Congratulations on your outstanding performance! Keep shining!' : 
-                'Great effort! Review your answers and try again to improve!';
-            showPage('resultsPage');
-            updateUserProgress(score, percentage, grade);
-
-            // Update hidden fields for potential resubmission
-            if (document.getElementById('regBook')) {
-                document.getElementById('regBook').value = currentBook.title;
-                document.getElementById('regScore').value = `${score} / ${currentBook.quiz.length}`;
-                document.getElementById('regGrade').value = grade;
-                document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
-                document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
-            }
-            submitQuizResults();
-        }
-
-        function updateUserProgress(score, percentage, grade) {
-            const users = JSON.parse(localStorage.getItem('users')) || [];
-            const userIndex = users.findIndex(u => u.email === currentUser.email);
-            if (userIndex !== -1) {
-                users[userIndex].completedBooks.push({
-                    bookId: currentBook.id,
-                    score,
-                    percentage,
-                    grade,
-                    date: new Date().toLocaleDateString()
-                });
-                localStorage.setItem('users', JSON.stringify(users));
-                currentUser = users[userIndex];
-                localStorage.setItem('currentUser', JSON.stringify(currentUser));
-            }
-        }
-
-        function submitQuizResults() {
-            const formData = new FormData();
-            formData.append('Full Name', currentUser.fullName);
-            formData.append('Email', currentUser.email);
-            formData.append('Book', currentBook.title);
-            formData.append('Score', document.getElementById('finalScore').textContent);
-            formData.append('Grade', document.getElementById('finalGrade').textContent);
-            formData.append('Summary Time', document.getElementById('timer')?.textContent || '');
-            formData.append('Quiz Time', document.getElementById('quizTimer')?.textContent || '');
-
-            fetch('https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    console.log('Quiz results submitted successfully, row:', data.row);
+    shuffledIndices.forEach((originalIndex, displayIndex) => {
+        const option = question.options[originalIndex];
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerHTML = `
+            <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
+            <span>${option}</span>
+        `;
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            quizAnswers[currentQuestion] = originalIndex; // Store original index
+            console.log(`Question ${currentQuestion + 1}: Selected original index ${originalIndex} (displayed as ${String.fromCharCode(65 + displayIndex)})`);
+            document.getElementById('nextQuestionBtn').disabled = false;
+            setTimeout(() => {
+                if (currentQuestion < currentBook.quiz.length - 1) {
+                    currentQuestion++;
+                    showQuestion();
                 } else {
-                    console.error('Quiz submission error:', data.error);
+                    console.log('Quiz completed. Answers:', quizAnswers);
+                    showResults();
                 }
-            })
-            .catch(error => console.error('Error submitting quiz results:', error));
-        }
+            }, 300);
+        });
+        optionsContainer.appendChild(btn);
+    });
+    document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
+    updateQuizTimer();
+}
 
+// Results Page
+function showResults() {
+    console.log('Quiz Answers:', quizAnswers);
+    console.log('Correct Answers:', currentBook.quiz.map(q => q.correct));
+    const score = currentBook.quiz.reduce((acc, q, i) => {
+        const userAnswer = quizAnswers[i] !== undefined ? Number(quizAnswers[i]) : -1;
+        const correctAnswer = Number(q.correct);
+        const isCorrect = userAnswer === correctAnswer;
+        console.log(`Question ${i + 1}: User Answer = ${userAnswer}, Correct Answer = ${correctAnswer}, Correct = ${isCorrect}`);
+        return acc + (isCorrect ? 1 : 0);
+    }, 0);
+    const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+    const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+    document.getElementById('certificateBookTitle').textContent = currentBook.title;
+    document.getElementById('certificateStudentName').textContent = currentUser.fullName;
+    document.getElementById('certificateBookName').textContent = currentBook.title;
+    document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
+    document.getElementById('finalPercentage').textContent = `${percentage}%`;
+    document.getElementById('finalGrade').textContent = grade;
+    document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
+    document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
+        'Congratulations on your outstanding performance! Keep shining!' : 
+        'Great effort! Review your answers and try again to improve!';
+    showPage('resultsPage');
+    updateUserProgress(score, percentage, grade);
+
+    // Update hidden fields for potential resubmission
+    if (document.getElementById('regBook')) {
+        document.getElementById('regBook').value = currentBook?.title || '';
+        document.getElementById('regScore').value = `${score} / ${currentBook.quiz.length}`;
+        document.getElementById('regGrade').value = grade;
+        document.getElementById('regSummaryTime').value = document.getElementById('timer')?.textContent || '';
+        document.getElementById('regQuizTime').value = document.getElementById('quizTimer')?.textContent || '';
+    }
+    submitQuizResults();
+}
+
+function submitQuizResults() {
+    const formData = new FormData();
+    formData.append('Full Name', currentUser?.fullName || '');
+    formData.append('Email', currentUser?.email || '');
+    formData.append('Book', currentBook?.title || '');
+    formData.append('Score', document.getElementById('finalScore')?.textContent || '');
+    formData.append('Grade', document.getElementById('finalGrade')?.textContent || '');
+    formData.append('Summary Time', document.getElementById('timer')?.textContent || '');
+    formData.append('Quiz Time', document.getElementById('quizTimer')?.textContent || '');
+
+    fetch('https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            console.log('Quiz results submitted successfully, row:', data.row);
+        } else {
+            console.error('Quiz submission error:', data.error);
+        }
+    })
+    .catch(error => console.error('Error submitting quiz results:', error));
+}
+
+        
         // Answer Review Page
         document.getElementById('reviewAnswersBtn').addEventListener('click', () => {
             showAnswerReview();

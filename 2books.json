@@ -248,84 +248,84 @@
     },
     {
         "id": 9,
-        "title": "Mindset",
-        "section": "Psychology",
+        "title": "Man’s Search for Meaning",
+        "section": "Personal Development",
         "thumbnail": "9a.png",
         "slides": [
             {
-                "title": "Fixed vs. Growth Mindset",
-                "content": "In 'Mindset,' Carol Dweck contrasts fixed and growth mindsets. A fixed mindset believes abilities are static, avoiding challenges to protect self-image. A growth mindset sees abilities as developable through effort. For example, a student with a growth mindset embraces math challenges, believing practice improves skills. Dweck argues that mindset shapes success in education, work, and relationships. Adopting a growth mindset fosters resilience and learning, enabling individuals to overcome obstacles and achieve their potential."
+                "title": "Finding Meaning in Life",
+                "content": "In *Man’s Search for Meaning*, Viktor E. Frankl argues that meaning is the primary driver of human life, even in suffering. Surviving the Holocaust, Frankl found purpose through helping others. For example, a teacher finding meaning in inspiring students perseveres through challenges. Frankl’s logotherapy emphasizes meaning, helping individuals find purpose to thrive personally and professionally."
             },
             {
-                "title": "The Power of Effort",
-                "content": "Dweck emphasizes that effort is key in a growth mindset. Unlike a fixed mindset, which relies on innate talent, a growth mindset values hard work. For instance, a musician practicing daily improves, regardless of initial skill. Effort transforms challenges into opportunities, like learning a new language through consistent study. By focusing on effort, individuals build resilience, turning setbacks into growth. This approach drives success in personal and professional goals, fostering a love for learning."
+                "title": "Logotherapy Basics",
+                "content": "Frankl’s logotherapy focuses on finding purpose, not pleasure or power. For instance, a nurse finds meaning in patient care, sustaining her through long shifts. Unlike traditional therapy, logotherapy looks forward, helping people define goals. In workplaces, aligning tasks with purpose boosts motivation. Frankl’s approach ensures resilience by anchoring life in meaningful pursuits."
             },
             {
-                "title": "Embracing Challenges",
-                "content": "A growth mindset thrives on challenges. Dweck explains that fixed mindset individuals avoid risks to prevent failure, while growth mindset individuals see challenges as growth opportunities. For example, a professional taking a tough project learns new skills, even if they stumble. Embracing challenges builds confidence and adaptability. This mindset helps in academics, like tackling difficult subjects, or in careers, like pursuing promotions, leading to greater achievement and personal development."
+                "title": "Meaning Through Suffering",
+                "content": "Suffering can lead to meaning, says Frankl. In concentration camps, he found purpose by supporting others, easing pain. For example, a grieving parent finds meaning in advocacy. This transforms suffering into growth. In teams, finding purpose in challenges, like tight deadlines, fosters resilience. Frankl’s insight helps individuals turn adversity into purpose-driven action."
             },
             {
-                "title": "Learning from Criticism",
-                "content": "Criticism is a growth tool in Dweck’s framework. A fixed mindset deflects feedback, feeling threatened, while a growth mindset uses it to improve. For instance, an employee accepting feedback on a presentation refines their skills. Dweck suggests viewing criticism as constructive, not personal. This approach fosters growth in areas like public speaking or teamwork, enabling individuals to turn weaknesses into strengths and achieve continuous improvement in their endeavors."
+                "title": "Freedom of Choice",
+                "content": "Frankl emphasizes that we choose our response to circumstances. For instance, a fired employee choosing to retrain finds new purpose. This freedom shapes meaning, even in hardship. In workplaces, choosing positive attitudes during setbacks inspires teams. Frankl’s principle shows that choice drives resilience, ensuring individuals control their path to meaning."
             },
             {
-                "title": "The Role of Persistence",
-                "content": "Persistence is central to a growth mindset. Dweck highlights that setbacks are part of learning, and persistence drives progress. For example, an entrepreneur facing rejections persists, refining their pitch. This resilience contrasts with a fixed mindset, which gives up easily. Persistence in studying, practicing skills, or building relationships leads to mastery. By staying committed, individuals overcome obstacles, achieving long-term goals and personal growth through consistent effort."
+                "title": "Meaning in Work",
+                "content": "Work provides meaning when tied to purpose, per Frankl. For example, a janitor viewing their role as creating safe spaces finds fulfillment. Aligning tasks with values, like a marketer promoting ethical products, boosts engagement. Frankl’s approach helps individuals and teams find purpose in work, driving motivation and satisfaction in professional life."
             },
             {
-                "title": "Inspiring Others",
-                "content": "A growth mindset inspires others. Dweck notes that leaders with this mindset encourage teams to learn and grow. For example, a teacher praising effort over grades motivates students to try harder. This creates a culture of learning, where mistakes are seen as opportunities. In workplaces, growth-minded leaders foster innovation by valuing progress. Inspiring others with a growth mindset builds collaborative, resilient teams that drive collective success."
+                "title": "Meaning in Relationships",
+                "content": "Relationships offer profound meaning, says Frankl. For instance, a parent finds purpose in raising children, enduring sacrifices. In teams, supporting colleagues creates connection. Frankl’s logotherapy emphasizes love and care as meaning sources. This approach strengthens bonds, ensuring individuals and organizations thrive through purposeful relationships built on mutual support."
             },
             {
-                "title": "Mindset in Relationships",
-                "content": "Mindset affects relationships. Dweck explains that a fixed mindset assumes compatibility is static, while a growth mindset sees relationships as improvable through effort. For instance, couples who work on communication grow stronger. A growth mindset encourages resolving conflicts through understanding, not blame. This approach builds stronger bonds in friendships, families, or teams, fostering trust and collaboration by viewing challenges as opportunities to deepen connections."
+                "title": "The Role of Responsibility",
+                "content": "Responsibility drives meaning, per Frankl. Taking ownership, like a leader addressing team issues, creates purpose. For example, volunteering for a cause fosters fulfillment. In workplaces, responsible actions align with values, boosting morale. Frankl’s insight shows that responsibility anchors meaning, ensuring individuals contribute positively to their lives and communities."
             },
             {
-                "title": "Overcoming Failure",
-                "content": "A growth mindset redefines failure as a learning opportunity. Dweck argues that fixed mindset individuals fear failure, while growth mindset individuals analyze it to improve. For example, a failed project teaches a manager better strategies. Embracing failure as feedback fosters resilience, whether in academics or business. This mindset encourages risk-taking, knowing setbacks lead to growth, enabling individuals to achieve more by learning from mistakes."
+                "title": "Discovering Personal Meaning",
+                "content": "Frankl believes meaning is unique to each person, discovered through reflection. For instance, an artist finds purpose in creative expression. Journaling or goal-setting helps uncover meaning. In teams, aligning roles with individual values boosts engagement. Frankl’s approach ensures personal fulfillment, helping individuals live purpose-driven lives in any context."
             },
             {
-                "title": "Cultivating a Growth Mindset",
-                "content": "Cultivating a growth mindset requires intentional practice. Dweck suggests self-reflection, like journaling about challenges and efforts. For example, tracking progress in learning a skill reinforces growth. Embracing ‘yet’—saying ‘I’m not good at this yet’—shifts perspective. Seeking feedback and setting learning goals also help. This practice transforms how individuals approach work, education, or hobbies, fostering a lifelong love for learning and continuous improvement."
+                "title": "Resilience Through Meaning",
+                "content": "Meaning fosters resilience, says Frankl. In hardship, like illness, finding purpose, such as helping others, sustains hope. For example, a cancer survivor advocating for awareness stays strong. In workplaces, purpose-driven teams overcome challenges. Frankl’s framework shows that meaning drives perseverance, ensuring success through adversity in personal or professional life."
             },
             {
-                "title": "Mindset in Education",
-                "content": "In education, a growth mindset transforms learning. Dweck’s research shows students with this mindset outperform those with fixed mindsets. For example, praising effort over intelligence encourages persistence in math. Teachers can foster this by rewarding progress and teaching that skills develop with practice. This creates resilient learners who tackle challenges, like mastering complex subjects, leading to better academic outcomes and a passion for lifelong learning."
+                "title": "Living with Purpose",
+                "content": "Living with purpose requires ongoing reflection, per Frankl. Regularly assessing goals, like a professional realigning career with values, sustains meaning. In organizations, purpose-driven cultures boost performance. Frankl’s logotherapy ensures individuals and teams thrive by anchoring actions in meaning, creating fulfilling lives and successful outcomes through purpose."
             },
             {
-                "title": "Real-Life Example: Career Shift",
-                "content": "Anna, stuck in a dead-end job, adopted a growth mindset. Instead of believing she lacked skills, she embraced challenges, taking online courses. She persisted through setbacks, like failed assignments, viewing them as learning. Accepting feedback, she improved her resume and interviewed confidently, landing a better role. Anna’s story shows how a growth mindset drives career growth by turning challenges and failures into opportunities for development and success."
+                "title": "Real-Life Example: Career Resilience",
+                "content": "A teacher, Maya, felt unmotivated. Using *Man’s Search for Meaning*, she found purpose in inspiring students, choosing positive responses to challenges. Her renewed passion improved teaching. Maya’s story shows how Frankl’s principles foster resilience, driving career success through purpose and responsibility in challenging roles."
             },
             {
-                "title": "Real-Life Example: Student Success",
-                "content": "Tom, a struggling student, feared math due to a fixed mindset. Using Dweck’s principles, he embraced effort, practicing daily. He sought teacher feedback and viewed mistakes as growth opportunities. His persistence paid off, improving his grades and confidence. By saying ‘I’m not good at math yet,’ Tom shifted his mindset, mastering the subject. His story illustrates how a growth mindset transforms academic performance through effort and resilience."
+                "title": "Real-Life Example: Community Impact",
+                "content": "A volunteer, Omar, applied *Man’s Search for Meaning* after loss. He found purpose in community service, transforming grief into action. His efforts inspired others. Omar’s journey shows how Frankl’s logotherapy turns suffering into meaning, driving personal growth and community impact through purposeful action."
             },
             {
-                "title": "Real-Life Example: Team Growth",
-                "content": "A manager, Lisa, led a team with low innovation. Adopting a growth mindset, she praised effort, not results, encouraging risk-taking. She fostered learning from failures, like a failed campaign, leading to creative solutions. Her team became more collaborative, sharing feedback openly. Lisa’s leadership created a growth-oriented culture, boosting innovation and performance, showing how a growth mindset enhances team dynamics and success."
+                "title": "Real-Life Example: Team Purpose",
+                "content": "A manager, Sana, used *Man’s Search for Meaning* to boost team morale. She aligned tasks with purpose, like community-focused projects, fostering resilience. The team excelled under pressure. Sana’s leadership shows how Frankl’s principles create purpose-driven teams, driving success through meaning in collaborative work."
             }
         ],
         "quiz": [
-            {"question": "What is a fixed mindset?", "options": ["Abilities develop", "Abilities are static", "Effort is key", "Challenges are good"], "correct": 1},
-            {"question": "What does a growth mindset value?", "options": ["Talent", "Effort", "Failure", "Avoidance"], "correct": 1},
-            {"question": "What do growth mindset individuals do?", "options": ["Avoid challenges", "Embrace challenges", "Fear failure", "Ignore feedback"], "correct": 1},
-            {"question": "How should criticism be viewed?", "options": ["As personal", "As constructive", "As failure", "As talent"], "correct": 1},
-            {"question": "What drives progress in a growth mindset?", "options": ["Persistence", "Talent", "Avoidance", "Fear"], "correct": 0},
-            {"question": "What do growth-minded leaders do?", "options": ["Discourage effort", "Encourage learning", "Focus on talent", "Avoid risks"], "correct": 1},
-            {"question": "How does mindset affect relationships?", "options": ["No impact", "Improves through effort", "Static compatibility", "Avoids conflicts"], "correct": 1},
-            {"question": "What is failure in a growth mindset?", "options": ["End point", "Learning opportunity", "Talent lack", "Avoidable"], "correct": 1},
-            {"question": "How do you cultivate a growth mindset?", "options": ["Avoid feedback", "Self-reflection", "Fear failure", "Focus on talent"], "correct": 1},
-            {"question": "What fosters learning in education?", "options": ["Fixed mindset", "Growth mindset", "Avoiding effort", "Ignoring feedback"], "correct": 1},
-            {"question": "What did Anna embrace?", "options": ["Failure", "Challenges", "Talent", "Avoidance"], "correct": 1},
-            {"question": "What did Tom improve?", "options": ["Social skills", "Math grades", "Avoidance", "Talent"], "correct": 1},
-            {"question": "What did Lisa foster?", "options": ["Competition", "Innovation", "Fear", "Control"], "correct": 1},
-            {"question": "What does ‘yet’ signify?", "options": ["Failure", "Potential", "Talent", "Avoidance"], "correct": 1},
-            {"question": "What helps master skills?", "options": ["Avoidance", "Effort", "Talent", "Fear"], "correct": 1},
-            {"question": "What did Tom say about math?", "options": ["I’m bad", "I’m not good yet", "I’ll never learn", "It’s easy"], "correct": 1},
-            {"question": "What boosts team performance?", "options": ["Fixed mindset", "Growth mindset", "Avoiding risks", "Ignoring feedback"], "correct": 1},
-            {"question": "What did Anna achieve?", "options": ["No change", "Better role", "Failure", "Avoidance"], "correct": 1},
-            {"question": "What encourages resilience?", "options": ["Fixed mindset", "Growth mindset", "Talent focus", "Avoiding effort"], "correct": 1},
-            {"question": "What did Lisa’s team learn from?", "options": ["Success", "Failures", "Talent", "Avoidance"], "correct": 1}
+            {"question": "What drives human life?", "options": ["Pleasure", "Meaning", "Power", "No purpose"], "correct": 1},
+            {"question": "What is logotherapy?", "options": ["Pleasure focus", "Purpose focus", "Power focus", "No focus"], "correct": 1},
+            {"question": "What transforms suffering?", "options": ["No purpose", "Meaning", "Pleasure", "Power"], "correct": 1},
+            {"question": "What shapes response?", "options": ["No choice", "Choice", "Pleasure", "Power"], "correct": 1},
+            {"question": "What gives work meaning?", "options": ["No purpose", "Purpose", "Pleasure", "Power"], "correct": 1},
+            {"question": "What strengthens bonds?", "options": ["No relationships", "Relationships", "Pleasure", "Power"], "correct": 1},
+            {"question": "What drives meaning?", "options": ["No responsibility", "Responsibility", "Pleasure", "Power"], "correct": 1},
+            {"question": "How is meaning discovered?", "options": ["No reflection", "Reflection", "Pleasure", "Power"], "correct": 1},
+            {"question": "What fosters resilience?", "options": ["No purpose", "Meaning", "Pleasure", "Power"], "correct": 1},
+            {"question": "What sustains purpose?", "options": ["No reflection", "Reflection", "Pleasure", "Power"], "correct": 1},
+            {"question": "What did Maya find?", "options": ["No purpose", "Purpose", "Pleasure", "Power"], "correct": 1},
+            {"question": "What did Omar transform?", "options": ["No grief", "Grief", "Pleasure", "Power"], "correct": 1},
+            {"question": "What did Sana boost?", "options": ["No morale", "Morale", "Pleasure", "Power"], "correct": 1},
+            {"question": "What ensures fulfillment?", "options": ["No purpose", "Purpose", "Pleasure", "Power"], "correct": 1},
+            {"question": "What did Maya improve?", "options": ["No teaching", "Teaching", "Pleasure", "Power"], "correct": 1},
+            {"question": "What drives perseverance?", "options": ["No purpose", "Meaning", "Pleasure", "Power"], "correct": 1},
+            {"question": "What did Omar inspire?", "options": ["No impact", "Others", "Pleasure", "Power"], "correct": 1},
+            {"question": "What ensures team success?", "options": ["No purpose", "Purpose", "Pleasure", "Power"], "correct": 1},
+            {"question": "What did Sana align?", "options": ["No tasks", "Tasks", "Pleasure", "Power"], "correct": 1},
+            {"question": "What anchors life?", "options": ["No meaning", "Meaning", "Pleasure", "Power"], "correct": 1}
         ]
     },
     {

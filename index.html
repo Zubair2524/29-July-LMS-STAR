@@ -36,60 +36,60 @@
     </div>
 
     <!-- Registration Page -->
-    <div id="registerPage" class="page">
-        <div class="background">
-            <div class="stars"></div>
-            <div class="moving-bg"></div>
-        </div>
-        <div class="registration-container glass-container">
-            <div class="logo-section">
-                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
-                <span class="subtitle">Study, Track, Achieve, Repeat</span>
-            </div>
-            <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-briefcase"></i>
-                    <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-users"></i>
-                    <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-city"></i>
-                    <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-calendar"></i>
-                    <input type="date" id="regDate" name="Date" placeholder="Date" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="regEmail" name="Email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="regPassword" name="Password" placeholder="Password" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
-                </div>
-                <input type="hidden" id="regBook" name="Book">
-                <input type="hidden" id="regScore" name="Score">
-                <input type="hidden" id="regGrade" name="Grade">
-                <input type="hidden" id="regSummaryTime" name="Summary Time">
-                <input type="hidden" id="regQuizTime" name="Quiz Time">
-                <button type="submit" class="rainbow-btn">Register</button>
-                <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
-                <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
-            </form>
-        </div>
+   <div id="registerPage" class="page">
+    <div class="background">
+        <div class="stars"></div>
+        <div class="moving-bg"></div>
     </div>
+    <div class="registration-container glass-container">
+        <div class="logo-section">
+            <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
+            <span class="subtitle">Study, Track, Achieve, Repeat</span>
+        </div>
+        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-briefcase"></i>
+                <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-users"></i>
+                <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-city"></i>
+                <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-calendar"></i>
+                <input type="date" id="regDate" name="Date" placeholder="Date" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="regEmail" name="Email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regPassword" name="Password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
+            </div>
+            <input type="hidden" id="regBook" name="Book">
+            <input type="hidden" id="regScore" name="Score">
+            <input type="hidden" id="regGrade" name="Grade">
+            <input type="hidden" id="regSummaryTime" name="Summary Time">
+            <input type="hidden" id="regQuizTime" name="Quiz Time">
+            <button type="submit" class="rainbow-btn">Register</button>
+            <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
+            <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </form>
+    </div>
+</div>
 
     <!-- Library Page -->
     <div id="libraryPage" class="page">
@@ -268,107 +268,151 @@
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
             if (pageId === 'libraryPage' && currentUser) {
-                document.getElementById('userNameDisplay').textContent = currentUser.fullName;
+                document.getElementById('userNameDisplay').textContent = `${currentUser.firstName} ${currentUser.lastName}`;
             }
         }
 
-        // Login
-        document.getElementById('loginForm').addEventListener('submit', (e) => {
+// Login
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const loginError = document.getElementById('loginError');
+    loginError.style.display = 'none';
+    const email = document.getElementById('loginUsername').value.trim(); // Changed from username to email
+    const password = document.getElementById('loginPassword').value.trim();
+    if (!email || !password) {
+        loginError.textContent = 'Please enter both email and password.';
+        loginError.style.display = 'block';
+        return;
+    }
+    try {
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(u => u.email === email && u.password === password); // Changed to email
+        if (user) {
+            currentUser = user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            showPage('libraryPage');
+        } else {
+            loginError.textContent = 'Invalid email or password.';
+            loginError.style.display = 'block';
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        loginError.textContent = 'An error occurred. Please try again.';
+        loginError.style.display = 'block';
+    }
+});
+
+       // Registration
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission for initial validation
+    const registerError = document.getElementById('registerError');
+    registerError.style.display = 'none';
+
+    // Collect registration form data
+    const fullName = document.getElementById('regFullName').value.trim();
+    const designation = document.getElementById('regDesignation').value.trim();
+    const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
+    const baseCity = document.getElementById('regBaseCity').value.trim();
+    const date = document.getElementById('regDate').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const cellNumber = document.getElementById('regCellNumber').value.trim();
+
+    // Validate registration fields
+    if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
+        registerError.textContent = 'Please fill in all fields.';
+        registerError.style.display = 'block';
+        return;
+    }
+
+    // Populate scorecard data (updated dynamically after quiz)
+    document.getElementById('regBook').value = currentBook ? currentBook.title : '';
+    document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
+    document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
+    document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+    document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+
+    // Submit form data to Google Apps Script
+    const form = document.getElementById('registerForm');
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            console.log('Registration successful, row:', data.row);
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const newUser = { 
+                fullName, 
+                designation, 
+                teamDepartment, 
+                baseCity, 
+                date, 
+                email, 
+                password, 
+                cellNumber, 
+                completedBooks: []
+            };
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            currentUser = newUser;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            showPage('libraryPage');
+        } else {
+            registerError.textContent = `Error during registration: ${data.error}`;
+            registerError.style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        registerError.textContent = 'An error occurred. Please try again.';
+        registerError.style.display = 'block';
+    });
+});
+
+// Update scorecard data after quiz completion
+function showResults() {
+    const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
+    const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+    const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+    document.getElementById('certificateBookTitle').textContent = currentBook.title;
+    document.getElementById('certificateStudentName').textContent = `${currentUser.fullName}`;
+    document.getElementById('certificateBookName').textContent = currentBook.title;
+    document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
+    document.getElementById('finalPercentage').textContent = `${percentage}%`;
+    document.getElementById('finalGrade').textContent = grade;
+    document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
+    document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
+        'Congratulations on your outstanding performance! Keep shining!' : 
+        'Great effort! Review your answers and try again to improve!';
+    showPage('resultsPage');
+    updateUserProgress(score, percentage, grade);
+
+    // Update hidden fields for potential resubmission
+    if (document.getElementById('regBook')) {
+        document.getElementById('regBook').value = currentBook.title;
+        document.getElementById('regScore').value = `${score} / ${currentBook.quiz.length}`;
+        document.getElementById('regGrade').value = grade;
+        document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+        document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+    }
+}
+        // Page Toggles
+        document.getElementById('showRegister').addEventListener('click', (e) => {
             e.preventDefault();
-            const loginError = document.getElementById('loginError');
-            loginError.style.display = 'none';
-            const email = document.getElementById('loginUsername').value.trim();
-            const password = document.getElementById('loginPassword').value.trim();
-            if (!email || !password) {
-                loginError.textContent = 'Please enter both email and password.';
-                loginError.style.display = 'block';
-                return;
-            }
-            try {
-                const users = JSON.parse(localStorage.getItem('users')) || [];
-                const user = users.find(u => u.email === email && u.password === password);
-                if (user) {
-                    currentUser = user;
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                    showPage('libraryPage');
-                    document.getElementById('userNameDisplay').textContent = currentUser.fullName;
-                } else {
-                    loginError.textContent = 'Invalid email or password.';
-                    loginError.style.display = 'block';
-                }
-            } catch (error) {
-                console.error('Login error:', error);
-                loginError.textContent = 'An error occurred. Please try again.';
-                loginError.style.display = 'block';
-            }
+            showPage('registerPage');
         });
-
-        // Registration
-        document.getElementById('registerForm').addEventListener('submit', (e) => {
+        document.getElementById('showLogin').addEventListener('click', (e) => {
             e.preventDefault();
-            const registerError = document.getElementById('registerError');
-            registerError.style.display = 'none';
-
-            const fullName = document.getElementById('regFullName').value.trim();
-            const designation = document.getElementById('regDesignation').value.trim();
-            const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
-            const baseCity = document.getElementById('regBaseCity').value.trim();
-            const date = document.getElementById('regDate').value.trim();
-            const email = document.getElementById('regEmail').value.trim();
-            const password = document.getElementById('regPassword').value.trim();
-            const cellNumber = document.getElementById('regCellNumber').value.trim();
-
-            if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
-                registerError.textContent = 'Please fill in all fields.';
-                registerError.style.display = 'block';
-                return;
-            }
-
-            document.getElementById('regBook').value = currentBook ? currentBook.title : '';
-            document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
-            document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
-            document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
-            document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
-
-            const form = document.getElementById('registerForm');
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    console.log('Registration successful, row:', data.row);
-                    const users = JSON.parse(localStorage.getItem('users')) || [];
-                    const newUser = { 
-                        fullName, 
-                        designation, 
-                        teamDepartment, 
-                        baseCity, 
-                        date, 
-                        email, 
-                        password, 
-                        cellNumber, 
-                        completedBooks: []
-                    };
-                    users.push(newUser);
-                    localStorage.setItem('users', JSON.stringify(users));
-                    currentUser = newUser;
-                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                    showPage('libraryPage');
-                    document.getElementById('userNameDisplay').textContent = currentUser.fullName;
-                } else {
-                    registerError.textContent = `Error during registration: ${data.error}`;
-                    registerError.style.display = 'block';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                registerError.textContent = 'An error occurred. Please try again.';
-                registerError.style.display = 'block';
-            });
+            showPage('loginPage');
+        });
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+            showPage('loginPage');
         });
 
         // Load Books
@@ -381,10 +425,7 @@
                     const response = await fetch(`${i}books.json`);
                     if (!response.ok) continue;
                     const data = await response.json();
-                    booksData[i] = data.map(book => ({
-                        ...book,
-                        quiz: book.quiz.map(q => ({ ...q, correct: Number(q.correct) }))
-                    }));
+                    booksData[i] = data;
                     data.forEach(book => {
                         if (!sections.includes(book.section)) return;
                         let section = document.querySelector(`#section-${book.section.replace(/\s+/g, '-')}`);
@@ -416,6 +457,7 @@
                     console.error(`Error loading ${i}books.json:`, error);
                 }
             }
+            // Add coming soon section
             const comingSoon = document.createElement('div');
             comingSoon.className = 'book-section';
             comingSoon.innerHTML = `
@@ -473,134 +515,104 @@
         document.getElementById('backToLibrary').addEventListener('click', () => showPage('libraryPage'));
 
         // Quiz Page
-document.getElementById('startQuizBtn').addEventListener('click', () => {
-    if (!currentBook || !currentBook.quiz || !Array.isArray(currentBook.quiz)) {
-        console.error('Cannot start quiz: currentBook or quiz data is invalid', { currentBook });
-        alert('Error: Unable to start quiz. Please select a book and try again.');
-        return;
-    }
-    currentQuestion = 0;
-    quizAnswers = new Array(currentBook.quiz.length).fill(-1); // Initialize with -1 for unanswered
-    quizStartTime = new Date();
-    console.log('Starting quiz for book:', currentBook.title);
-    showQuestion();
-    showPage('quizPage');
-});
+        document.getElementById('startQuizBtn').addEventListener('click', () => {
+            currentQuestion = 0;
+            quizAnswers = [];
+            quizStartTime = new Date();
+            showQuestion();
+            showPage('quizPage');
+        });
 
-function showQuestion() {
-    if (!currentBook || !currentBook.quiz || currentQuestion >= currentBook.quiz.length) {
-        console.error('Cannot show question: invalid book or question index', { currentBook, currentQuestion });
-        showResults(); // Fallback to results if quiz data is invalid
-        return;
-    }
+        function showQuestion() {
+    if (!currentBook) return;
     const question = currentBook.quiz[currentQuestion];
-    if (!question || !question.options || !Array.isArray(question.options)) {
-        console.error('Invalid question data:', { question, currentQuestion });
-        showResults(); // Fallback to results if question data is invalid
-        return;
-    }
     document.getElementById('quizBookTitle').textContent = currentBook.title;
     document.getElementById('questionText').textContent = question.question;
     document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
-
-    // Create shuffled options and track mapping
-    const originalIndices = question.options.map((_, index) => index);
-    const shuffledIndices = [...originalIndices].sort(() => Math.random() - 0.5); // Shuffle indices
-    question.shuffledIndices = shuffledIndices; // Store mapping for scoring
-
-    shuffledIndices.forEach((originalIndex, displayIndex) => {
-        const option = question.options[originalIndex];
+    question.options.forEach((option, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerHTML = `
-            <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
+            <span class="option-label">${String.fromCharCode(65 + index)}</span>
             <span>${option}</span>
         `;
         btn.addEventListener('click', () => {
             document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
             btn.classList.add('selected');
-            quizAnswers[currentQuestion] = originalIndex; // Store original index
-            console.log(`Question ${currentQuestion + 1}: Selected original index ${originalIndex} (displayed as ${String.fromCharCode(65 + displayIndex)})`);
-            document.getElementById('nextQuestionBtn').disabled = false;
+            quizAnswers[currentQuestion] = index;
+            // Auto-advance to next question or results
             setTimeout(() => {
                 if (currentQuestion < currentBook.quiz.length - 1) {
                     currentQuestion++;
                     showQuestion();
                 } else {
-                    console.log('Quiz completed. Answers:', quizAnswers);
                     showResults();
                 }
-            }, 300);
+            }, 300); // Small delay for user feedback
         });
         optionsContainer.appendChild(btn);
     });
     document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
     updateQuizTimer();
 }
-// Results Page
-function showResults() {
-    console.log('Quiz Answers:', quizAnswers);
-    console.log('Correct Answers:', currentBook.quiz.map(q => q.correct));
-    const score = currentBook.quiz.reduce((acc, q, i) => {
-        const userAnswer = quizAnswers[i] !== undefined ? Number(quizAnswers[i]) : -1;
-        const correctAnswer = Number(q.correct);
-        const isCorrect = userAnswer === correctAnswer;
-        console.log(`Question ${i + 1}: User Answer = ${userAnswer}, Correct Answer = ${correctAnswer}, Correct = ${isCorrect}`);
-        return acc + (isCorrect ? 1 : 0);
-    }, 0);
-    const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
-    const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
-    document.getElementById('certificateBookTitle').textContent = currentBook.title;
-    document.getElementById('certificateStudentName').textContent = currentUser.fullName;
-    document.getElementById('certificateBookName').textContent = currentBook.title;
-    document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
-    document.getElementById('finalPercentage').textContent = `${percentage}%`;
-    document.getElementById('finalGrade').textContent = grade;
-    document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
-    document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
-        'Congratulations on your outstanding performance! Keep shining!' : 
-        'Great effort! Review your answers and try again to improve!';
-    showPage('resultsPage');
-    updateUserProgress(score, percentage, grade);
 
-    // Update hidden fields for potential resubmission
-    if (document.getElementById('regBook')) {
-        document.getElementById('regBook').value = currentBook?.title || '';
-        document.getElementById('regScore').value = `${score} / ${currentBook.quiz.length}`;
-        document.getElementById('regGrade').value = grade;
-        document.getElementById('regSummaryTime').value = document.getElementById('timer')?.textContent || '';
-        document.getElementById('regQuizTime').value = document.getElementById('quizTimer')?.textContent || '';
-    }
-    submitQuizResults();
-}
-
-function submitQuizResults() {
-    const formData = new FormData();
-    formData.append('Full Name', currentUser?.fullName || '');
-    formData.append('Email', currentUser?.email || '');
-    formData.append('Book', currentBook?.title || '');
-    formData.append('Score', document.getElementById('finalScore')?.textContent || '');
-    formData.append('Grade', document.getElementById('finalGrade')?.textContent || '');
-    formData.append('Summary Time', document.getElementById('timer')?.textContent || '');
-    formData.append('Quiz Time', document.getElementById('quizTimer')?.textContent || '');
-
-    fetch('https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.result === 'success') {
-            console.log('Quiz results submitted successfully, row:', data.row);
-        } else {
-            console.error('Quiz submission error:', data.error);
+        function updateQuizTimer() {
+            if (!quizStartTime) return;
+            const now = new Date();
+            const diff = Math.floor((now - quizStartTime) / 1000);
+            const minutes = Math.floor(diff / 60).toString().padStart(2, '0');
+            const seconds = (diff % 60).toString().padStart(2, '0');
+            document.getElementById('quizTimer').textContent = `${minutes}:${seconds}`;
+            setTimeout(updateQuizTimer, 1000);
         }
-    })
-    .catch(error => console.error('Error submitting quiz results:', error));
-}
-        
+
+        document.getElementById('nextQuestionBtn').addEventListener('click', () => {
+            if (currentQuestion < currentBook.quiz.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        });
+
+        // Results Page
+        function showResults() {
+            const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
+            const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
+            const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
+            document.getElementById('certificateBookTitle').textContent = currentBook.title;
+            document.getElementById('certificateStudentName').textContent = `${currentUser.firstName} ${currentUser.lastName}`;
+            document.getElementById('certificateBookName').textContent = currentBook.title;
+            document.getElementById('finalScore').textContent = `${score} / ${currentBook.quiz.length}`;
+            document.getElementById('finalPercentage').textContent = `${percentage}%`;
+            document.getElementById('finalGrade').textContent = grade;
+            document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
+            document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
+                'Congratulations on your outstanding performance! Keep shining!' : 
+                'Great effort! Review your answers and try again to improve!';
+            showPage('resultsPage');
+            updateUserProgress(score, percentage, grade);
+        }
+
+        function updateUserProgress(score, percentage, grade) {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const userIndex = users.findIndex(u => u.username === currentUser.username);
+            if (userIndex !== -1) {
+                users[userIndex].completedBooks.push({
+                    bookId: currentBook.id,
+                    score,
+                    percentage,
+                    grade,
+                    date: new Date().toLocaleDateString()
+                });
+                localStorage.setItem('users', JSON.stringify(users));
+                currentUser = users[userIndex];
+                localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            }
+        }
+
         // Answer Review Page
         document.getElementById('reviewAnswersBtn').addEventListener('click', () => {
             showAnswerReview();
@@ -612,7 +624,7 @@ function submitQuizResults() {
             const answersList = document.getElementById('answersList');
             answersList.innerHTML = '';
             currentBook.quiz.forEach((question, index) => {
-                const isCorrect = Number(quizAnswers[index]) === Number(question.correct);
+                const isCorrect = quizAnswers[index] === question.correct;
                 const answerItem = document.createElement('div');
                 answerItem.className = `answer-item ${isCorrect ? 'correct' : 'incorrect'}`;
                 answerItem.innerHTML = `
@@ -640,7 +652,7 @@ function submitQuizResults() {
                 });
                 answersList.appendChild(answerItem);
             });
-            const score = currentBook.quiz.reduce((acc, q, i) => acc + (Number(quizAnswers[i]) === Number(q.correct) ? 1 : 0), 0);
+            const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
             const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
             const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
             document.getElementById('reviewScore').textContent = `${score} / ${currentBook.quiz.length}`;
@@ -664,7 +676,7 @@ function submitQuizResults() {
             doc.text('This certifies that', 105, 80, { align: 'center' });
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(20);
-            doc.text(currentUser.fullName, 105, 100, { align: 'center' });
+            doc.text(`${currentUser.firstName} ${currentUser.lastName}`, 105, 100, { align: 'center' });
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(14);
             doc.text('has successfully completed the course for', 105, 120, { align: 'center' });
@@ -673,7 +685,7 @@ function submitQuizResults() {
             doc.text(currentBook.title, 105, 140, { align: 'center' });
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(12);
-            const score = currentBook.quiz.reduce((acc, q, i) => acc + (Number(quizAnswers[i]) === Number(q.correct) ? 1 : 0), 0);
+            const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);
             const percentage = ((score / currentBook.quiz.length) * 100).toFixed(2);
             const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
             doc.text(`Score: ${score} / ${currentBook.quiz.length}`, 50, 170);
@@ -682,7 +694,7 @@ function submitQuizResults() {
             doc.text(`Completion Date: ${new Date().toLocaleDateString()}`, 50, 200);
             doc.text('Issued by: STAR-Shaigan\'s Learning Portal', 50, 230);
             doc.text('Instructor: Self-Paced Learning', 50, 240);
-            doc.save(`${currentUser.fullName}_${currentBook.title}_Certificate.pdf`);
+            doc.save(`${currentUser.firstName}_${currentUser.lastName}_${currentBook.title}_Certificate.pdf`);
         });
 
         document.getElementById('backToLibraryResults').addEventListener('click', () => showPage('libraryPage'));
@@ -695,21 +707,6 @@ function submitQuizResults() {
                 const section = card.querySelector('p').textContent.toLowerCase();
                 card.style.display = title.includes(query) || section.includes(query) ? 'block' : 'none';
             });
-        });
-
-        // Page Toggles
-        document.getElementById('showRegister').addEventListener('click', (e) => {
-            e.preventDefault();
-            showPage('registerPage');
-        });
-        document.getElementById('showLogin').addEventListener('click', (e) => {
-            e.preventDefault();
-            showPage('loginPage');
-        });
-        document.getElementById('logoutBtn').addEventListener('click', () => {
-            currentUser = null;
-            localStorage.removeItem('currentUser');
-            showPage('loginPage');
         });
 
         // Initialize

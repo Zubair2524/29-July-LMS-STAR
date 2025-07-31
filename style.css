@@ -335,6 +335,7 @@ body {
     color: white;
     font-size: 2rem;
     margin-bottom: 30px;
+    margin-top: 0;
     text-align: center;
     position: relative;
 }

@@ -752,6 +752,37 @@ btn.addEventListener('click', () => {
             showPage('loginPage');
         }
         loadBooks();
+        // Log access when page changes or loads
+function logPageAccess(pageId) {
+  const email = currentUser ? currentUser.email : 'Anonymous';
+  fetch('https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `action=logAccess&email=${encodeURIComponent(email)}&page=${encodeURIComponent(pageId)}`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.result !== 'success') console.error('Access log failed:', data.error);
+  })
+  .catch(error => console.error('Error logging access:', error));
+}
+
+// Update showPage function to log access
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+
+  if (pageId === 'libraryPage' && currentUser) {
+    document.getElementById('userNameDisplay').textContent = currentUser.fullName;
+  }
+  logPageAccess(pageId); // Log access for the new page
+}
+
+// Log initial page load
+document.addEventListener('DOMContentLoaded', () => {
+  const initialPage = currentUser ? 'libraryPage' : 'loginPage';
+  showPage(initialPage);
+});
     </script>
 </body>
 </html>

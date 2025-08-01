@@ -326,16 +326,18 @@ body, html {
 }
 
 .library-content {
-    padding: 0 10px;
+    padding: 10px;
     max-width: 1200px;
-    margin: 35px auto 0 auto; /* Adjusted for header height (~30px) */
-    min-height: calc(100vh - 35px); /* Ensure content fills viewport */
-    overflow-y: auto; /* Explicit scrollbar for content */
+    margin: 30px auto 0 auto; /* Match header height */
+    min-height: calc(100vh - 30px); /* Ensure content fills viewport */
+    overflow-y: scroll; /* Force scrollbar */
     position: relative;
+    display: block; /* Ensure visibility */
 }
 
 .book-section {
     margin-bottom: 15px;
+    min-height: 300px; /* Ensure space for books */
 }
 
 .section-title {
@@ -363,7 +365,8 @@ body, html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 10px 0;
-    min-height: 200px; /* Ensure grid is visible */
+    min-height: 300px; /* Ensure grid has space */
+    display: block; /* Fallback for rendering */
 }
 
 .book-card {
@@ -376,9 +379,12 @@ body, html {
     cursor: pointer;
     transition: all 0.3s ease;
     animation: bookFloat 6s ease-in-out infinite;
-    visibility: visible; /* Ensure visibility */
+    visibility: visible;
     opacity: 1;
-    min-height: 200px; /* Ensure card has space */
+    min-height: 220px; /* Ensure card has space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .book-card:hover {
@@ -1009,7 +1015,7 @@ body, html {
     }
 
     .library-content {
-        margin-top: 30px; /* Slightly less for mobile */
+        margin-top: 30px;
         min-height: calc(100vh - 30px);
     }
 }

@@ -377,6 +377,7 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
         registerError.style.display = 'block';
     });
 });
+        
 // Update scorecard data after quiz completion
 function showResults() {
     const score = currentBook.quiz.reduce((acc, q, i) => acc + (quizAnswers[i] === q.correct ? 1 : 0), 0);

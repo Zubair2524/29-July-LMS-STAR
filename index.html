@@ -36,56 +36,60 @@
     </div>
 
     <!-- Registration Page -->
-    <div id="registerPage" class="page">
-        <div class="background">
-            <div class="stars"></div>
-            <div class="moving-bg"></div>
-        </div>
-        <div class="registration-container glass-container">
-            <div class="logo-section">
-                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
-                <span class="subtitle">Study, Track, Achieve, Repeat</span>
-            </div>
-            <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-briefcase"></i>
-                    <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-users"></i>
-                    <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-city"></i>
-                    <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-calendar"></i>
-                    <input type="date" id="regDate" name="Date" placeholder="Date" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="regEmail" name="Email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
-                </div>
-                <input type="hidden" id="regBook" name="Book">
-                <input type="hidden" id="regScore" name="Score">
-                <input type="hidden" id="regGrade" name="Grade">
-                <input type="hidden" id="regSummaryTime" name="Summary Time">
-                <input type="hidden" id="regQuizTime" name="Quiz Time">
-                <button type="submit" class="rainbow-btn">Register</button>
-                <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
-                <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
-            </form>
-        </div>
+<div id="registerPage" class="page">
+    <div class="background">
+        <div class="stars"></div>
+        <div class="moving-bg"></div>
     </div>
+    <div class="registration-container glass-container">
+        <div class="logo-section">
+            <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
+            <span class="subtitle">Study, Track, Achieve, Repeat</span>
+        </div>
+        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-briefcase"></i>
+                <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-users"></i>
+                <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-city"></i>
+                <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-calendar"></i>
+                <input type="date" id="regDate" name="Date" placeholder="Date" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="regEmail" name="Email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regPassword" name="password" placeholder="Password" required autocomplete="new-password">
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
+            </div>
+            <input type="hidden" id="regBook" name="Book">
+            <input type="hidden" id="regScore" name="Score">
+            <input type="hidden" id="regGrade" name="Grade">
+            <input type="hidden" id="regSummaryTime" name="Summary Time">
+            <input type="hidden" id="regQuizTime" name="Quiz Time">
+            <button type="submit" class="rainbow-btn">Register</button>
+            <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
+            <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </form>
+    </div>
+</div>
 
     <!-- Library Page -->
     <div id="libraryPage" class="page">
@@ -299,79 +303,79 @@
                 loginError.style.display = 'block';
             }
         });
-
+        
         // Registration
-        document.getElementById('registerForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const registerError = document.getElementById('registerError');
-            registerError.style.display = 'none';
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const registerError = document.getElementById('registerError');
+    registerError.style.display = 'none';
 
-            // Collect registration form data
-            const fullName = document.getElementById('regFullName').value.trim();
-            const designation = document.getElementById('regDesignation').value.trim();
-            const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
-            const baseCity = document.getElementById('regBaseCity').value.trim();
-            const date = document.getElementById('regDate').value.trim();
-            const email = document.getElementById('regEmail').value.trim();
-            const password = document.getElementById('regPassword').value.trim();
-            const cellNumber = document.getElementById('regCellNumber').value.trim();
+    // Collect registration form data
+    const fullName = document.getElementById('regFullName').value.trim();
+    const designation = document.getElementById('regDesignation').value.trim();
+    const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
+    const baseCity = document.getElementById('regBaseCity').value.trim();
+    const date = document.getElementById('regDate').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const cellNumber = document.getElementById('regCellNumber').value.trim();
 
-            // Validate registration fields
-            if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
-                registerError.textContent = 'Please fill in all fields.';
-                registerError.style.display = 'block';
-                return;
-            }
+    // Validate registration fields
+    if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
+        registerError.textContent = 'Please fill in all fields, including password.';
+        registerError.style.display = 'block';
+        return;
+    }
 
-            // Populate scorecard data (updated dynamically after quiz)
-            document.getElementById('regBook').value = currentBook ? currentBook.title : '';
-            document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
-            document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
-            document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
-            document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+    // Populate scorecard data (updated dynamically after quiz)
+    document.getElementById('regBook').value = currentBook ? currentBook.title : '';
+    document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
+    document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
+    document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+    document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
 
-            // Submit form data to Google Apps Script
-            const form = document.getElementById('registerForm');
-            const formData = new FormData(form);
-            console.log('Form Data:', Object.fromEntries(formData)); // Debug
+    // Submit form data to Google Apps Script
+    const form = document.getElementById('registerForm');
+    const formData = new FormData(form);
+    console.log('Form Data:', Object.fromEntries(formData)); // Debug
 
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    console.log('Registration successful, row:', data.row);
-                    const users = JSON.parse(localStorage.getItem('users')) || [];
-                    const newUser = { 
-                        fullName,
-                        designation, 
-                        teamDepartment, 
-                        baseCity, 
-                        date, 
-                        email, 
-                        password,
-                        cellNumber,
-                        completedBooks: []
-                    };
-                    users.push(newUser);
-                    localStorage.setItem('users', JSON.stringify(users));
-                    currentUser = newUser;
-                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                    showPage('libraryPage');
-                    document.getElementById('userNameDisplay').textContent = currentUser.fullName;
-                } else {
-                    registerError.textContent = `Error during registration: ${data.error}`;
-                    registerError.style.display = 'block';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                registerError.textContent = 'An error occurred. Please try again.';
-                registerError.style.display = 'block';
-            });
-        });
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            console.log('Registration successful, row:', data.row);
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const newUser = { 
+                fullName,
+                designation, 
+                teamDepartment, 
+                baseCity, 
+                date, 
+                email, 
+                password, // Store password in localStorage
+                cellNumber,
+                completedBooks: []
+            };
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            currentUser = newUser;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            showPage('libraryPage');
+            document.getElementById('userNameDisplay').textContent = currentUser.fullName;
+        } else {
+            registerError.textContent = `Error during registration: ${data.error}`;
+            registerError.style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        registerError.textContent = 'An error occurred. Please try again.';
+        registerError.style.display = 'block';
+    });
+});
 
         // Submit Quiz Results to Google Sheet
         function submitQuizResults() {

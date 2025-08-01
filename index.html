@@ -530,62 +530,61 @@
         });
 
         function showQuestion() {
-            if (!currentBook) return;
-            const question = currentBook.quiz[currentQuestion];
-            document.getElementById('quizBookTitle').textContent = currentBook.title;
-            document.getElementById('questionText').textContent = question.question;
-            document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
-            const optionsContainer = document.getElementById('optionsContainer');
-            optionsContainer.innerHTML = '';
+    if (!currentBook) return;
+    const question = currentBook.quiz[currentQuestion];
+    document.getElementById('quizBookTitle').textContent = currentBook.title;
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
 
-            // Create an array of indices and shuffle it
-            const indices = [0, 1, 2, 3].filter(i => question.options[i] !== undefined);
-            const shuffledIndices = indices.sort(() => Math.random() - 0.5);
+    // Create an array of indices and shuffle it
+    const indices = [0, 1, 2, 3].filter(i => question.options[i] !== undefined);
+    const shuffledIndices = indices.sort(() => Math.random() - 0.5);
 
-            // Store the mapping of displayed index to original index
-            const indexMapping = {};
-            shuffledIndices.forEach((originalIndex, displayIndex) => {
-                indexMapping[displayIndex] = originalIndex;
-            });
+    // Store the mapping of displayed index to original index
+    const indexMapping = {};
+    shuffledIndices.forEach((originalIndex, displayIndex) => {
+        indexMapping[displayIndex] = originalIndex;
+    });
 
-            shuffledIndices.forEach((originalIndex, displayIndex) => {
-                const option = question.options[originalIndex];
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerHTML = `
-                    <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
-                    <span>${option}</span>
-                `;
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                    btn.classList.add('selected');
-                    quizAnswers[currentQuestion] = indexMapping[displayIndex];
-                    document.getElementById('nextQuestionBtn').disabled = false;
-                });
-                optionsContainer.appendChild(btn);
-            });
-            document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
-            updateQuizTimer();
-        }
-
-        function updateQuizTimer() {
-            if (!quizStartTime) return;
-            const now = new Date();
-            const diff = Math.floor((now - quizStartTime) / 1000);
-            const minutes = Math.floor(diff / 60).toString().padStart(2, '0');
-            const seconds = (diff % 60).toString().padStart(2, '0');
-            document.getElementById('quizTimer').textContent = `${minutes}:${seconds}`;
-            setTimeout(updateQuizTimer, 1000);
-        }
-
-        document.getElementById('nextQuestionBtn').addEventListener('click', () => {
-            if (currentQuestion < currentBook.quiz.length - 1) {
-                currentQuestion++;
-                showQuestion();
-            } else {
-                showResults();
-            }
+    shuffledIndices.forEach((originalIndex, displayIndex) => {
+        const option = question.options[originalIndex];
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerHTML = `
+            <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
+            <span>${option}</span>
+        `;
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            quizAnswers[currentQuestion] = indexMapping[displayIndex];
+            document.getElementById('nextQuestionBtn').disabled = false;
+            // Automatically advance to the next question after a short delay
+            setTimeout(() => {
+                if (currentQuestion < currentBook.quiz.length - 1) {
+                    currentQuestion++;
+                    showQuestion();
+                } else {
+                    showResults();
+                }
+            }, 500); // 500ms delay to allow user to see selection
         });
+        optionsContainer.appendChild(btn);
+    });
+    document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
+    updateQuizTimer();
+}
+
+document.getElementById('nextQuestionBtn').addEventListener('click', () => {
+    if (currentQuestion < currentBook.quiz.length - 1) {
+        currentQuestion++;
+        showQuestion();
+    } else {
+        showResults();
+    }
+});
 
         // Results Page
         function showResults() {

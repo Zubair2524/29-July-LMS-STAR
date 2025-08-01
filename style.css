@@ -11,13 +11,15 @@ body {
     background: #0a0a0a;
 }
 .page {
-    position: relative; /* Changed from fixed to relative to allow stacking and scrolling */
+    position: relative;
     width: 100%;
-    height: 40vh; /* Changed to min-height to allow content to expand beyond viewport */
+    min-height: 100vh;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
     z-index: 1;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .page.active {
@@ -280,6 +282,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .header-content {
@@ -339,12 +343,11 @@ body {
 .book-section {
     margin-bottom: 50px;
 }
-
 .section-title {
     color: white;
     font-size: 2rem;
     margin-bottom: 30px;
-    margin-top: 0;
+    margin-top: 0; /* Ensure no top margin */
     text-align: center;
     position: relative;
 }

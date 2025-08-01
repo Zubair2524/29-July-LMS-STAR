@@ -189,6 +189,15 @@ body {
 .input-group input::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
+/* Ensure password field is visible */
+#regPassword {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+
 
 /* Rainbow Button */
 .rainbow-btn {

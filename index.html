@@ -529,7 +529,7 @@
             showPage('quizPage');
         });
 
-    function showQuestion() {
+        function showQuestion() {
     if (!currentBook) return;
     const question = currentBook.quiz[currentQuestion];
     document.getElementById('quizBookTitle').textContent = currentBook.title;
@@ -537,31 +537,18 @@
     document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
-
-    // Create an array of indices and shuffle it
-    const indices = [0, 1, 2, 3].filter(i => question.options[i] !== undefined);
-    const shuffledIndices = indices.sort(() => Math.random() - 0.5);
-
-    // Store the mapping of displayed index to original index
-    const indexMapping = {};
-    shuffledIndices.forEach((originalIndex, displayIndex) => {
-        indexMapping[displayIndex] = originalIndex;
-    });
-
-    shuffledIndices.forEach((originalIndex, displayIndex) => {
-        const option = question.options[originalIndex];
+    question.options.forEach((option, index) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
         btn.innerHTML = `
-            <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
+            <span class="option-label">${String.fromCharCode(65 + index)}</span>
             <span>${option}</span>
         `;
         btn.addEventListener('click', () => {
             document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
             btn.classList.add('selected');
-            quizAnswers[currentQuestion] = indexMapping[displayIndex];
-            document.getElementById('nextQuestionBtn').disabled = false;
-            // Automatically advance to the next question after a short delay
+            quizAnswers[currentQuestion] = index;
+            // Auto-advance to next question or results
             setTimeout(() => {
                 if (currentQuestion < currentBook.quiz.length - 1) {
                     currentQuestion++;
@@ -569,7 +556,7 @@
                 } else {
                     showResults();
                 }
-            }, 500); // 500ms delay to allow user to see selection
+            }, 300); // Small delay for user feedback
         });
         optionsContainer.appendChild(btn);
     });
@@ -577,14 +564,24 @@
     updateQuizTimer();
 }
 
-document.getElementById('nextQuestionBtn').addEventListener('click', () => {
-    if (currentQuestion < currentBook.quiz.length - 1) {
-        currentQuestion++;
-        showQuestion();
-    } else {
-        showResults();
-    }
-});
+        function updateQuizTimer() {
+            if (!quizStartTime) return;
+            const now = new Date();
+            const diff = Math.floor((now - quizStartTime) / 1000);
+            const minutes = Math.floor(diff / 60).toString().padStart(2, '0');
+            const seconds = (diff % 60).toString().padStart(2, '0');
+            document.getElementById('quizTimer').textContent = `${minutes}:${seconds}`;
+            setTimeout(updateQuizTimer, 1000);
+        }
+
+        document.getElementById('nextQuestionBtn').addEventListener('click', () => {
+            if (currentQuestion < currentBook.quiz.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showResults();
+            }
+        });
 
         // Results Page
         function showResults() {

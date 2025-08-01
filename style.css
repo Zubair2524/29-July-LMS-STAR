@@ -25,7 +25,7 @@ body, html {
     margin: 0 !important;
     padding: 0 !important;
     top: 0 !important;
-    overflow-y: auto; /* Scroll only if needed */
+    overflow-y: auto; /* Ensure scrolling */
 }
 
 .page.active {
@@ -84,7 +84,7 @@ body, html {
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    padding: 15px; /* Further reduced */
+    padding: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     animation: slideIn 0.4s ease-out;
 }
@@ -92,7 +92,7 @@ body, html {
 @keyframes slideIn {
     from {
         opacity: 0;
-        transform: translateY(10px); /* Further reduced */
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -103,7 +103,7 @@ body, html {
 /* Login Page */
 .login-container {
     max-width: 450px;
-    margin: 10px auto; /* Minimal top margin */
+    margin: 10px auto;
     padding: 15px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -116,7 +116,7 @@ body, html {
 /* Registration Page */
 .registration-container {
     max-width: 600px;
-    margin: 10px auto; /* Minimal top margin */
+    margin: 10px auto;
     padding: 15px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -127,7 +127,7 @@ body, html {
 }
 
 .logo-section {
-    margin-bottom: 15px; /* Further reduced */
+    margin-bottom: 15px;
 }
 
 .star-text {
@@ -170,7 +170,7 @@ body, html {
 /* Form Styles */
 .input-group {
     position: relative;
-    margin-bottom: 10px; /* Further reduced */
+    margin-bottom: 10px;
 }
 
 .input-group i {
@@ -184,7 +184,7 @@ body, html {
 
 .input-group input {
     width: 100%;
-    padding: 10px 40px; /* Further reduced */
+    padding: 10px 40px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
@@ -213,7 +213,7 @@ body, html {
 /* Rainbow Button */
 .rainbow-btn {
     position: relative;
-    padding: 10px 20px; /* Further reduced */
+    padding: 10px 20px;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fd79a8);
     background-size: 300% 300%;
     border: none;
@@ -328,18 +328,20 @@ body, html {
 .library-content {
     padding: 0 10px;
     max-width: 1200px;
-    margin: 30px auto 0 auto; /* Reduced to match header height */
-    min-height: auto;
+    margin: 35px auto 0 auto; /* Adjusted for header height (~30px) */
+    min-height: calc(100vh - 35px); /* Ensure content fills viewport */
+    overflow-y: auto; /* Explicit scrollbar for content */
+    position: relative;
 }
 
 .book-section {
-    margin-bottom: 20px; /* Further reduced */
+    margin-bottom: 15px;
 }
 
 .section-title {
     color: white;
     font-size: 1.6rem;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     text-align: center;
     position: relative;
 }
@@ -361,6 +363,7 @@ body, html {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 10px 0;
+    min-height: 200px; /* Ensure grid is visible */
 }
 
 .book-card {
@@ -373,6 +376,9 @@ body, html {
     cursor: pointer;
     transition: all 0.3s ease;
     animation: bookFloat 6s ease-in-out infinite;
+    visibility: visible; /* Ensure visibility */
+    opacity: 1;
+    min-height: 200px; /* Ensure card has space */
 }
 
 .book-card:hover {
@@ -424,7 +430,7 @@ body, html {
 /* Reading Page */
 .reading-container {
     max-width: 800px;
-    margin: 10px auto; /* Minimal top margin */
+    margin: 10px auto;
     padding: 0 10px;
     min-height: auto;
 }
@@ -563,7 +569,7 @@ body, html {
 /* Quiz Page */
 .quiz-container {
     max-width: 800px;
-    margin: 10px auto; /* Minimal top margin */
+    margin: 10px auto;
     padding: 0 10px;
     min-height: auto;
 }
@@ -673,7 +679,7 @@ body, html {
 /* Results Page */
 .results-container {
     max-width: 800px;
-    margin: 10px auto; /* Minimal top margin */
+    margin: 10px auto;
     padding: 0 10px;
     min-height: auto;
 }
@@ -832,7 +838,7 @@ body, html {
 /* Answer Review Page */
 .review-container {
     max-width: 800px;
-    margin: 10px auto; /* Minimal top margin */
+    margin: 10px auto;
     padding: 0 10px;
     min-height: auto;
 }
@@ -1000,6 +1006,11 @@ body, html {
     .detail-row {
         flex-direction: column;
         gap: 4px;
+    }
+
+    .library-content {
+        margin-top: 30px; /* Slightly less for mobile */
+        min-height: calc(100vh - 30px);
     }
 }
 

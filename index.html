@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <!-- Login Page -->
     <div id="loginPage" class="page active">
         <div class="background">
@@ -40,60 +36,60 @@
     </div>
 
     <!-- Registration Page -->
-    <div id="registerPage" class="page">
-        <div class="background">
-            <div class="stars"></div>
-            <div class="moving-bg"></div>
-        </div>
-        <div class="registration-container glass-container">
-            <div class="logo-section">
-                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
-                <span class="subtitle">Study, Track, Achieve, Repeat</span>
-            </div>
-            <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-briefcase"></i>
-                    <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-users"></i>
-                    <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-city"></i>
-                    <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-calendar"></i>
-                    <input type="date" id="regDate" name="Date" placeholder="Date" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="regEmail" name="Email" placeholder="Email" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="regPassword" name="password" placeholder="Password" required autocomplete="new-password">
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-phone"></i>
-                    <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
-                </div>
-                <input type="hidden" id="regBook" name="Book">
-                <input type="hidden" id="regScore" name="Score">
-                <input type="hidden" id="regGrade" name="Grade">
-                <input type="hidden" id="regSummaryTime" name="Summary Time">
-                <input type="hidden" id="regQuizTime" name="Quiz Time">
-                <button type="submit" class="rainbow-btn">Register</button>
-                <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
-                <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
-            </form>
-        </div>
+<div id="registerPage" class="page">
+    <div class="background">
+        <div class="stars"></div>
+        <div class="moving-bg"></div>
     </div>
+    <div class="registration-container glass-container">
+        <div class="logo-section">
+            <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
+            <span class="subtitle">Study, Track, Achieve, Repeat</span>
+        </div>
+        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-briefcase"></i>
+                <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-users"></i>
+                <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-city"></i>
+                <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-calendar"></i>
+                <input type="date" id="regDate" name="Date" placeholder="Date" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="regEmail" name="Email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="regPassword" name="password" placeholder="Password" required autocomplete="new-password">
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
+            </div>
+            <input type="hidden" id="regBook" name="Book">
+            <input type="hidden" id="regScore" name="Score">
+            <input type="hidden" id="regGrade" name="Grade">
+            <input type="hidden" id="regSummaryTime" name="Summary Time">
+            <input type="hidden" id="regQuizTime" name="Quiz Time">
+            <button type="submit" class="rainbow-btn">Register</button>
+            <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
+            <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </form>
+    </div>
+</div>
 
     <!-- Library Page -->
     <div id="libraryPage" class="page">
@@ -256,7 +252,6 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
     <script>
         // User Management
         let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
@@ -267,7 +262,6 @@
         let quizStartTime = null;
         let readingStartTime = null;
         let booksData = {};
-        let sessionLogged = localStorage.getItem('sessionLogged_' + (currentUser ? currentUser.email : 'Anonymous')) || false; // Track session log
 
         // Page Navigation
         function showPage(pageId) {
@@ -275,9 +269,6 @@
             document.getElementById(pageId).classList.add('active');
             if (pageId === 'libraryPage' && currentUser) {
                 document.getElementById('userNameDisplay').textContent = currentUser.fullName;
-            }
-            if (!sessionLogged) {
-                logPageAccess(pageId); // Log only on first page load
             }
         }
 
@@ -300,8 +291,6 @@
                     console.log('Logged in user:', user); // Debug
                     currentUser = user;
                     localStorage.setItem('currentUser', JSON.stringify(user));
-                    sessionLogged = false; // Reset session log on new login
-                    localStorage.removeItem('sessionLogged_' + email); // Clear previous session log
                     showPage('libraryPage');
                     document.getElementById('userNameDisplay').textContent = currentUser.fullName;
                 } else {
@@ -314,82 +303,82 @@
                 loginError.style.display = 'block';
             }
         });
-
+        
         // Registration
-        document.getElementById('registerForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const registerError = document.getElementById('registerError');
-            registerError.style.display = 'none';
-            // Collect registration form data
-            const fullName = document.getElementById('regFullName').value.trim();
-            const designation = document.getElementById('regDesignation').value.trim();
-            const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
-            const baseCity = document.getElementById('regBaseCity').value.trim();
-            const date = document.getElementById('regDate').value.trim();
-            const email = document.getElementById('regEmail').value.trim();
-            const password = document.getElementById('regPassword').value.trim();
-            const cellNumber = document.getElementById('regCellNumber').value.trim();
-            // Validate registration fields
-            if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
-                registerError.textContent = 'Please fill in all fields, including password.';
-                registerError.style.display = 'block';
-                return;
-            }
-            // Populate scorecard data (updated dynamically after quiz)
-            document.getElementById('regBook').value = currentBook ? currentBook.title : '';
-            document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
-            document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
-            document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
-            document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
-            // Add access timestamp
-            const accessTimestamp = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'full', timeStyle: 'short' });
-            const formData = new FormData(document.getElementById('registerForm'));
-            formData.append('Access_Timestamp', accessTimestamp); // Updated parameter name
-            console.log('Registration Data:', Object.fromEntries(formData)); // Debug
-            // Submit form data to Google Apps Script
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    console.log('Registration successful, row:', data.row);
-                    const users = JSON.parse(localStorage.getItem('users')) || [];
-                    const newUser = {
-                        fullName,
-                        designation,
-                        teamDepartment,
-                        baseCity,
-                        date,
-                        email,
-                        password,
-                        cellNumber,
-                        completedBooks: []
-                    };
-                    users.push(newUser);
-                    localStorage.setItem('users', JSON.stringify(users));
-                    currentUser = newUser;
-                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                    sessionLogged = false; // Reset session log on new registration
-                    localStorage.removeItem('sessionLogged_' + email); // Clear previous session log
-                    showPage('libraryPage');
-                    document.getElementById('userNameDisplay').textContent = currentUser.fullName;
-                } else {
-                    registerError.textContent = `Error during registration: ${data.error}`;
-                    registerError.style.display = 'block';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                registerError.textContent = 'An error occurred. Please try again.';
-                registerError.style.display = 'block';
-            });
-        });
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const registerError = document.getElementById('registerError');
+    registerError.style.display = 'none';
+
+    // Collect registration form data
+    const fullName = document.getElementById('regFullName').value.trim();
+    const designation = document.getElementById('regDesignation').value.trim();
+    const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
+    const baseCity = document.getElementById('regBaseCity').value.trim();
+    const date = document.getElementById('regDate').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const cellNumber = document.getElementById('regCellNumber').value.trim();
+
+    // Validate registration fields
+    if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
+        registerError.textContent = 'Please fill in all fields, including password.';
+        registerError.style.display = 'block';
+        return;
+    }
+
+    // Populate scorecard data (updated dynamically after quiz)
+    document.getElementById('regBook').value = currentBook ? currentBook.title : '';
+    document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
+    document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
+    document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+    document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+
+    // Submit form data to Google Apps Script
+    const form = document.getElementById('registerForm');
+    const formData = new FormData(form);
+    console.log('Form Data:', Object.fromEntries(formData)); // Debug
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            console.log('Registration successful, row:', data.row);
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const newUser = { 
+                fullName,
+                designation, 
+                teamDepartment, 
+                baseCity, 
+                date, 
+                email, 
+                password, // Store password in localStorage
+                cellNumber,
+                completedBooks: []
+            };
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            currentUser = newUser;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            showPage('libraryPage');
+            document.getElementById('userNameDisplay').textContent = currentUser.fullName;
+        } else {
+            registerError.textContent = `Error during registration: ${data.error}`;
+            registerError.style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        registerError.textContent = 'An error occurred. Please try again.';
+        registerError.style.display = 'block';
+    });
+});
 
         // Submit Quiz Results to Google Sheet
         function submitQuizResults() {
-            const accessTimestamp = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'full', timeStyle: 'short' });
             const formData = new FormData();
             formData.append('Full Name', currentUser.fullName);
             formData.append('Designation', currentUser.designation);
@@ -403,9 +392,8 @@
             formData.append('Grade', document.getElementById('finalGrade').textContent);
             formData.append('Summary Time', document.getElementById('timer').textContent);
             formData.append('Quiz Time', document.getElementById('quizTimer').textContent);
-            formData.append('Access_Timestamp', accessTimestamp); // Updated parameter name
-            console.log('Quiz Data:', Object.fromEntries(formData)); // Debug
-            fetch('https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec', {
+
+            fetch('https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec', {
                 method: 'POST',
                 body: formData
             })
@@ -427,17 +415,13 @@
             e.preventDefault();
             showPage('registerPage');
         });
-
         document.getElementById('showLogin').addEventListener('click', (e) => {
             e.preventDefault();
             showPage('loginPage');
         });
-
         document.getElementById('logoutBtn').addEventListener('click', () => {
             currentUser = null;
             localStorage.removeItem('currentUser');
-            sessionLogged = false; // Reset session log on logout
-            localStorage.removeItem('sessionLogged_' + (currentUser ? currentUser.email : 'Anonymous')); // Clear session log
             showPage('loginPage');
         });
 
@@ -557,12 +541,17 @@
             document.getElementById('questionCounter').textContent = `Question ${currentQuestion + 1} of ${currentBook.quiz.length}`;
             const optionsContainer = document.getElementById('optionsContainer');
             optionsContainer.innerHTML = '';
+
+            // Create an array of indices and shuffle it
             const indices = [0, 1, 2, 3].filter(i => question.options[i] !== undefined);
             const shuffledIndices = indices.sort(() => Math.random() - 0.5);
+
+            // Store the mapping of displayed index to original index
             const indexMapping = {};
             shuffledIndices.forEach((originalIndex, displayIndex) => {
                 indexMapping[displayIndex] = originalIndex;
             });
+
             shuffledIndices.forEach((originalIndex, displayIndex) => {
                 const option = question.options[originalIndex];
                 const btn = document.createElement('button');
@@ -571,21 +560,23 @@
                     <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
                     <span>${option}</span>
                 `;
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                    btn.classList.add('selected');
-                    quizAnswers[currentQuestion] = indexMapping[displayIndex];
-                    document.getElementById('nextQuestionBtn').disabled = false;
-                    setTimeout(() => {
-                        if (currentQuestion < currentBook.quiz.length - 1) {
-                            currentQuestion++;
-                            showQuestion();
-                        } else {
-                            showResults();
-                        }
-                    }, 500);
-                });
-                optionsContainer.appendChild(btn);
+
+btn.addEventListener('click', () => {
+    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    quizAnswers[currentQuestion] = indexMapping[displayIndex];
+    document.getElementById('nextQuestionBtn').disabled = false;
+    setTimeout(() => {
+        if (currentQuestion < currentBook.quiz.length - 1) {
+            currentQuestion++;
+            showQuestion();
+        } else {
+            showResults();
+        }
+    }, 500);
+});
+                
+        optionsContainer.appendChild(btn);
             });
             document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
             updateQuizTimer();
@@ -624,12 +615,14 @@
             document.getElementById('finalPercentage').textContent = `${percentage}%`;
             document.getElementById('finalGrade').textContent = grade;
             document.getElementById('completionDate').textContent = new Date().toLocaleDateString();
-            document.getElementById('encouragementMessage').textContent = percentage >= 70 ?
-                'Congratulations on your outstanding performance! Keep shining!' :
+            document.getElementById('encouragementMessage').textContent = percentage >= 70 ? 
+                'Congratulations on your outstanding performance! Keep shining!' : 
                 'Great effort! Review your answers and try again to improve!';
             showPage('resultsPage');
             updateUserProgress(score, percentage, grade);
             submitQuizResults();
+
+            // Update hidden fields for potential resubmission
             if (document.getElementById('regBook')) {
                 document.getElementById('regBook').value = currentBook.title;
                 document.getElementById('regScore').value = `${score} / ${currentBook.quiz.length}`;
@@ -679,11 +672,11 @@
                 question.options.forEach((opt, optIndex) => {
                     const isUserAnswer = quizAnswers[index] === optIndex;
                     const isCorrectAnswer = optIndex === question.correct;
-                    const optionClass = isUserAnswer && isCorrectAnswer ? 'user-correct' :
-                                      isUserAnswer ? 'user-answer' :
+                    const optionClass = isUserAnswer && isCorrectAnswer ? 'user-correct' : 
+                                      isUserAnswer ? 'user-answer' : 
                                       isCorrectAnswer ? 'correct-answer' : '';
-                    const indicatorClass = isUserAnswer && isCorrectAnswer ? 'correct-indicator' :
-                                         isUserAnswer ? 'incorrect-indicator' :
+                    const indicatorClass = isUserAnswer && isCorrectAnswer ? 'correct-indicator' : 
+                                         isUserAnswer ? 'incorrect-indicator' : 
                                          isCorrectAnswer ? 'correct-indicator' : 'neutral-indicator';
                     const optionElement = document.createElement('div');
                     optionElement.className = `answer-option ${optionClass}`;
@@ -759,36 +752,6 @@
             showPage('loginPage');
         }
         loadBooks();
-
-        // Log access timestamp when page changes or loads
-        function logPageAccess(pageId) {
-            const email = currentUser ? currentUser.email : 'Anonymous';
-            const accessTimestamp = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'full', timeStyle: 'short' });
-            console.log('Sending Access Data:', { email, accessTimestamp, page: pageId }); // Debug
-            fetch('https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `email=${encodeURIComponent(email)}&Access_Timestamp=${encodeURIComponent(accessTimestamp)}&page=${encodeURIComponent(pageId)}`
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result !== 'success') console.error('Access log failed:', data.error);
-                else {
-                    console.log('Access Response:', data); // Debug success
-                    sessionLogged = true; // Mark session as logged
-                    localStorage.setItem('sessionLogged_' + email, 'true'); // Persist session log
-                }
-            })
-            .catch(error => console.error('Error logging access:', error));
-        }
-
-        // Log initial page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const initialPage = currentUser ? 'libraryPage' : 'loginPage';
-            showPage(initialPage);
-        });
     </script>
-
 </body>
-
 </html>

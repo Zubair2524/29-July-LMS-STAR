@@ -18,8 +18,9 @@ body {
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
     z-index: 1;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+    margin: 0 !important; /* Remove all margins */
+    padding: 0 !important; /* Remove all padding */
+    top: 0 !important; /* Ensure page starts at top */
 }
 
 .page.active {
@@ -279,11 +280,11 @@ body {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 10px 0;
-    position: sticky;
-    top: 0;
+    position: fixed; /* Changed to fixed to stick at viewport top */
+    top: 0 !important;
     z-index: 100;
-    margin-top: 0;
-    padding-top: 0;
+    width: 100%; /* Ensure header spans full width */
+    margin: 0 !important; /* Remove all margins */
 }
 
 .header-content {
@@ -335,9 +336,10 @@ body {
 
 /* Library Content */
 .library-content {
+    padding: 0 20px; /* Remove top/bottom padding, keep horizontal */
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px;
+    margin: 0 auto; /* Center horizontally, no top margin */
+    margin-top: 60px; /* Adjust for fixed header height */
 }
 
 .book-section {
@@ -346,8 +348,7 @@ body {
 .section-title {
     color: white;
     font-size: 2rem;
-    margin-bottom: 30px;
-    margin-top: 0; /* Ensure no top margin */
+    margin: 0 0 30px 0; /* No top margin, keep bottom margin */
     text-align: center;
     position: relative;
 }

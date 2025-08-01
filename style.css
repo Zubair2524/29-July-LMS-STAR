@@ -5,25 +5,19 @@
     box-sizing: border-box;
 }
 
-body, html {
+body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     background: #0a0a0a;
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
-
 .page {
-    position: relative;
+    position: relative; /* Changed from fixed to relative to allow stacking and scrolling */
     width: 100%;
-    min-height: 100vh; /* Changed from 40vh to 100vh to ensure full viewport */
+    height: 40vh; /* Changed to min-height to allow content to expand beyond viewport */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
     z-index: 1;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
 }
 
 .page.active {
@@ -31,7 +25,6 @@ body, html {
     pointer-events: auto;
     z-index: 10;
 }
-
 /* Animated Background */
 .background {
     position: fixed;
@@ -113,6 +106,7 @@ body, html {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     animation: slideIn 1s ease-out;
     text-align: center;
+    margin-top: 300px; /* Slide down by approximately 100px (adjust as needed) */
 }
 
 .logo-section {
@@ -134,9 +128,8 @@ body, html {
     animation: rainbowText 3s ease-in-out infinite;
     display: block;
 }
-
 .register-link {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller than star-text's 3.5rem */
     font-weight: 700;
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #fd79a8);
     background-size: 300% 300%;
@@ -144,7 +137,7 @@ body, html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbowText 3s ease-in-out infinite;
-    display: inline-block;
+    display: inline-block; /* Suitable for a link */
 }
 
 .subtitle {
@@ -278,8 +271,6 @@ body, html {
     position: sticky;
     top: 0;
     z-index: 100;
-    margin-top: 0;
-    padding-top: 0;
 }
 
 .header-content {
@@ -344,7 +335,7 @@ body, html {
     color: white;
     font-size: 2rem;
     margin-bottom: 30px;
-    margin-top: 0; /* Ensure no top margin */
+    margin-top: 0;
     text-align: center;
     position: relative;
 }
@@ -571,8 +562,6 @@ body, html {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 0;
-    padding-top: 0;
 }
 
 .quiz-header {
@@ -681,13 +670,11 @@ body, html {
 
 /* Results Page */
 .results-container {
-    min-height: 100vh; /* Ensure full viewport height */
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-top: 0;
-    padding-top: 0;
 }
 
 .certificate-container {

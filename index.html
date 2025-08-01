@@ -556,13 +556,23 @@
                     <span class="option-label">${String.fromCharCode(65 + displayIndex)}</span>
                     <span>${option}</span>
                 `;
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-                    btn.classList.add('selected');
-                    quizAnswers[currentQuestion] = indexMapping[displayIndex];
-                    document.getElementById('nextQuestionBtn').disabled = false;
-                });
-                optionsContainer.appendChild(btn);
+
+btn.addEventListener('click', () => {
+    document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    quizAnswers[currentQuestion] = indexMapping[displayIndex];
+    document.getElementById('nextQuestionBtn').disabled = false;
+    setTimeout(() => {
+        if (currentQuestion < currentBook.quiz.length - 1) {
+            currentQuestion++;
+            showQuestion();
+        } else {
+            showResults();
+        }
+    }, 500);
+});
+                
+        ptionsContainer.appendChild(btn);
             });
             document.getElementById('nextQuestionBtn').disabled = quizAnswers[currentQuestion] === undefined;
             updateQuizTimer();

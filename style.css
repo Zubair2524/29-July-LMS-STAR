@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     color: #333;
@@ -19,103 +17,34 @@ body {
     padding: 20px;
 }
 
-.page {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease-in-out;
-    z-index: 1;
+/* Glass Morphism Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
-.page.active {
-    opacity: 1;
-    pointer-events: auto;
-    z-index: 10;
+/* Section Management */
+.section {
+    display: none;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.section.active {
     display: block;
 }
 
-/* Animated Background */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #1a0033, #330066, #0066cc, #3399ff);
-    background-size: 300% 300%;
-    animation: gradientShift 20s ease infinite;
-    z-index: -2;
-}
-
-.stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.8"/><circle cx="80" cy="30" r="0.5" fill="white" opacity="0.6"/><circle cx="30" cy="70" r="1.5" fill="white" opacity="0.4"/><circle cx="70" cy="80" r="0.8" fill="white" opacity="0.7"/><circle cx="90" cy="10" r="0.3" fill="white" opacity="0.9"/></svg>') repeat;
-    animation: twinkle 3s ease-in-out infinite alternate;
-}
-
-.moving-bg {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: float 20s linear infinite;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes twinkle {
-    0% { opacity: 0.3; }
-    100% { opacity: 1; }
-}
-
-@keyframes float {
-    0% { transform: translate(-50px, -50px); }
-    100% { transform: translate(50px, 50px); }
-}
-
-/* Glass Morphism */
-.glass-container, .glass-card {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    animation: slideIn 1s ease-out;
-}
-
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* Header */
-.glass-header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.header {
+    text-align: center;
+    margin-bottom: 40px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -123,9 +52,21 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: white;
+}
+
+.star-icon {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    background-size: 300% 300%;
+    animation: rainbow 3s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@keyframes rainbow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .logo h1 {
@@ -135,142 +76,26 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.star-icon, .star-text {
-    font-size: 3.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
-    background-size: 300% 300%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbowText 3s ease-in-out infinite;
-}
-
-.register-link {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
-    background-size: 300% 300%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: rainbowText 3s ease-in-out infinite;
-    display: inline-block;
-}
-
-@keyframes rainbowText {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
 .subtitle {
-    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-    display: block;
+    font-size: 1.1rem;
     margin-top: 10px;
     text-align: center;
 }
 
-.search-bar {
-    position: relative;
-    flex: 1;
-    max-width: 400px;
-    margin: 0 40px;
-}
-
-.search-bar i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 12px 50px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 25px;
+.user-info {
     color: white;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.search-bar input:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.02);
-}
-
-/* Login Page */
-.login-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    animation: slideIn 1s ease-out;
-    text-align: center;
-    margin-top: 300px;
-}
-
-.logo-section {
-    margin-bottom: 30px;
-}
-
-.main-title {
-    margin-bottom: 10px;
-}
-
-/* Form Styles */
-.form, .registration-form {
+/* Forms */
+.form {
     max-width: 500px;
     margin: 0 auto;
 }
 
-.input-group, .form-group {
-    position: relative;
+.form-group {
     margin-bottom: 25px;
-}
-
-.input-group i {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.6);
-    z-index: 2;
-}
-
-.input-group input, .form-group input {
-    width: 100%;
-    padding: 15px 50px;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    border-radius: 10px;
-    color: #333;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.input-group input:focus, .form-group input:focus {
-    outline: none;
-    background: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.input-group input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
 }
 
 .form-group label {
@@ -280,15 +105,25 @@ body {
     font-weight: 500;
 }
 
-/* Ensure password field is visible */
-#regPassword {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Buttons */
-.rainbow-btn, .btn-primary, .btn-secondary, .btn-nav, .btn-back {
+.btn-primary, .btn-secondary, .btn-nav, .btn-back {
     padding: 15px 30px;
     border: none;
     border-radius: 10px;
@@ -301,14 +136,14 @@ body {
     text-align: center;
 }
 
-.rainbow-btn, .btn-primary {
+.btn-primary {
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
     background-size: 300% 300%;
     color: white;
-    animation: rainbowShift 3s ease-in-out infinite;
+    animation: rainbow 3s ease-in-out infinite;
 }
 
-.rainbow-btn:hover, .btn-primary:hover {
+.btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -350,116 +185,42 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-@keyframes rainbowShift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* Registration Page */
-.registration-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-    animation: slideIn 1s ease-out;
-    text-align: center;
-}
-
-.form-row {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.form-row .input-group {
-    flex: 1;
-    margin-bottom: 0;
-}
-
-/* Library Page */
-.library-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.book-section {
-    margin-bottom: 50px;
-}
-
-.section-title {
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
-    border-radius: 2px;
-}
-
-.bookshelf, .books-grid {
+/* Books Grid */
+.books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    padding: 20px 0;
+    margin-top: 40px;
 }
 
 .book-card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 30px;
     text-align: center;
-    cursor: pointer;
     transition: all 0.3s ease;
-    animation: bookFloat 6s ease-in-out infinite;
+    cursor: pointer;
 }
 
 .book-card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     background: rgba(255, 255, 255, 0.25);
 }
 
-.book-thumbnail {
-    width: 120px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, #667eea, #764ba2);
-}
-
-.book-card h3 {
+.book-cover h3 {
     color: white;
     font-size: 1.4rem;
-    font-weight: bold;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.book-card p, .book-cover .author {
+.book-cover .author {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
     font-style: italic;
+    margin-bottom: 20px;
 }
 
 .book-stats {
@@ -481,43 +242,14 @@ body {
     font-size: 1.2rem;
 }
 
-@keyframes bookFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-}
-
-/* Reading Page */
-.reading-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
+/* Reading Section */
 .reading-header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 30px;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.reading-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.reading-nav h2 {
-    color: white;
-    font-size: 1.5rem;
-    flex: 1;
-    text-align: center;
 }
 
 .progress-container {
@@ -546,69 +278,50 @@ body {
     font-weight: 500;
 }
 
-.timer {
-    color: white;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 10px 15px;
-    border-radius: 10px;
-}
-
-.timer-icon {
-    font-size: 1.2rem;
-}
-
 .slide-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
+    padding: 40px;
     min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .slide-content {
     flex: 1;
     margin-bottom: 30px;
-    color: #666;
 }
 
 .slide-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
     color: #333;
-    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
 .slide-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
     color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     font-weight: bold;
 }
 
 .slide-content p {
-    font-size: 1.1rem;
+    color: #666;
     line-height: 1.8;
-    margin-bottom: 20px;
-    text-align: justify;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 .slide-content ul {
-    margin: 20px 0;
-    padding-left: 25px;
+    color: #666;
     line-height: 1.8;
+    font-size: 1.1rem;
+    margin-left: 20px;
 }
 
 .slide-content li {
-    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
@@ -628,35 +341,20 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
-/* Quiz Page */
-.quiz-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 40px;
-    min-height: 400px;
-}
-
+/* Quiz Section */
 .quiz-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    padding: 20px;
 }
 
 .quiz-header h2 {
     color: white;
     font-size: 2rem;
-    text-align: center;
 }
 
 .quiz-progress {
@@ -666,39 +364,27 @@ body {
     color: white;
 }
 
-.quiz-info {
+.timer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    color: white;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
 }
 
-.question-counter {
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 16px;
-    border-radius: 20px;
+.timer-icon {
+    font-size: 1.2rem;
 }
 
-.quiz-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
-
-.question-container {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.quiz-container {
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 40px;
-    margin-bottom: 30px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .question-content h3 {
@@ -708,35 +394,31 @@ body {
     font-weight: bold;
 }
 
-.options-container, .options {
+.options {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
 }
 
-.option-btn, .option {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 20px;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: left;
+.option {
     display: flex;
     align-items: center;
     gap: 15px;
-    font-size: 1.1rem;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
-.option-btn:hover, .option:hover {
+.option:hover {
     background: rgba(255, 255, 255, 0.8);
     transform: translateX(5px);
 }
 
-.option-btn.selected, .option.selected {
+.option.selected {
     background: rgba(76, 175, 80, 0.2);
     border-color: #4CAF50;
 }
@@ -746,12 +428,11 @@ body {
     transform: scale(1.2);
 }
 
-.option-label, .option label {
-    font-weight: 700;
-    font-size: 1.2rem;
-    min-width: 30px;
-    color: #4ecdc4;
+.option label {
+    flex: 1;
     cursor: pointer;
+    color: #333;
+    font-size: 1.1rem;
 }
 
 .quiz-navigation {
@@ -761,53 +442,26 @@ body {
     gap: 20px;
 }
 
-#nextQuestionBtn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/* Results Page */
+/* Results Section */
 .results-container {
-    min-height: 80vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    min-height: 80vh;
 }
 
-.certificate-container, .score-card {
+.score-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 40px;
-    max-width: 800px;
+    text-align: center;
+    max-width: 600px;
     width: 100%;
-    color: #333;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    border: 5px solid transparent;
-    background-image: linear-gradient(white, white), linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-.certificate-header, .score-header {
-    text-align: center;
+.score-header {
     margin-bottom: 30px;
-    border-bottom: 3px solid #4ecdc4;
-    padding-bottom: 20px;
-}
-
-.certificate-header h1, .score-header h2 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.certificate-header h2 {
-    font-size: 1.8rem;
-    color: #4ecdc4;
-    font-weight: 600;
 }
 
 .achievement-icon {
@@ -815,67 +469,16 @@ body {
     margin-bottom: 15px;
 }
 
-.certificate-content {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.certificate-text {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.student-name {
+.score-header h2 {
+    color: #333;
     font-size: 2.2rem;
-    color: #2c3e50;
-    font-weight: 700;
-    margin: 20px 0;
-    text-decoration: underline;
-    text-decoration-color: #4ecdc4;
-}
-
-.book-name {
-    font-size: 1.8rem;
-    color: #45b7d1;
-    font-weight: 600;
-    margin: 20px 0;
-    font-style: italic;
-}
-
-.results-details, .score-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-    padding: 20px;
-    background: rgba(76, 175, 80, 0.1);
-    border-radius: 15px;
-}
-
-.result-item, .score-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.result-item .label, .score-label {
-    font-weight: 600;
-    color: #555;
-}
-
-.result-item .value, .score-value {
-    font-weight: 700;
-    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .grade {
-    color: #4CAF50;
-    font-size: 1.3rem !important;
+    font-size: 1.8rem;
+    font-weight: bold;
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -886,36 +489,50 @@ body {
 .grade.C { background: #FF9800; color: white; }
 .grade.D { background: #F44336; color: white; }
 
-.encouragement-message {
-    margin: 30px 0;
-    padding: 20px;
-    background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(33, 150, 243, 0.1));
-    border-radius: 15px;
-    border-left: 5px solid #4CAF50;
+.score-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.encouragement-message p {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin: 0;
-}
-
-.user-details {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 2px solid #eee;
-    text-align: left;
-}
-
-.detail-row, .detail-item {
+.score-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
-    font-size: 1rem;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.score-label {
     color: #666;
+    font-weight: 500;
+}
+
+.score-value {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.user-details {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.user-details h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     padding: 10px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -925,146 +542,76 @@ body {
     width: 25px;
 }
 
-.certificate-actions, .action-buttons {
+.action-buttons {
     display: flex;
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
-.action-btn {
-    background: linear-gradient(45deg, #4ecdc4, #45b7d1);
-    border: none;
-    border-radius: 10px;
-    padding: 12px 24px;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.action-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Answer Review Page */
-.review-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    color: white;
-}
-
+/* Answer Review */
 .review-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 20px;
     margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .review-header h2 {
+    color: white;
     font-size: 2rem;
-    color: #4ecdc4;
     font-weight: bold;
 }
 
-.answers-list, .review-content {
+.review-content {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.answer-item, .review-question {
+.review-question {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     padding: 25px;
     border-left: 5px solid #ddd;
 }
 
-.answer-item.correct, .review-question.correct {
-    border-left: 5px solid #4CAF50;
+.review-question.correct {
+    border-left-color: #4CAF50;
     background: rgba(76, 175, 80, 0.05);
 }
 
-.answer-item.incorrect, .review-question.incorrect {
-    border-left: 5px solid #f44336;
+.review-question.incorrect {
+    border-left-color: #F44336;
     background: rgba(244, 67, 54, 0.05);
 }
 
-.question-number, .review-question h4 {
-    font-weight: 700;
+.review-question h4 {
     color: #333;
+    font-size: 1.2rem;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.question-text {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.answer-options {
-    margin-bottom: 15px;
-}
-
-.answer-option, .review-answer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
+.review-answer {
+    margin-bottom: 10px;
     padding: 10px;
     border-radius: 8px;
 }
 
-.answer-option.user-answer, .review-answer.user-answer {
+.review-answer.user-answer {
     background: rgba(33, 150, 243, 0.1);
     border-left: 3px solid #2196F3;
 }
 
-.answer-option.correct-answer, .review-answer.correct-answer {
+.review-answer.correct-answer {
     background: rgba(76, 175, 80, 0.1);
     border-left: 3px solid #4CAF50;
 }
 
-.answer-option.user-correct {
-    background: rgba(76, 175, 80, 0.3);
-}
-
-.answer-option.user-incorrect, .review-answer.user-incorrect {
+.review-answer.user-incorrect {
     background: rgba(244, 67, 54, 0.1);
     border-left: 3px solid #F44336;
-}
-
-.option-indicator {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.correct-indicator {
-    background: #4CAF50;
-    color: white;
-}
-
-.incorrect-indicator {
-    background: #f44336;
-    color: white;
-}
-
-.neutral-indicator {
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
 }
 
 .answer-label {
@@ -1077,186 +624,113 @@ body {
     color: #555;
 }
 
-.result-summary {
-    text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-}
-
-.result-summary h3 {
-    color: #4ecdc4;
-    margin-bottom: 15px;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .login-container, .registration-container {
-        width: 90%;
-        padding: 30px 20px;
+    .container {
+        padding: 15px;
     }
-
-    .star-text {
-        font-size: 2.5rem;
-    }
-
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .header-content, .reading-header, .quiz-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .search-bar {
-        margin: 0;
-        max-width: 100%;
-    }
-
-    .bookshelf, .books-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .slide-navigation, .quiz-navigation {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .results-details, .score-details {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .certificate-actions, .action-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .detail-row, .detail-item {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .container, .slide-container, .quiz-container, .glass-card {
+    
+    .glass-card {
         padding: 25px;
     }
-
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
     .logo h1 {
         font-size: 2rem;
     }
-
-    .slide-content h2 {
-        font-size: 1.6rem;
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-
+    
+    .reading-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
     .progress-container {
         justify-content: center;
     }
-
-    .btn-primary, .btn-secondary, .btn-nav {
+    
+    .slide-container {
+        padding: 25px;
+    }
+    
+    .slide-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .quiz-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .quiz-container {
+        padding: 25px;
+    }
+    
+    .score-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .slide-navigation,
+    .quiz-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-nav {
         width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .logo h1, .star-icon {
+    .logo h1 {
         font-size: 1.8rem;
     }
-
-    .star-text {
+    
+    .star-icon {
         font-size: 2rem;
     }
-
+    
     .slide-content h2 {
         font-size: 1.4rem;
     }
-
+    
     .slide-content h3 {
         font-size: 1.2rem;
     }
-
-    .slide-content p, .slide-content ul, .question-content h3, .option label {
+    
+    .slide-content p,
+    .slide-content ul {
         font-size: 1rem;
     }
-
-    .certificate-header h1, .score-header h2 {
+    
+    .question-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .option label {
+        font-size: 1rem;
+    }
+    
+    .score-header h2 {
         font-size: 1.8rem;
     }
-
+    
     .grade {
         font-size: 1.4rem;
     }
-}
-
-/* Loading Animation */
-.loading {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Scroll Animations */
-.fade-in {
-    animation: fadeIn 0.6s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Additional Button Hover Effects */
-.book-card:hover .book-thumbnail {
-    transform: scale(1.1) rotateY(5deg);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-.option-btn:hover .option-label {
-    color: #ff6b6b;
-    transform: scale(1.1);
-}
-
-/* Success/Error States */
-.success {
-    background: rgba(76, 175, 80, 0.2);
-    border: 1px solid #4CAF50;
-    color: #4CAF50;
-}
-
-.error {
-    background: rgba(244, 67, 54, 0.2);
-    border: 1px solid #f44336;
-    color: #f44336;
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5);
 }

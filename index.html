@@ -3,552 +3,305 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>STAR-Shaigan's Learning Portal</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
     <!-- Login Page -->
-
     <div id="loginPage" class="page active">
-
         <div class="background">
-
             <div class="stars"></div>
-
             <div class="moving-bg"></div>
-
         </div>
-
         <div class="login-container glass-container">
-
             <div class="logo-section">
-
                 <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
-
                 <span class="subtitle">Study, Track, Achieve, Repeat</span>
-
             </div>
-
             <form id="loginForm">
-
                 <div class="input-group">
-
                     <i class="fas fa-user"></i>
-
                     <input type="text" id="loginUsername" placeholder="Username" required>
-
                 </div>
-
                 <div class="input-group">
-
                     <i class="fas fa-lock"></i>
-
                     <input type="password" id="loginPassword" placeholder="Password" required>
-
                 </div>
-
                 <button type="submit" class="rainbow-btn">Login</button>
-
                 <p class="subtitle" id="loginError" style="color: #f44336; display: none;"></p>
-
                 <p class="subtitle">Don't have an account? <a href="#" id="showRegister" class="register-link">Register</a></p>
-
             </form>
-
         </div>
-
     </div>
 
     <!-- Registration Page -->
-
-<div id="registerPage" class="page">
-
-    <div class="background">
-
-        <div class="stars"></div>
-
-        <div class="moving-bg"></div>
-
-    </div>
-
-    <div class="registration-container glass-container">
-
-        <div class="logo-section">
-
-            <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
-
-            <span class="subtitle">Study, Track, Achieve, Repeat</span>
-
+    <div id="registerPage" class="page">
+        <div class="background">
+            <div class="stars"></div>
+            <div class="moving-bg"></div>
         </div>
-                                                                           
-        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec">
-
-            <div class="input-group">
-
-                <i class="fas fa-user"></i>
-
-                <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
-
+        <div class="registration-container glass-container">
+            <div class="logo-section">
+                <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
+                <span class="subtitle">Study, Track, Achieve, Repeat</span>
             </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-briefcase"></i>
-
-                <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
-
-            </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-users"></i>
-
-                <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
-
-            </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-city"></i>
-
-                <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
-
-            </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-calendar"></i>
-
-                <input type="date" id="regDate" name="Date" placeholder="Date" required>
-
-            </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-envelope"></i>
-
-                <input type="email" id="regEmail" name="Email" placeholder="Email" required>
-
-            </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-lock"></i>
-
-                <input type="password" id="regPassword" name="password" placeholder="Password" required autocomplete="new-password">
-
-            </div>
-
-            <div class="input-group">
-
-                <i class="fas fa-phone"></i>
-
-                <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
-
-            </div>
-
-            <input type="hidden" id="regBook" name="Book">
-
-            <input type="hidden" id="regScore" name="Score">
-
-            <input type="hidden" id="regGrade" name="Grade">
-
-            <input type="hidden" id="regSummaryTime" name="Summary Time">
-
-            <input type="hidden" id="regQuizTime" name="Quiz Time">
-
-            <button type="submit" class="rainbow-btn">Register</button>
-
-            <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
-
-            <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
-
-        </form>
-
+            <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="regDesignation" name="Designation" placeholder="Designation" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-users"></i>
+                    <input type="text" id="regTeamDepartment" name="Team/Department" placeholder="Team/Department" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-city"></i>
+                    <input type="text" id="regBaseCity" name="Base City" placeholder="Base City" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" id="regDate" name="Date" placeholder="Date" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="regEmail" name="Email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="regPassword" name="password" placeholder="Password" required autocomplete="new-password">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="regCellNumber" name="Cell Number" placeholder="Cell Number" required>
+                </div>
+                <input type="hidden" id="regBook" name="Book">
+                <input type="hidden" id="regScore" name="Score">
+                <input type="hidden" id="regGrade" name="Grade">
+                <input type="hidden" id="regSummaryTime" name="Summary Time">
+                <input type="hidden" id="regQuizTime" name="Quiz Time">
+                <button type="submit" class="rainbow-btn">Register</button>
+                <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
+                <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </form>
+        </div>
     </div>
-
-</div>
 
     <!-- Library Page -->
-
     <div id="libraryPage" class="page">
-
         <div class="background">
-
             <div class="stars"></div>
-
             <div class="moving-bg"></div>
-
         </div>
-
         <div class="glass-header">
-
             <div class="header-content">
-
                 <div class="logo">STAR-Shaigan's Learning Portal</div>
-
                 <div class="search-bar">
-
                     <i class="fas fa-search"></i>
-
                     <input type="text" id="searchInput" placeholder="Search books...">
-
                 </div>
-
                 <div class="user-info">
-
                     <span id="userNameDisplay"></span>
-
                     <button class="rainbow-btn small" id="logoutBtn">Logout</button>
-
                 </div>
-
             </div>
-
         </div>
-
         <div class="library-content">
-
             <div id="bookSections"></div>
-
         </div>
-
     </div>
 
     <!-- Reading Page -->
-
     <div id="readingPage" class="page">
-
         <div class="background">
-
             <div class="stars"></div>
-
             <div class="moving-bg"></div>
-
         </div>
-
         <div class="reading-container">
-
             <div class="reading-header">
-
                 <div class="reading-nav">
-
                     <button class="nav-btn" id="backToLibrary"><i class="fas fa-arrow-left"></i> Library</button>
-
                     <h2 id="bookTitle"></h2>
-
                     <div class="timer"><i class="fas fa-clock"></i> <span id="timer">00:00</span></div>
-
                 </div>
-
             </div>
-
             <div class="slide-container">
-
                 <div class="slide-content fade-in">
-
                     <h2 id="slideTitle"></h2>
-
                     <div id="slideContent"></div>
-
                 </div>
-
                 <div class="slide-navigation">
-
                     <button class="nav-btn" id="prevSlide"><i class="fas fa-chevron-left"></i> Previous</button>
-
                     <span class="slide-counter" id="slideCounter">Slide 1 of 13</span>
-
                     <button class="nav-btn" id="nextSlide">Next <i class="fas fa-chevron-right"></i></button>
-
                     <div class="quiz-start-container">
-
                         <button class="rainbow-btn" id="startQuizBtn">Start Quiz</button>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Quiz Page -->
-
     <div id="quizPage" class="page">
-
         <div class="background">
-
             <div class="stars"></div>
-
             <div class="moving-bg"></div>
-
         </div>
-
         <div class="quiz-container">
-
             <div class="quiz-header">
-
                 <h2 id="quizBookTitle"></h2>
-
                 <div class="quiz-info">
-
                     <span class="question-counter" id="questionCounter">Question 1 of 20</span>
-
                     <div class="timer"><i class="fas fa-clock"></i> <span id="quizTimer">00:00</span></div>
-
                 </div>
-
             </div>
-
             <div class="quiz-content">
-
                 <div class="question-container fade-in">
-
                     <h3 id="questionText"></h3>
-
                     <div class="options-container" id="optionsContainer"></div>
-
                 </div>
-
                 <div class="quiz-navigation">
-
                     <button class="rainbow-btn" id="nextQuestionBtn" disabled>Next Question</button>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Results Page -->
-
     <div id="resultsPage" class="page">
-
         <div class="background">
-
             <div class="stars"></div>
-
             <div class="moving-bg"></div>
-
         </div>
-
         <div class="results-container">
-
             <div class="certificate-container">
-
                 <div class="certificate-header">
-
                     <h1>Certificate of Completion</h1>
-
                     <h2 id="certificateBookTitle"></h2>
-
                 </div>
-
                 <div class="certificate-content">
-
                     <p class="certificate-text">This certifies that</p>
-
                     <p class="student-name" id="certificateStudentName"></p>
-
                     <p class="certificate-text">has successfully completed the course for</p>
-
                     <p class="book-name" id="certificateBookName"></p>
-
                 </div>
-
                 <div class="results-details">
-
                     <div class="result-item">
-
                         <span class="label">Score:</span>
-
                         <span class="value" id="finalScore"></span>
-
                     </div>
-
                     <div class="result-item">
-
                         <span class="label">Percentage:</span>
-
                         <span class="value" id="finalPercentage"></span>
-
                     </div>
-
                     <div class="result-item">
-
                         <span class="label">Grade:</span>
-
                         <span class="value grade" id="finalGrade"></span>
-
                     </div>
-
                     <div class="result-item">
-
                         <span class="label">Completion Date:</span>
-
                         <span class="value" id="completionDate"></span>
-
                     </div>
-
                 </div>
-
                 <div class="encouragement-message">
-
                     <p id="encouragementMessage"></p>
-
                 </div>
-
                 <div class="user-details">
-
                     <div class="detail-row">
-
                         <span>Issued by:</span>
-
                         <span>STAR Learning Management System</span>
-
                     </div>
-
                     <div class="detail-row">
-
                         <span>Instructor:</span>
-
                         <span>Self-Paced Learning</span>
-
                     </div>
-
                 </div>
-
                 <div class="certificate-actions">
-
                     <button class="action-btn" id="reviewAnswersBtn"><i class="fas fa-eye"></i> Review Answers</button>
-
                     <button class="action-btn" id="downloadCertificateBtn"><i class="fas fa-download"></i> Download Certificate</button>
-
                     <button class="action-btn" id="backToLibraryResults"><i class="fas fa-arrow-left"></i> Back to Library</button>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Answer Review Page -->
-
     <div id="reviewPage" class="page">
-
         <div class="background">
-
             <div class="stars"></div>
-
             <div class="moving-bg"></div>
-
         </div>
-
         <div class="review-container">
-
             <div class="review-header">
-
                 <h2>Answer Review - <span id="reviewBookTitle"></span></h2>
-
                 <button class="rainbow-btn small" id="backToResultsBtn"><i class="fas fa-arrow-left"></i> Back to Results</button>
-
             </div>
-
             <div class="answers-list" id="answersList"></div>
-
             <div class="result-summary">
-
                 <h3>Summary</h3>
-
                 <p>Score: <span id="reviewScore"></span></p>
-
                 <p>Percentage: <span id="reviewPercentage"></span></p>
-
                 <p>Grade: <span id="reviewGrade"></span></p>
-
             </div>
-
         </div>
-
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
     <script>
-
         // User Management
-
         let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
-
         let currentBook = null;
-
         let currentSlide = 0;
-
         let currentQuestion = 0;
-
         let quizAnswers = [];
-
         let quizStartTime = null;
-
         let readingStartTime = null;
-
         let booksData = {};
+        let sessionLogged = localStorage.getItem('sessionLogged_' + (currentUser ? currentUser.email : 'Anonymous')) || false; // Track session log
 
         // Page Navigation
-
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
-
             if (pageId === 'libraryPage' && currentUser) {
                 document.getElementById('userNameDisplay').textContent = currentUser.fullName;
             }
-            logPageAccess(pageId); // Log access for the new page
+            if (!sessionLogged) {
+                logPageAccess(pageId); // Log only on first page load
+            }
         }
 
         // Login
-
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
-
             const loginError = document.getElementById('loginError');
             loginError.style.display = 'none';
-
             const email = document.getElementById('loginUsername').value.trim();
             const password = document.getElementById('loginPassword').value.trim();
-
             if (!email || !password) {
                 loginError.textContent = 'Please enter both email and password.';
                 loginError.style.display = 'block';
                 return;
             }
-
             try {
                 const users = JSON.parse(localStorage.getItem('users')) || [];
                 const user = users.find(u => u.email === email && u.password === password);
-
                 if (user) {
                     console.log('Logged in user:', user); // Debug
                     currentUser = user;
                     localStorage.setItem('currentUser', JSON.stringify(user));
+                    sessionLogged = false; // Reset session log on new login
+                    localStorage.removeItem('sessionLogged_' + email); // Clear previous session log
                     showPage('libraryPage');
                     document.getElementById('userNameDisplay').textContent = currentUser.fullName;
                 } else {
@@ -565,10 +318,8 @@
         // Registration
         document.getElementById('registerForm').addEventListener('submit', (e) => {
             e.preventDefault();
-
             const registerError = document.getElementById('registerError');
             registerError.style.display = 'none';
-
             // Collect registration form data
             const fullName = document.getElementById('regFullName').value.trim();
             const designation = document.getElementById('regDesignation').value.trim();
@@ -578,26 +329,23 @@
             const email = document.getElementById('regEmail').value.trim();
             const password = document.getElementById('regPassword').value.trim();
             const cellNumber = document.getElementById('regCellNumber').value.trim();
-
             // Validate registration fields
             if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
                 registerError.textContent = 'Please fill in all fields, including password.';
                 registerError.style.display = 'block';
                 return;
             }
-
             // Populate scorecard data (updated dynamically after quiz)
             document.getElementById('regBook').value = currentBook ? currentBook.title : '';
             document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
             document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
             document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
             document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
-
             // Add access timestamp
             const accessTimestamp = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'full', timeStyle: 'short' });
             const formData = new FormData(document.getElementById('registerForm'));
-            formData.append('Access Timestamp', accessTimestamp);
-
+            formData.append('Access_Timestamp', accessTimestamp); // Updated parameter name
+            console.log('Registration Data:', Object.fromEntries(formData)); // Debug
             // Submit form data to Google Apps Script
             fetch(form.action, {
                 method: 'POST',
@@ -623,6 +371,8 @@
                     localStorage.setItem('users', JSON.stringify(users));
                     currentUser = newUser;
                     localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                    sessionLogged = false; // Reset session log on new registration
+                    localStorage.removeItem('sessionLogged_' + email); // Clear previous session log
                     showPage('libraryPage');
                     document.getElementById('userNameDisplay').textContent = currentUser.fullName;
                 } else {
@@ -653,9 +403,8 @@
             formData.append('Grade', document.getElementById('finalGrade').textContent);
             formData.append('Summary Time', document.getElementById('timer').textContent);
             formData.append('Quiz Time', document.getElementById('quizTimer').textContent);
-            formData.append('Access Timestamp', accessTimestamp);
-
-
+            formData.append('Access_Timestamp', accessTimestamp); // Updated parameter name
+            console.log('Quiz Data:', Object.fromEntries(formData)); // Debug
             fetch('https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec', {
                 method: 'POST',
                 body: formData
@@ -687,6 +436,8 @@
         document.getElementById('logoutBtn').addEventListener('click', () => {
             currentUser = null;
             localStorage.removeItem('currentUser');
+            sessionLogged = false; // Reset session log on logout
+            localStorage.removeItem('sessionLogged_' + (currentUser ? currentUser.email : 'Anonymous')); // Clear session log
             showPage('loginPage');
         });
 
@@ -695,7 +446,6 @@
             const bookSections = document.getElementById('bookSections');
             bookSections.innerHTML = '';
             const sections = ['Psychology', 'Business', 'Leadership', 'Productivity', 'Personal Development'];
-
             for (let i = 1; i <= 10; i++) {
                 try {
                     const response = await fetch(`${i}books.json`);
@@ -733,7 +483,6 @@
                     console.error(`Error loading ${i}books.json:`, error);
                 }
             }
-
             // Add coming soon section
             const comingSoon = document.createElement('div');
             comingSoon.className = 'book-section';
@@ -1015,14 +764,20 @@
         function logPageAccess(pageId) {
             const email = currentUser ? currentUser.email : 'Anonymous';
             const accessTimestamp = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'full', timeStyle: 'short' });
+            console.log('Sending Access Data:', { email, accessTimestamp, page: pageId }); // Debug
             fetch('https://script.google.com/macros/s/AKfycbwXCKa79Ytefp6xEc4GV-zZaF87ZxUakjcUe2Sivr5r9L25WLtIJbeyfXNB3kl_E86Z/exec', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: `email=${encodeURIComponent(email)}&Access Timestamp=${encodeURIComponent(accessTimestamp)}&page=${encodeURIComponent(pageId)}`
+                body: `email=${encodeURIComponent(email)}&Access_Timestamp=${encodeURIComponent(accessTimestamp)}&page=${encodeURIComponent(pageId)}`
             })
             .then(response => response.json())
             .then(data => {
                 if (data.result !== 'success') console.error('Access log failed:', data.error);
+                else {
+                    console.log('Access Response:', data); // Debug success
+                    sessionLogged = true; // Mark session as logged
+                    localStorage.setItem('sessionLogged_' + email, 'true'); // Persist session log
+                }
             })
             .catch(error => console.error('Error logging access:', error));
         }
@@ -1032,7 +787,6 @@
             const initialPage = currentUser ? 'libraryPage' : 'loginPage';
             showPage(initialPage);
         });
-
     </script>
 
 </body>

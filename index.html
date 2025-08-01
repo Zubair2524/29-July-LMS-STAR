@@ -529,7 +529,8 @@
             showPage('quizPage');
         });
 
-        function showQuestion() {
+      // Quiz Page
+    function showQuestion() {
     if (!currentBook) return;
     const question = currentBook.quiz[currentQuestion];
     document.getElementById('quizBookTitle').textContent = currentBook.title;

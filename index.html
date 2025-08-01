@@ -86,7 +86,7 @@
             <input type="hidden" id="regQuizTime" name="Quiz Time">
             <button type="submit" class="rainbow-btn">Register</button>
             <p class="subtitle" id="registerError" style="color: #f44336; display: none;"></p>
-            <p class="subtitle">Already have an account? <a href="#" id="showLogin" class="register-link" style="color: #FFFFFF; font-weight: bold;">Login</a></p>
+            <p class="subtitle">Already have an account? <a href="#" id="showLogin">Login</a></p>
         </form>
     </div>
 </div>
@@ -303,80 +303,80 @@
                 loginError.style.display = 'block';
             }
         });
-
-        // Registration
-        document.getElementById('registerForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const registerError = document.getElementById('registerError');
-            registerError.style.display = 'none';
-            // Collect registration form data
-            const fullName = document.getElementById('regFullName').value.trim();
-            const designation = document.getElementById('regDesignation').value.trim();
-            const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
-            const baseCity = document.getElementById('regBaseCity').value.trim();
-            const date = document.getElementById('regDate').value.trim();
-            const email = document.getElementById('regEmail').value.trim();
-            const password = document.getElementById('regPassword').value.trim();
-            const cellNumber = document.getElementById('regCellNumber').value.trim();
-            // Validate registration fields
-            if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
-                registerError.textContent = 'Please fill in all fields, including password.';
-                registerError.style.display = 'block';
-                return;
-            }
-            // Populate scorecard data (updated dynamically after quiz)
-            document.getElementById('regBook').value = currentBook ? currentBook.title : '';
-            document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
-            document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
-            document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
-            document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
-            // Add access timestamp
-            const accessTimestamp = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi', dateStyle: 'full', timeStyle: 'short' });
-            const formData = new FormData(document.getElementById('registerForm'));
-            formData.append('Access_Timestamp', accessTimestamp); // Updated parameter name
-            console.log('Registration Data:', Object.fromEntries(formData)); // Debug
-            // Submit form data to Google Apps Script
-            fetch(form.action, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    console.log('Registration successful, row:', data.row);
-                    const users = JSON.parse(localStorage.getItem('users')) || [];
-                    const newUser = {
-                        fullName,
-                        designation,
-                        teamDepartment,
-                        baseCity,
-                        date,
-                        email,
-                        password,
-                        cellNumber,
-                        completedBooks: []
-                    };
-                    users.push(newUser);
-                    localStorage.setItem('users', JSON.stringify(users));
-                    currentUser = newUser;
-                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
-                    sessionLogged = false; // Reset session log on new registration
-                    localStorage.removeItem('sessionLogged_' + email); // Clear previous session log
-                    showPage('libraryPage');
-                    document.getElementById('userNameDisplay').textContent = currentUser.fullName;
-                    alert('Successfully Registered'); // Display success message
-                } else {
-                    registerError.textContent = `Error during registration: ${data.error}`;
-                    registerError.style.display = 'block';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                registerError.textContent = 'An error occurred. Please try again.';
-                registerError.style.display = 'block';
-            });
-        });
         
+        // Registration
+document.getElementById('registerForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const registerError = document.getElementById('registerError');
+    registerError.style.display = 'none';
+
+    // Collect registration form data
+    const fullName = document.getElementById('regFullName').value.trim();
+    const designation = document.getElementById('regDesignation').value.trim();
+    const teamDepartment = document.getElementById('regTeamDepartment').value.trim();
+    const baseCity = document.getElementById('regBaseCity').value.trim();
+    const date = document.getElementById('regDate').value.trim();
+    const email = document.getElementById('regEmail').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const cellNumber = document.getElementById('regCellNumber').value.trim();
+
+    // Validate registration fields
+    if (!fullName || !designation || !teamDepartment || !baseCity || !date || !email || !password || !cellNumber) {
+        registerError.textContent = 'Please fill in all fields, including password.';
+        registerError.style.display = 'block';
+        return;
+    }
+
+    // Populate scorecard data (updated dynamically after quiz)
+    document.getElementById('regBook').value = currentBook ? currentBook.title : '';
+    document.getElementById('regScore').value = document.getElementById('finalScore') ? document.getElementById('finalScore').textContent : '';
+    document.getElementById('regGrade').value = document.getElementById('finalGrade') ? document.getElementById('finalGrade').textContent : '';
+    document.getElementById('regSummaryTime').value = document.getElementById('timer') ? document.getElementById('timer').textContent : '';
+    document.getElementById('regQuizTime').value = document.getElementById('quizTimer') ? document.getElementById('quizTimer').textContent : '';
+
+    // Submit form data to Google Apps Script
+    const form = document.getElementById('registerForm');
+    const formData = new FormData(form);
+    console.log('Form Data:', Object.fromEntries(formData)); // Debug
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.result === 'success') {
+            console.log('Registration successful, row:', data.row);
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const newUser = { 
+                fullName,
+                designation, 
+                teamDepartment, 
+                baseCity, 
+                date, 
+                email, 
+                password, // Store password in localStorage
+                cellNumber,
+                completedBooks: []
+            };
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            currentUser = newUser;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+            showPage('libraryPage');
+            document.getElementById('userNameDisplay').textContent = currentUser.fullName;
+        } else {
+            registerError.textContent = `Error during registration: ${data.error}`;
+            registerError.style.display = 'block';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        registerError.textContent = 'An error occurred. Please try again.';
+        registerError.style.display = 'block';
+    });
+});
+
         // Submit Quiz Results to Google Sheet
         function submitQuizResults() {
             const formData = new FormData();

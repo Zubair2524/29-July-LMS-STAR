@@ -46,7 +46,8 @@
             <h1 class="star-text">STAR-Shaigan's Learning Portal</h1>
             <span class="subtitle">Study, Track, Achieve, Repeat</span>
         </div>
-        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec">
+        <form id="registerForm" class="registration-form" method="POST" action="https://script.google.com/macros/s/AKfycbz3X459wg-_Bel9Qnq-U2YJQatkZKHZA8PRC62MVefho88Hb50nIp7nkX1PLKZh0kbV/exec">
+            
             <div class="input-group">
                 <i class="fas fa-user"></i>
                 <input type="text" id="regFullName" name="Full Name" placeholder="Full Name" required>
@@ -393,7 +394,7 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
             formData.append('Summary Time', document.getElementById('timer').textContent);
             formData.append('Quiz Time', document.getElementById('quizTimer').textContent);
 
-            fetch('https://script.google.com/macros/s/AKfycbwW6OWSpZEeVqrWJO2Ov8HPqpBHkvtE7kKiURWHBaexI5XyZf4kvS3pTzhkk0Od5fE/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbz3X459wg-_Bel9Qnq-U2YJQatkZKHZA8PRC62MVefho88Hb50nIp7nkX1PLKZh0kbV/exec', {
                 method: 'POST',
                 body: formData
             })
@@ -755,3 +756,4 @@ btn.addEventListener('click', () => {
     </script>
 </body>
 </html>
+
